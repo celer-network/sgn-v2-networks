@@ -58,8 +58,8 @@ sudo apt-get install ethereum
 1. From the `/home/ubuntu` directory, download and install the `sgnd` binary:
 
 ```sh
-wget <TODO: add link>
-cp
+curl https://github.com/celer-network/sgn-v2-networks/releases/download/v1.4.1/sgn-v1.4.1-linux-amd64.tar.gz | tar -xz
+mv sgnd $GOBIN
 ```
 
 2. From the `/home/ubuntu` directory, clone the `sgn-v2-networks` repository:
