@@ -17,8 +17,8 @@ If you only intend to run an SGN node to sync and verify the blocks, stop after 
 
 We run on Ubuntu Linux amd64 with Amazon EC2 as an example. Feel free to experiment with other VPS or physical server setups on your own.
 
-1. Start an EC2 machine with the Ubuntu 20.04 LTS image. We recommend using `t3.medium` with an EBS volume of at least
-100GB for testnet and `c5a.2xlarge` with an EBS volume of at least 500GB for mainnet. Use the appropriate security
+1. Start an EC2 machine with the Ubuntu 20.04 LTS image. We recommend using `t3.medium` (2 vCPUs, 4GB RAM and 5Gbps network bandwidth) with an EBS volume of at least
+100GB for testnet and `c5a.2xlarge` (8 vCPUs, 16GB RAM and 10Gbps network bandwidth) with an EBS volume of at least 500GB for mainnet. Use the appropriate security
 groups and a keypair that you have access to.
 
 2. Install go (at least 1.16):
@@ -84,12 +84,12 @@ sgnd init <node-name> --chain-id <network-name> --home $HOME/.sgnd
 cp genesis.json config.toml $HOME/.sgnd/config
 ```
 
-Backup the generated `$HOME/.sgnd/config/node_key.json` and `$HOME/.sgnd/config/priv_validator_key.json` securely. Make sure the keys are **never** committed to any repo.
+Backup the generated Tendermint key files `$HOME/.sgnd/config/node_key.json` and `$HOME/.sgnd/config/priv_validator_key.json` securely. Make sure the keys are **never** committed to any repo.
 
-3. Fill out the `moniker` field in `config/config.toml` with your `node-name`.
+5. Fill out the `moniker` field in `config/config.toml` with your `node-name`.
 Fill out the `external_address` field with `<public-ip:26656>`, where the `public-ip` is the public IP of the EC2 machine hosting the node. Currently, the Celer foundation nodes restrict the access to port 26656, so please **report your public IP to the Celer team** to get whitelisted.
 
-4. Add a Cosmos SDK / Tendermint validator account:
+6. Add a Cosmos SDK / Tendermint validator account:
 
 ```sh
 sgnd keys add <node-name>
@@ -103,38 +103,53 @@ To view the account created, run:
 sgnd keys list
 ```
 
-Make a note of the account address.
+Make a note of the **sgn-prefixed account address**.
 
-5. Prepare an Ethereum gateway URL. You can use services like [Infura](https://infura.io/),
+7. Prepare an Ethereum gateway URL. You can use services like [Infura](https://infura.io/),
 [Alchemy](https://alchemyapi.io/) or run your own node.
 
-6. Prepare an Ethereum keystore JSON file as the **validator key**. Assuming `geth` is installed, this can be done via:
+8. Prepare an Ethereum key as the **validator key**, which will be used for initializing the validator and occasional operations such as withdrawing rewards. Therefore, the validator key does not need to stay online.
+
+The validator key can be prepared via two ways:
+
+### Using a local keystore JSON file
+
+Currently, the advantage of a local keystore JSON is that operations can be done via the command line. However, it will require saving a passphrase in clear text on the machine running the node, so please be careful about access control.
+
+Assuming `geth` is installed, the keystore JSON file can be generated via:
 
 ```sh
 geth account new
 ```
 
-Save it as `$HOME/.sgnd/eth-ks/val.json`:
+Backup the passphrase securely. Save the JSON file as `$HOME/.sgnd/eth-ks/val.json`:
 
 ```sh
 mkdir $HOME/.sgnd/eth-ks
 cp <path-to-keystore-json> $HOME/.sgnd/eth-ks/val.json
 ```
 
-7. Prepare another Ethereum keystore JSON as the **signer key** and save it as `$HOME/.sgnd/eth-ks/signer.json`.
+### Using MetaMask / hardware wallet
 
-8. Fill in the fields in `$HOME/.sgnd/config/sgn.toml` with the correct values:
+This approach is more secure than a local keystore, but it will require interacting with the staking contract via Etherscan.
+
+Please reserve a dedicated account on MetaMask. If using a hardware wallet, make sure it is compatible with MetaMask.
+
+9. Prepare another Ethereum key as the **signer key**, which will be used for signing
+cross-chain transactions and needs to stay online. Currently, the signer key can only be provided as a local keystore JSON file. Save it as `$HOME/.sgnd/eth-ks/signer.json`.
+
+10. Fill in the fields in `$HOME/.sgnd/config/sgn.toml` with the correct values:
 
     | Field | Description |
     | ----- | ----------- |
-    | eth.gateway | The Ethereum gateway URL obtained from step 5 |
-    | eth.signer_keystore | The path to the signer keystore file in step 7 |
+    | eth.gateway | The Ethereum gateway URL obtained from step 7 |
+    | eth.signer_keystore | The path to the signer Ethereum keystore file in step 9 |
     | eth.signer_passphrase | The passphrase of the signer keystore |
-    | eth.validator_address | The Ethereum address of the validator keystore created in step 6 |
-    | sgnd.passphrase | The passphrase you typed in step 4 |
-    | sgnd.validator_account | The validator Cosmos SDK account added in step 4 |
+    | eth.validator_address | The **Ethereum address** of the validator key prepared in step 8 |
+    | sgnd.passphrase | The **Cosmos keyring passphrase** you typed in step 6 |
+    | sgnd.validator_account | The **sgn-prefixed validator Cosmos SDK account** added in step 6 |
 
-9. Fill in the missing gateway URLs in `$HOME/.sgnd/config/cbridge.toml` with the corresponding JSON-RPC URLs for the chains. In general, we recommend using paid provider services instead of the public endpoints for better reliability.
+11. Fill in the missing gateway URLs in `$HOME/.sgnd/config/cbridge.toml` with the corresponding JSON-RPC URLs for the chains. In general, we recommend using paid provider services instead of the public endpoints for better reliability.
 
 ## Run validator with systemd
 
@@ -211,9 +226,11 @@ You can tell the node is synced when new blocks show up about every 5 seconds.
 ## Claim validator status
 
 1. For testnet, obtain some Goerli ETH from places like the Paradigm
-[faucet](https://faucet.paradigm.xyz/). Contact the Celer team for some Goerli test CELR tokens and get whitelisted for a validator spot.
+[faucet](https://faucet.paradigm.xyz/). Contact the Celer team for some Goerli test CELR tokens.
 
 For mainnet, prepare real ETH and CELR tokens.
+
+For both networks, contact the Celer team to get whitelisted for a validator spot.
 
 2. Send ETH and CELR to the address of the **validator key**. Make sure it has enough CELR for the intended self delegation and some ETH for gas.
 
@@ -222,9 +239,43 @@ cBridge cross-chain requests.
 
 4. Initialize the validator. Here we set a commission rate of 6% and a minimal self delegation of 10000 CELR tokens.
 
+### For validator key on local keystore JSON file
+
+Initialize using the command line:
+
 ```sh
 sgnd ops init-validator --commission-rate 0.06 --min-self-delegation 10000 --keystore ~/.sgnd/eth-ks/val.json --passphrase <val-ks-passphrase>
 ```
+
+### For validator key on MetaMask / hardware wallet
+
+First, approve CELR tokens to the `Staking` contract:
+
+i. Go to [Etherscan](etherscan.io) for either Goerli or mainnet, search for the **celr** contract address taken from `eth.contract_addresses` in `$HOME/.sgnd/sgn.toml`. You should see the verified `CelerToken` contract on the corresponding network.
+
+ii. Make sure the validator key address is selected on your MetaMask / hardware wallet. Click on the "Write Contract" button under the "Contract" tab, click on "Connect to Web3" to connect your wallet.
+
+iii. Find the `approve` method.
+
+For `spender`, put the address of the **staking** contract address taken from `eth.contract_addresses` in `$HOME/.sgnd/sgn.toml`.
+
+For `amount`, put at least the amount of CELR tokens intended for self delegation times the decimals of CELR, which is 1e18. Eg. `10000000000000000000000` for 10000 CELR. Feel free to approve more.
+
+Click "Write" and send the transaction.
+
+Then, initialize the validator with a self delegation:
+
+i. Find the `Staking` contract on Etherscan and connect your wallet to "Write Contract".
+
+ii. Find the `initializeValidator` method.
+
+For `signer`, put the address of the **signer key**.
+
+For `minSelfDelegation`, put the amount of CELR tokens for self delegation times 1e18.
+
+For `commissionRate`, put the intended commission rate times 10000. Eg. 600 would represent 6%.
+
+Click "Write" and send the transaction.
 
 Note that it will take some time for the existing SGN validators to sync your new validator. Afterwards, verify your validator status:
 
@@ -248,11 +299,29 @@ After a while, verify the updated description:
 sgnd query staking validator <val-eth-address>
 ```
 
-6. To become a bonded validator, you need to delegate more CELR tokens to the validator:
+6. To become a bonded validator, your validator needs to have more CELR tokens delegated to it. Note that additional delegation does not need to come from the validator account, so feel free to use any key that holds CELR tokens.
+
+### For local keystore JSON file
 
 ```sh
-sgnd ops delegate --validator <val-eth-address> --amount 50000 --keystore ~/.sgnd/eth-ks/val.json --passphrase <val-ks-passphrase>
+sgnd ops delegate --validator <val-eth-address> --amount 50000 --keystore <path-to-keystore-file> --passphrase <ks-passphrase>
 ```
+
+### For MetaMask / hardware wallet
+
+First, approve CELR tokens to the `Staking` contract following the instructions in step 4.
+
+Then, delegate to the validator:
+
+i. Find the staking contract on Etherscan and connect your wallet to "Write Contract".
+
+ii. Find the `delegate` method.
+
+For `valAddr`, put the address of the **validator key**.
+
+For `tokens`, put the amount of CELR tokens to delegate times 1e18.
+
+Click "Write" and send the transaction.
 
 After a while, verify the status:
 
