@@ -1,0 +1,45 @@
+help = false
+home = "/home/ubuntu"
+log_format = "plain"
+log_level = "info"
+trace = false
+
+[eth]
+block_delay = 4
+chain_id = 5
+gateway = ""
+poll_interval = 15
+signer_keystore = "/home/ubuntu/.sgnd/eth-ks/signer.json"
+signer_passphrase = ""
+validator_address = ""
+
+[eth.contract_address]
+celr = "0x5D3c0F4cA5EE99f8E8F59Ff9A5fAb04F6a7e007f"
+staking = "0x81ECac0D6Be0550A00FF064a4f9dd2400585FE9c"
+sgn = "0x6a2d262D56735DbA19Dd70682B39F6bE9a931D98"
+staking_reward = "0x3795C36e7D12A8c252A20C5a7B455f7c57b60283"
+farming_rewards = "0x6De33698e9e9b787e09d3Bd7771ef63557E148bb"
+govern = "0x7f27352D5F83Db87a5A3E00f4B07Cc2138D8ee52"
+viewer = "0x4Bf769b05E832FCdc9053fFFBC78Ca889aCb5E1E"
+
+[log]
+color = false
+level = "debug"
+
+[sgnd]
+base_gas_price = 0
+chain_id = "sgn-partnernet-1000"
+gas_adjustment = 3
+keyring_backend = "file"
+node_uri = "tcp://localhost:26657"
+passphrase = ""
+transactors = []
+validator_account = ""
+price_update_url = "https://cbridge-stat.s3.us-west-2.amazonaws.com/test/cbridge-price.json"
+liveness_report_endpoint = "https://cbridge-v2-test.celer.network/v1/reportCurrentBlockNumber"
+
+[sgnd.check_interval]
+verifier = 5
+cbridge = 5
+slash = 60
+cbr_price = 900

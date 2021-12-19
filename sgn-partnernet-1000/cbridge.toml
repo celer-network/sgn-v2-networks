@@ -1,0 +1,27 @@
+[[multichain]]
+chainID = 5
+name = "Goerli"
+gateway = ""
+blkinterval = 15
+blkdelay = 5
+maxblkdelta = 5000
+cbridge = "0x8d50a024B2F5593605d3cE8183Ca8969226Fcbf8"
+
+[[multichain]]
+chainID = 97
+name = "BSC Testnet"
+gateway = "https://data-seed-prebsc-1-s1.binance.org:8545/"
+blkinterval = 3
+blkdelay = 8
+maxblkdelta = 5000
+cbridge = "0xD9d1034ef3d21221F008C7e96346CA999966752C"
+
+[[multichain]]
+chainID = 4002
+name = "Fantom Testnet"
+gateway = "https://rpc.testnet.fantom.network/"
+blkinterval = 3
+blkdelay = 6
+maxblkdelta = 5000
+forwardblkdelay = 50
+cbridge = "0xB565E2fFee7Eb5aA40EB755250f7F7D1549fdAe2"
