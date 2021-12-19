@@ -47,7 +47,7 @@ source $HOME/.profile
 
 4. (Optional) Install geth:
 
-```
+```sh
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install ethereum
@@ -87,7 +87,7 @@ cp genesis.json config.toml $HOME/.sgnd/config
 Backup the generated `$HOME/.sgnd/config/node_key.json` and `$HOME/.sgnd/config/priv_validator_key.json` securely. Make sure the keys are **never** committed to any repo.
 
 3. Fill out the `moniker` field in `config/config.toml` with your `node-name`.
-Fill out the `external_address` field with `<public-ip:26656>`, where the `public-ip` is the public IP of the EC2 machine to host the node. Currently, the Celer foundation nodes restrict the access to port 26656, so please **report your public IP to the Celer team** to get whitelisted.
+Fill out the `external_address` field with `<public-ip:26656>`, where the `public-ip` is the public IP of the EC2 machine hosting the node. Currently, the Celer foundation nodes restrict the access to port 26656, so please **report your public IP to the Celer team** to get whitelisted.
 
 4. Add a Cosmos SDK / Tendermint validator account:
 
@@ -228,7 +228,7 @@ sgnd ops init-validator --commission-rate 0.06 --min-self-delegation 10000 --key
 
 Note that it will take some time for the existing SGN validators to sync your new validator. Afterwards, verify your validator status:
 
-```
+```sh
 sgnd query staking validator <val-eth-address>
 ```
 
@@ -244,7 +244,7 @@ Note that `COSMOS_KEYRING_PASSPHRASE` here is the passphrase for the keyring use
 
 After a while, verify the updated description:
 
-```
+```sh
 sgnd query staking validator <val-eth-address>
 ```
 
@@ -256,7 +256,7 @@ sgnd ops delegate --validator <val-eth-address> --amount 50000 --keystore ~/.sgn
 
 After a while, verify the status:
 
-```
+```sh
 sgnd query staking validator <val-eth-address>
 ```
 
@@ -264,7 +264,7 @@ If you have delegated enough tokens to qualify as a bonded validator, you should
 
 You can verify that your validator is in the Tendermint validator set:
 
-```
+```sh
 sgnd query tendermint-validator-set
 ```
 
@@ -272,6 +272,6 @@ You should see an entry with `address` matching the `consensus_address` obtained
 
 You can also verify the delegation:
 
-```
+```sh
 sgnd query staking delegation <val-eth-address> <val-eth-address>
 ```
