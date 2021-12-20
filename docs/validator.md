@@ -221,13 +221,13 @@ sudo systemctl start sgnd.service
 ```
 
 7. Now the node should start the "fast sync" process where it replays and verifies all historical
-transactions starting from genesis. Monitor `tendermint.log` for the process:
+transactions starting from genesis. Monitor `tendermint.log` for the progress:
 
 ```sh
 tail -f /var/log/sgnd/tendermint.log
 ```
 
-You can tell the node is synced when new blocks start showing up about every 5 seconds.
+You can tell the node is synced when a new block shows up about every 5 seconds.
 
 Alternatively, you can check out [state sync](state_sync.md) for a faster but not so much trustless way of syncing your node.
 
