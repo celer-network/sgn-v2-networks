@@ -66,6 +66,7 @@ mv sgnd $GOBIN
 
 ```sh
 git clone https://github.com/celer-network/sgn-v2-networks
+# sgn-partnernet-1000 for testnet and sgn-3 for mainnet
 cd sgn-v2-networks/<network-name>
 ```
 
@@ -78,10 +79,14 @@ cp * $HOME/.sgnd/config
 
 4. Initialize the new validator node:
 
+`node-name` is a name you specify for the node.
+
 ```sh
 sgnd init <node-name> --chain-id <network-name> --home $HOME/.sgnd
 # Overwrite genesis.json and config.toml with the ones from sgn-v2-networks
 cp genesis.json config.toml $HOME/.sgnd/config
+# Create an empty Tendermint snapshots directory
+mkdir -p $HOME/.sgnd/data/snapshots
 ```
 
 Backup the generated Tendermint key files `$HOME/.sgnd/config/node_key.json` and `$HOME/.sgnd/config/priv_validator_key.json` securely. Make sure the keys are **never** committed to any repo.
@@ -215,13 +220,16 @@ sudo systemctl enable sgnd.service
 sudo systemctl start sgnd.service
 ```
 
-7.  Monitor `tendermint.log` and wait for the node to sync:
+7. Now the node should start the "fast sync" process where it replays and verifies all historical
+transactions starting from genesis. Monitor `tendermint.log` for the process:
 
 ```sh
 tail -f /var/log/sgnd/tendermint.log
 ```
 
-You can tell the node is synced when new blocks show up about every 5 seconds.
+You can tell the node is synced when new blocks start showing up about every 5 seconds.
+
+Alternatively, you can check out [state sync](state_sync.md) for a faster but not so much trustless way of syncing your node.
 
 ## Claim validator status
 
@@ -253,11 +261,11 @@ First, approve CELR tokens to the `Staking` contract:
 
 i. Go to [Etherscan](etherscan.io) for either Goerli or mainnet, search for the **celr** contract address taken from `eth.contract_addresses` in `$HOME/.sgnd/sgn.toml`. You should see the verified `CelerToken` contract on the corresponding network.
 
-ii. Make sure the validator key address is selected on your MetaMask / hardware wallet. Click on the "Write Contract" button under the "Contract" tab, click on "Connect to Web3" to connect your wallet.
+ii. Make sure the validator address is selected on your MetaMask / hardware wallet. Click on the "Write Contract" button under the "Contract" tab, click on "Connect to Web3" to connect your wallet.
 
 iii. Find the `approve` method.
 
-For `spender`, put the address of the **staking** contract address taken from `eth.contract_addresses` in `$HOME/.sgnd/sgn.toml`.
+For `spender`, put the **staking** contract address taken from `eth.contract_addresses` in `$HOME/.sgnd/sgn.toml`.
 
 For `amount`, put at least the amount of CELR tokens intended for self delegation times the decimals of CELR, which is 1e18. Eg. `10000000000000000000000` for 10000 CELR. Feel free to approve more.
 
@@ -265,7 +273,7 @@ Click "Write" and send the transaction.
 
 Then, initialize the validator with a self delegation:
 
-i. Find the `Staking` contract on Etherscan and connect your wallet to "Write Contract".
+i. Find the `Staking` contract on Etherscan and connect the validator address to "Write Contract".
 
 ii. Find the `initializeValidator` method.
 
@@ -274,6 +282,21 @@ For `signer`, put the address of the **signer key**.
 For `minSelfDelegation`, put the amount of CELR tokens for self delegation times 1e18.
 
 For `commissionRate`, put the intended commission rate times 10000. Eg. 600 would represent 6%.
+
+Click "Write" and send the transaction.
+
+Finally, register the sgn-prefixed validator account address on the SGN contract:
+
+i. Find the `SGN` contract on Etherscan using the **sgn** address taken from `eth.contract_addresses` in `$HOME/.sgnd/sgn.toml` and connect the validator address to "Write Contract".
+
+ii. Find the `updateSgnAddr` method.
+
+For `sgnAddr`, go to https://slowli.github.io/bech32-buffer/, select the "Data" tab on the left hand side and paste the
+**sgn-prefixed validator account address** into the "Encoded data" field on the right hand side.
+
+Click "Decode" to decode the address into a hex string. For or example, `sgn1gl6484ghn586km0pjlrznk4mdjxqxteq5ukfqx` should decode to `47f553d5179d0fab6de197c629dabb6c8c032f20`.
+
+Paste the decoded output into the `sgnAddr` field on Etherscan.
 
 Click "Write" and send the transaction.
 
@@ -313,7 +336,7 @@ First, approve CELR tokens to the `Staking` contract following the instructions 
 
 Then, delegate to the validator:
 
-i. Find the staking contract on Etherscan and connect your wallet to "Write Contract".
+i. Find the staking contract on Etherscan and connect the validator address to "Write Contract".
 
 ii. Find the `delegate` method.
 
@@ -331,6 +354,10 @@ sgnd query staking validator <val-eth-address>
 
 If you have delegated enough tokens to qualify as a bonded validator, you should see that your validator has the status of `BOND_STATUS_BONDED`.
 
+NOTE: The Staking contract implements a basic decentralization check. If you somehow delegated too many CELR tokens so that your validator
+has more than 2/3 of the total stakes, you will not be able to bond the validator. Contact the Celer team to resolve the situation and refer
+to step 7 to bond the validator manually.
+
 You can verify that your validator is in the Tendermint validator set:
 
 ```sh
@@ -344,3 +371,25 @@ You can also verify the delegation:
 ```sh
 sgnd query staking delegation <val-eth-address> <val-eth-address>
 ```
+
+7. (Optional) Bond validator manually using the validator key
+
+### For local keystore JSON file
+
+```sh
+sgnd ops bond-validator --validator <val-eth-address> --keystore ~/.sgnd/eth-ks/val.json --passphrase <val-ks-passphrase>
+```
+
+### For MetaMask / hardware wallet
+
+i. Find the staking contract on Etherscan and connect the validator address to "Write Contract".
+
+ii. Find the `bondValidator` method and click "Write" to send the transaction.
+
+After a while, verify the status:
+
+```sh
+sgnd query staking validator <val-eth-address>
+```
+
+You should see that your validator has the status of `BOND_STATUS_BONDED`.
