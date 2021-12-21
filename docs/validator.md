@@ -213,15 +213,18 @@ contains SGN-specific logs.
 30 */6  * * *   root    logrotate -f /etc/logrotate.conf
 ```
 
-6. Enable and start the sgnd service:
+6. Currently, we require using [state sync](state_sync.md) to sync your node. Follow the instructions in that doc to prepare the node
+receiving the snapshot with `up-to-date-node-ip`s taken from the `seeds` field in `$HOME/.sgnd/config/config.toml`.
+Stop short of starting the node.
+
+7. Enable and start the sgnd service:
 
 ```sh
 sudo systemctl enable sgnd.service
 sudo systemctl start sgnd.service
 ```
 
-7. Now the node should start the "fast sync" process where it replays and verifies all historical
-transactions starting from genesis. Monitor `tendermint.log` for the progress:
+Now the node should start the state sync. Monitor `tendermint.log` for the progress:
 
 ```sh
 tail -f /var/log/sgnd/tendermint.log
@@ -229,7 +232,8 @@ tail -f /var/log/sgnd/tendermint.log
 
 You can tell the node is synced when a new block shows up about every 5 seconds.
 
-Alternatively, you can check out [state sync](state_sync.md) for a faster but not so much trustless way of syncing your node.
+8. (Currently unsupported) If you choose not to setup state sync, the node will perform a traditional "fast sync" instead.
+In this mode it replays and verifies all historical transactions starting from genesis.
 
 ## Claim validator status
 

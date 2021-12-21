@@ -61,14 +61,22 @@ trust_hash = "6FD28DAAAC79B77F589AE692B6CD403412CE27D0D2629E81951607B297696E5B" 
 trust_period = "6h" # Recommended to be about 2/3 of unbonding time
 ```
 
-4. Stop the node and clear local data:
+## Syncing a new node
+
+```sh
+sudo systemctl start sgnd
+```
+
+## Re-syncing a node with corrupt local state
+
+1. Stop the node and clear local data:
 
 ```sh
 sudo systemctl stop sgnd # Stop if running
 sgnd unsafe-reset-all
 ```
 
-Make sure `$HOME/.sgnd/data/priv_validator_state.json` is reset to the initial state of:
+2. Make sure `$HOME/.sgnd/data/priv_validator_state.json` is reset to the initial state of:
 
 ```json
 {
@@ -80,7 +88,7 @@ Make sure `$HOME/.sgnd/data/priv_validator_state.json` is reset to the initial s
 
 and the `$HOME/.sgnd/data/snapshots` folder exists.
 
-5. Restart the node:
+3. Restart the node:
 
 ```sh
 sudo systemctl start sgnd
