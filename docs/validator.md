@@ -195,7 +195,7 @@ WantedBy=multi-user.target
 With this setup, `tendermint.log` contains Tendermint logs (i.e. block height, peer info, etc.) while `app.log`
 contains SGN-specific logs.
 
-4. Create `/etc/logrotate.d/sgn` and add the following:
+2. Create `/etc/logrotate.d/sgn` and add the following:
 
 ```
 /var/log/sgnd/*.log {
@@ -207,17 +207,17 @@ contains SGN-specific logs.
 }
 ```
 
-5. Add an entry to `/etc/crontab` to make logrotate run every 6 hours:
+3. Add an entry to `/etc/crontab` to make logrotate run every 6 hours:
 
 ```
 30 */6  * * *   root    logrotate -f /etc/logrotate.conf
 ```
 
-6. Currently, we require using [state sync](state_sync.md) to sync your node. Follow the instructions in that doc to prepare the node
+4. Currently, we require using [state sync](state_sync.md) to sync your node. Follow the instructions in that doc to prepare the node
 receiving the snapshot with `up-to-date-node-ip`s taken from the `seeds` field in `$HOME/.sgnd/config/config.toml`.
 Stop short of starting the node.
 
-7. Enable and start the sgnd service:
+5. Enable and start the sgnd service:
 
 ```sh
 sudo systemctl enable sgnd.service
@@ -232,7 +232,7 @@ tail -f /var/log/sgnd/tendermint.log
 
 You can tell the node is synced when a new block shows up about every 5 seconds.
 
-8. (Currently unsupported) If you choose not to setup state sync, the node will perform a traditional "fast sync" instead.
+6. (Currently unsupported) If you choose not to setup state sync, the node will perform a traditional "fast sync" instead.
 In this mode it replays and verifies all historical transactions starting from genesis.
 
 ## Claim validator status
