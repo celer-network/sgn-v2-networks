@@ -58,7 +58,7 @@ groups and a keypair that you have access to.
 1. From the `/home/ubuntu` directory, download and install the `sgnd` binary:
 
     ```sh
-    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.4.1/sgnd-v1.4.1-linux-amd64.tar.gz | tar -xz
+    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.4.3/sgnd-v1.4.3-linux-amd64.tar.gz | tar -xz
     mv sgnd $GOBIN
     ```
 
@@ -115,7 +115,7 @@ Fill out the `external_address` field with `<public-ip:26656>`, where the `publi
 
 8. Prepare an Ethereum key as the **validator key**, which will be used for initializing the validator and occasional operations such as withdrawing rewards. Therefore, the validator key does not need to stay online.
 
-    The validator key can be prepared via two ways:
+    The validator key can be prepared via one of the two ways:
 
     - **Using a local keystore JSON file**
 
@@ -140,16 +140,26 @@ Fill out the `external_address` field with `<public-ip:26656>`, where the `publi
 
       Please reserve a dedicated account on MetaMask. If using a hardware wallet, make sure it is compatible with MetaMask.
 
-9. Prepare another Ethereum key as the **signer key**, which will be used for signing
-cross-chain transactions and needs to stay online. Currently, the signer key can only be provided as a local keystore JSON file. Save it as `$HOME/.sgnd/eth-ks/signer.json`.
+9. Prepare another Ethereum key as the **signer key**, which will be used for signing cross-chain transactions and needs to stay online.
+
+    The signer key can be prepared via one of the two ways:
+
+    - **Using a local keystore JSON file**
+
+      Follow the same steps as preparing the validator key. Save the JSON file as `$HOME/.sgnd/eth-ks/signer.json`.
+
+    - **Using AWS Key Management Service (KMS)**
+
+      For better security, we support using AWS KMS to manage the signer key.
+      Follow [this doc](aws_kms.md) to set it up.
 
 10. Fill in the fields in `$HOME/.sgnd/config/sgn.toml` with the correct values:
 
     | Field | Description |
     | ----- | ----------- |
     | eth.gateway | The Ethereum gateway URL obtained from step 7 |
-    | eth.signer_keystore | The path to the signer Ethereum keystore file in step 9 |
-    | eth.signer_passphrase | The passphrase of the signer keystore |
+    | eth.signer_keystore | The path to the signer Ethereum keystore file in step 9, or the format required by AWS KMS setup |
+    | eth.signer_passphrase | The passphrase of the signer keystore, or the format required by AWS KMS setup |
     | eth.validator_address | The **Ethereum address** of the validator key prepared in step 8 |
     | sgnd.passphrase | The **Cosmos keyring passphrase** you typed in step 6 |
     | sgnd.validator_account | The **sgn-prefixed validator Cosmos SDK account** added in step 6 |
@@ -213,7 +223,7 @@ We recommend using systemd to run your validator. Feel free to experiment with o
     30 */6  * * *   root    logrotate -f /etc/logrotate.conf
     ```
 
-4. Currently, we require using [state sync](state_sync.md) to sync your node. Follow the instructions in that doc to prepare the node
+4. Currently, we require using Tendermint state sync to sync your node. Follow the instructions in [this doc](state_sync.md) to prepare the node
 receiving the snapshot with `up-to-date-node-ip`s taken from the `seeds` field in `$HOME/.sgnd/config/config.toml`.
 Stop short of starting the node.
 
