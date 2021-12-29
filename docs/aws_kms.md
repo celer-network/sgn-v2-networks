@@ -54,7 +54,7 @@ signer_passphrase = "<api-key>:<api-secret>"
 You will need the signer address for various operations. Download and install the `aws-kms-test` binary:
 
 ```sh
-curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.4.4/aws-kms-test-linux-amd64.tar.gz | tar -xz
+curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.4.5/aws-kms-test-linux-amd64.tar.gz | tar -xz
 mv aws-kms-test $GOBIN
 ```
 
