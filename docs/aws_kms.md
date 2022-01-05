@@ -43,25 +43,40 @@ After obtaining the IP of the EC2 machine running the node, go to KMS console, s
 Use the following format to enable signing via KMS:
 
 ```toml
-signer_keystore = "awskms:<aws-region>:alias/<key-name>"
+signer_keystore = "awskms:<aws-region>:alias/<key-alias-name>"
 signer_passphrase = "<api-key>:<api-secret>"
 ```
 
 `signer_keystore` must be in the specified format. If passphrase is left empty, the code will search automatically from env variables, `~/.aws/credentials` etc.
 
-## Obtaining the signer address
+## Obtaining the signer address using aws-kms-tools
 
-You will need the signer address for various operations. Download and install the `aws-kms-test` binary:
-
-```sh
-curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.4.5/aws-kms-test-linux-amd64.tar.gz | tar -xz
-mv aws-kms-test $GOBIN
-```
-
-Test that signing works:
+You will need the signer address for various operations. Download and install the `aws-kms-tools` binary:
 
 ```sh
-aws-kms-test -r <aws-region> -k <key-name>
+curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.4.6/aws-kms-tools-linux-amd64.tar.gz | tar -xz
+mv aws-kms-tools $GOBIN
 ```
 
-Take a note of the printed Ethereum signer address.
+Print the Ethereum signer address:
+
+```sh
+aws-kms-tools print-address --region <aws-region> --alias <key-alias-name>
+```
+
+Take a note of the printed address.
+
+Additionally, you can use the binary to sign Ethereum messages or send transactions:
+
+```sh
+aws-kms-tools sign-message --region <aws-region> --alias <key-name> --data "0x1234"
+aws-kms-tools send-tx --region <aws-region> --alias <key-name> --destination <address> --value 1 --data "0x1234"
+```
+
+Run
+
+```sh
+aws-kms-tools --help
+```
+
+to learn more.

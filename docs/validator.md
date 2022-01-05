@@ -58,7 +58,7 @@ groups and a keypair that you have access to.
 1. From the `/home/ubuntu` directory, download and install the `sgnd` binary:
 
     ```sh
-    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.4.5/sgnd-v1.4.5-linux-amd64.tar.gz | tar -xz
+    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.4.6/sgnd-v1.4.6-linux-amd64.tar.gz | tar -xz
     mv sgnd $GOBIN
     ```
 
