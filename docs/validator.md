@@ -27,10 +27,16 @@ groups and a keypair that you have access to.
     sudo snap install go --classic
     ```
 
-    Install gcc, make and libleveldb-dev
+    Install gcc and make :
 
     ```sh
-    sudo apt update && sudo apt install gcc make libleveldb-dev
+    sudo apt update && sudo apt install gcc make
+    ```
+
+    (Optional) If you are on Ubuntu and choose to use cleveldb, which is reported to be more performant, install libleveldb-dev:
+
+    ```sh
+    sudo apt install libleveldb-dev
     ```
 
 3. Set \$GOBIN and add \$GOBIN to \$PATH. Edit `$HOME/.profile` and add:
@@ -58,7 +64,8 @@ groups and a keypair that you have access to.
 1. From the `/home/ubuntu` directory, download and install the `sgnd` binary:
 
     ```sh
-    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.4.6/sgnd-v1.4.6-linux-amd64.tar.gz | tar -xz
+    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.4.7/sgnd-v1.4.7-goleveldb-linux-amd64.tar.gz | tar -xz
+    # To use with cleveldb on Ubuntu, download https://github.com/celer-network/sgn-v2-networks/releases/download/v1.4.7/sgnd-v1.4.7-ubuntu-cleveldb-linux-amd64.tar.gz
     mv sgnd $GOBIN
     ```
 
@@ -92,7 +99,9 @@ groups and a keypair that you have access to.
     Backup the generated Tendermint key files `$HOME/.sgnd/config/node_key.json` and `$HOME/.sgnd/config/priv_validator_key.json` securely. Make sure the keys are **never** committed to any repo.
 
 5. Fill out the `moniker` field in `config/config.toml` with your `node-name`.
-Fill out the `external_address` field with `<public-ip:26656>`, where the `public-ip` is the public IP of the EC2 machine hosting the node. Currently, the Celer foundation nodes restrict the access to port 26656, so please **report your public IP to the Celer team** to get whitelisted.
+Fill out the `external_address` field with `<public-ip:26656>`, where the `public-ip` is the public IP of the EC2 machine hosting the node.
+If using cleveldb, change the `db_backend` field to `"cleveldb"`.
+Currently, the Celer foundation nodes restrict the access to port 26656, so please **report your public IP to the Celer team** to get whitelisted.
 
 6. Add a Cosmos SDK / Tendermint validator account:
 
