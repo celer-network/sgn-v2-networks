@@ -98,10 +98,15 @@ groups and a keypair that you have access to.
 
     Backup the generated Tendermint key files `$HOME/.sgnd/config/node_key.json` and `$HOME/.sgnd/config/priv_validator_key.json` securely. Make sure the keys are **never** committed to any repo.
 
-5. Fill out the `moniker` field in `config/config.toml` with your `node-name`.
-Fill out the `external_address` field with `<public-ip:26656>`, where the `public-ip` is the public IP of the EC2 machine hosting the node.
-If using cleveldb, change the `db_backend` field to `"cleveldb"`.
-Currently, the Celer foundation nodes restrict the access to port 26656, so please **report your public IP to the Celer team** to get whitelisted.
+5. Fill out the fields in the Tendermint config file `$HOME/.sgnd/config/config.toml` with the correct values:
+
+    | Field | Description |
+    | ----- | ----------- |
+    | moniker | The `node-name` you decided |
+    | external_address| `<public-ip:26656>`, where `public-ip` is the public IP of the machine hosting the node |
+    | db_backend | `goleveldb` or `cleveldb` depending on the binary used |
+
+    Currently, the Celer foundation nodes restrict the access to port 26656-26657, so please **report your public IP to the Celer team** to get whitelisted.
 
 6. Add a Cosmos SDK / Tendermint validator account:
 
@@ -162,7 +167,7 @@ Currently, the Celer foundation nodes restrict the access to port 26656, so plea
       For better security, we support using AWS KMS to manage the signer key.
       Follow [this doc](aws_kms.md) to set it up.
 
-10. Fill in the fields in `$HOME/.sgnd/config/sgn.toml` with the correct values:
+10. Fill out the fields in the SGN-specific config file `$HOME/.sgnd/config/sgn.toml` with the correct values:
 
     | Field | Description |
     | ----- | ----------- |
