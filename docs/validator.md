@@ -64,8 +64,8 @@ groups and a keypair that you have access to.
 1. From the `/home/ubuntu` directory, download and install the `sgnd` binary:
 
     ```sh
-    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.4.7/sgnd-v1.4.7-goleveldb-linux-amd64.tar.gz | tar -xz
-    # To use with cleveldb on Ubuntu, download https://github.com/celer-network/sgn-v2-networks/releases/download/v1.4.7/sgnd-v1.4.7-ubuntu-cleveldb-linux-amd64.tar.gz
+    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.5.0/sgnd-v1.5.0-goleveldb-linux-amd64.tar.gz | tar -xz
+    # To use with cleveldb on Ubuntu, download https://github.com/celer-network/sgn-v2-networks/releases/download/v1.5.0/sgnd-v1.5.0-ubuntu-cleveldb-linux-amd64.tar.gz
     mv sgnd $GOBIN
     ```
 
