@@ -1,0 +1,73 @@
+[[multichain]]
+chainID = 5
+name = "Goerli"
+gateway = ""                                           # insert your goerli rpc endpoint url
+blkinterval = 15
+blkdelay = 5
+maxblkdelta = 5000
+cbridge = "0x358234B325EF9eA8115291A8b81b7d33A2Fa762D"
+otvault = "0x28b37266a82aA7aae2b5ACA5a557C4Af0717b114"
+msgbus = "0x942E8e0e4b021F55b89660c886146e0Ec57F4b5B"
+
+[[multichain]]
+chainID = 97
+name = "BSC Testnet"
+gateway = "https://data-seed-prebsc-1-s1.binance.org:8545/"
+blkinterval = 3
+blkdelay = 8
+maxblkdelta = 5000
+cbridge = "0xf89354F314faF344Abd754924438bA798E306DF2"
+otvault = "0xf763c9ec62a9ff998da4c205c0f78b7024c66b68"
+ptbridge = "0xcb1dB69399755Cf8A9EbE8A3033f3082793b67eB"
+msgbus = "0xAd204986D6cB67A5Bc76a3CB8974823F43Cb9AAA"
+addgasgwei = 2
+addgasestimateratio = 0.3
+
+[[multichain]]
+chainID = 4002
+name = "Fantom Testnet"
+gateway = "https://rpc.testnet.fantom.network/"
+blkinterval = 3
+blkdelay = 6
+maxblkdelta = 5000
+forwardblkdelay = 50
+cbridge = "0xFA78cBa4ebbf8fE28B4fC1468948F16Fda2752b3"
+ptbridge = "0x6a96506058da59895289c7e9af134f8105a6d940"
+msgbus = "0xb92d6933A024bcca9A21669a480C236Cbc973110"
+addgasgwei = 2
+addgasestimateratio = 0.3
+
+[[multichain]]
+chainID = 421611
+name = "Arbitrum Testnet"
+gateway = "https://rinkeby.arbitrum.io/rpc"
+blkinterval = 10
+blkdelay = 1
+forwardblkdelay = 500
+maxblkdelta = 99999
+cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+msgbus = "0x7d43AABC515C356145049227CeE54B608342c0ad"
+addgasestimateratio = 0.3
+
+[[multichain]]
+chainID = 80001
+name = "Polygon Mumbai"
+gateway = "https://matic-testnet-archive-rpc.bwarelabs.com"
+blkinterval = 15
+blkdelay = 80
+forwardblkdelay = 50
+maxblkdelta = 5000
+cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+msgbus = "0x7d43AABC515C356145049227CeE54B608342c0ad"
+addgasestimateratio = 0.3
+
+[[multichain]]
+chainID = 43113
+name = "Avalanche Fuji"
+gateway = "https://api.avax-test.network/ext/bc/C/rpc"
+blkinterval = 15
+blkdelay = 15
+forwardblkdelay = 50
+cbridge = "0xe95E3a9f1a45B5EDa71781448F6047d7B7e31cbF"
+msgbus = "0xE9533976C590200E32d95C53f06AE12d292cFc47"
+addgasestimateratio = 0.3

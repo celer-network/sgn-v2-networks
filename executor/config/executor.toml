@@ -1,0 +1,13 @@
+[sgnd]
+node_uri = "tcp://localhost:26657"                           # node0
+transactors = ["sgn1c0mqgwxzcs0kcy85zv3dkhps6xz7seulyghkrt"]
+# passphrase = ""
+keyring_backend = "file"
+chain_id = "sgn-testnet-4000"
+
+[eth]
+signer_keystore = "/home/ubuntu/.executor/eth-ks/signer.json" # uses node0 signer
+# signer_passphrase = ""
+
+[db]
+url = "localhost:26257"
