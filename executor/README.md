@@ -55,7 +55,7 @@ You probably want to run executor using systemd so it can start with the system 
 touch /etc/systemd/system/executor.service
 ```
 
-```toml
+```
 # executor.service
 [Unit]
 Description=Executor pulls active messages from sgn and executes them on-chain
