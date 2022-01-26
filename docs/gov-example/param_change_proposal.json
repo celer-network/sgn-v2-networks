@@ -1,0 +1,12 @@
+{
+  "title": "Staking Param Change",
+  "description": "Update staking syncer duration",
+  "changes": [
+    {
+      "subspace": "staking",
+      "key": "SyncerDuration",
+      "value": "8"
+    }
+  ],
+  "deposit": "0"
+}

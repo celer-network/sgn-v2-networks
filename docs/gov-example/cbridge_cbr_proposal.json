@@ -1,0 +1,61 @@
+{
+  "title": "cBridge config Change",
+  "description": "Update cbridge config to v1.1",
+  "cbr_config": {
+    "lp_fee_perc": 100,
+    "max_gain_perc": 2000,
+    "cbr_contracts": [
+      {
+        "chain_id": 883,
+        "address": "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
+      },
+      {
+        "chain_id": 884,
+        "address": "0x841ce48F9446C8E281D3F1444cB859b4A6D0738D"
+      }
+    ],
+    "relay_gas_cost": [
+      {
+        "chain_id": 883,
+        "cost_base": 83537,
+        "per_validator": 950,
+        "per_sig": 7414
+      },
+      {
+        "chain_id": 884,
+        "cost_base": 83537,
+        "per_validator": 950,
+        "per_sig": 7414
+      }
+    ],    
+    "assets": [
+      {
+        "addr": "2b499b7e9de669e968acd6039845a422f7ff758a",
+        "chain_id": 883,
+        "decimal": 6,
+        "max_fee_amount": "100000000",
+        "symbol": "USDT",
+        "xfer_disabled": false
+      },
+      {
+        "addr": "d22fe06b3f7fae4e72717762b075e63e5f0121be",
+        "chain_id": 884,
+        "decimal": 6,
+        "max_fee_amount": "100000000",
+        "symbol": "USDT",
+        "xfer_disabled": false
+      }
+    ],
+    "chain_pairs": [
+      {
+        "chid1": 883,
+        "chid2": 884,
+        "const_a": 0,
+        "fee1to2": 10000,
+        "fee2to1": 20000,
+        "weight1": 100
+      }
+    ]
+  },
+  "deposit": "0"
+}
