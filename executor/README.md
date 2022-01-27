@@ -22,6 +22,9 @@ mkdir ~/.executor
 cp ./ ~/.executor/
 # copy your signer keystore file to eth-ks/
 cp <your-keystore-file> ~/.executor/eth-ks
+# extract the executor binary
+cd ~/.executor
+tar -xz executor-v1.6.0-dev-linux-amd64.tar.gz
 ```
 
 ### 2. Setup Executor's Database
