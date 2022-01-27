@@ -1,6 +1,13 @@
+[executor]
+[[executor.contracts]]
+chainid = 5
+address = "<your application contract address>"
+[[executor.contracts]]
+chainid = 97
+address = "<your application contract address>"
+
 [sgnd]
-node_uri = "tcp://localhost:26657"
-gateway = ""
+gateway = "https://cbridge-v2-test.celer.network"
 
 [eth]
 signer_keystore = "/home/ubuntu/.executor/eth-ks/signer.json"
