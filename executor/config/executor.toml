@@ -1,4 +1,7 @@
 [executor]
+# these contract info filters tells the executor for messages initiated from which contracts 
+# it should submit the execution on-chain. basically these are the message passing app contracts 
+# (the ones that implements MessageSenderApp/MessageReceiverApp) you deploy on source/destination chains
 [[executor.contracts]]
 chainid = 5
 address = "<your application contract address>"
@@ -10,7 +13,9 @@ address = "<your application contract address>"
 gateway = "https://cbridge-v2-test.celer.network"
 
 [eth]
+# the location of your eth keystore. it is used for submitting execution on-chain
 signer_keystore = "/home/ubuntu/.executor/eth-ks/signer.json"
+# don't forget to populate the passphrase of your keystore
 # signer_passphrase = ""
 
 [db]

@@ -16,12 +16,18 @@ executor/
 ```
 
 ```sh
+# clone this repo first
+git clone https://github.com/celer-network/sgn-v2-networks.git
+
 # create a home directory for executor
 mkdir ~/.executor
+
 # copy this directory to the executor home
 cp ./ ~/.executor/
+
 # copy your signer keystore file to eth-ks/
 cp <your-keystore-file> ~/.executor/eth-ks
+
 # copy and extract the executor binary
 cp ../binaries/executor-v1.6.0-dev.1-linux-amd64.tar.gz ~/.executor
 cd ~/.executor
@@ -47,7 +53,7 @@ cp -i cockroach-v21.2.4.linux-amd64/lib/libgeos_c.so /usr/local/lib/cockroach/
 mkdir ~/.crdb-node0
 # start a single node DB instance
 cockroach start-single-node --store=~/.crdb-node0 --listen-addr=localhost:26257 --http-addr=localhost:38080 --background --insecure
-# schemas will be auto added when executor starts
+# note: DB schemas will be auto added when executor starts
 ```
 
 ### 3. Deploy the Executor Service
@@ -55,12 +61,13 @@ cockroach start-single-node --store=~/.crdb-node0 --listen-addr=localhost:26257 
 You probably want to run executor using systemd so it can start with the system and restart when crash happens.
 
 ```sh
-# create a executor.service file in /etc/systemd/system
+# create an executor.service file in /etc/systemd/system
 touch /etc/systemd/system/executor.service
 ```
 
 ```
 # executor.service
+
 [Unit]
 Description=Executor pulls active messages from sgn and executes them on-chain
 After=network-online.target
@@ -79,7 +86,7 @@ LimitNOFILE=4096
 WantedBy=multi-user.target
 ```
 
-Before starting the systemd service, don't forget to create the log directory first
+IMPORTANT: Before starting the systemd service, you MUST create the log directory first
 
 ```sh
 mkdir -p /var/log/executor
