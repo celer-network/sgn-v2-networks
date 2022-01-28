@@ -16,7 +16,7 @@ gateway = "https://cbridge-v2-test.celer.network"
 # the location of your eth keystore. it is used for submitting execution on-chain
 signer_keystore = "/home/ubuntu/.executor/eth-ks/signer.json"
 # don't forget to populate the passphrase of your keystore
-# signer_passphrase = ""
+signer_passphrase = "<your keystore passphrase>"
 
 [db]
 url = "localhost:26257"
