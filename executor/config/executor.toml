@@ -10,7 +10,11 @@ chainid = 97
 address = "<your application contract address>"
 
 [sgnd]
-gateway = "https://cbridge-v2-test.celer.network"
+# all read queries are executed through sgn node 0 grpc
+sgn_grpc = "35.165.81.166:9090"
+# all writes to sgn (sending transactions) are delegated through sgn gateway for now so you don't
+# need to have a sgn account key
+gateway_grpc = "35.165.81.166:20000"
 
 [eth]
 # the location of your eth keystore. it is used for submitting execution on-chain
