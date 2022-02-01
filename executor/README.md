@@ -27,14 +27,17 @@ git clone https://github.com/celer-network/sgn-v2-networks.git
 mkdir ~/.executor
 
 # copy this directory to the executor home
+cd executor
 cp ./ ~/.executor/
 
 # copy your signer keystore file to eth-ks/
 cp <your-keystore-file> ~/.executor/eth-ks
 
 # extract the executor binary
-tar -xz executor-v1.6.0-dev.1-linux-amd64.tar.gz
-cp executor-v1.6.0-dev.1-linux-amd64 ~/usr/local/bin
+cp ../binaries/executor-v1.6.0.-dev.2-linux-amd64.tar.gz ~/.executor/
+cd ~/.executor
+tar -xz executor-v1.6.0-dev.2-linux-amd64.tar.gz
+cp executor-v1.6.0-dev.2-linux-amd64 ~/usr/local/bin
 ```
 
 ### 2. Setup Executor's Database
