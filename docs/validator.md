@@ -270,10 +270,11 @@ In this mode it replays and verifies all historical transactions starting from g
 
 2. Send ETH and CELR to the address of the **validator key**. Make sure it has enough CELR for the intended self delegation and some ETH for gas.
 
-3. Send some ETH to the address of the **signer key** for gas. On each chain specified in `$HOME/.sgnd/config/cbridge.toml`, send corresponding native tokens to the signer key as gas is required for relaying
-cBridge cross-chain requests.
+3. Send some ETH to the address of the **signer key** for gas.
 
-4. Initialize the validator. Here we set a commission rate of 6% and a minimal self delegation of 10000 CELR tokens.
+4. (Optional) If you intend to serve as relayer / syncer for cBridge cross-chain requests, send corresponding native tokens as gas to the signer key on each chain specified in `$HOME/.sgnd/config/cbridge.toml`. Relayers are expected to keep good RPC connection to and reserve sufficient gas on all supported chains. Due to the technical requirement and significant responsibility involved, new relayers are carefully vetted and added via governance.
+
+5. Initialize the validator. Here we set a commission rate of 6% and a minimal self delegation of 10000 CELR tokens.
 
     - **For validator key on local keystore JSON file**
 
@@ -336,7 +337,7 @@ cBridge cross-chain requests.
 
     You should see that your validator has a `tokens` field matching your delegated CELR amount. Make a note of the `consensus_address` - the address prefixed with `sgnvalcons`.
 
-5. Update validator description:
+6. Update validator description:
 
     ```sh
     echo $COSMOS_KEYRING_PASSPHRASE | sgnd tx staking edit-description --website "your-website" --contact "email-address"
@@ -350,7 +351,7 @@ cBridge cross-chain requests.
     sgnd query staking validator <val-eth-address>
     ```
 
-6. To become a bonded validator, your validator needs to have more CELR tokens delegated to it. Note that additional delegation does not need to come from the validator account, so feel free to use any key that holds CELR tokens.
+7. To become a bonded validator, your validator needs to have more CELR tokens delegated to it. Note that additional delegation does not need to come from the validator account, so feel free to use any key that holds CELR tokens.
 
     - **For validator key on local keystore JSON file**
 
@@ -400,7 +401,7 @@ cBridge cross-chain requests.
     sgnd query staking delegation <val-eth-address> <val-eth-address>
     ```
 
-7. (Optional) Bond validator manually using the validator key
+8. (Optional) Bond validator manually using the validator key
 
     - **For validator key on local keystore JSON file**
 
