@@ -10,8 +10,8 @@ As of the writing of this manual, the gov params are set as:
     "voting_period":"300000000000"
   },
   "tally_params":{
-    "quorum":"0.334000000000000000",
-    "threshold":"0.500000000000000000",
+    "quorum":"0.667000000000000000",
+    "threshold":"0.667000000000000000",
     "veto":"0.334000000000000000"
   },
   "deposit_params":{
