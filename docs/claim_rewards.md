@@ -6,7 +6,7 @@ This manual describes the process of claiming reward, including cbridge fee, peg
 Prior experience with Cosmos SDK and Ethereum transactions will be helpful.**
 
 ## Table of Contents
-- [Prerequisite](#prepare-machine-and-install-dependencies)
+- [Prerequisite](#prerequisite)
 - [Claim cbridge fee](#claim-cbridge-fee)
 - [Claim pegbridge fee](#claim-pegbridge-fee)
 - [Claim staking reward](#claim-staking-reward)
