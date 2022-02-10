@@ -94,12 +94,12 @@ echo $COSMOS_KEYRING_PASSPHRASE | sgnd tx distribution claim-staking-reward <val
 
 Check claiming request status:
 ```shell
-sgnd ops withdraw-pegbr-fee --file claim_fee.txt --query
+sgnd ops claim-staking-reward --query
 ```
 
 Until your request status comes to `enough signatures`, then:
 ```shell
-sgnd ops withdraw-pegbr-fee --file claim_fee.txt
+sgnd ops claim-staking-reward
 ```
 
 If none obvious error happens, congratulations, we've done for claiming staking reward.
