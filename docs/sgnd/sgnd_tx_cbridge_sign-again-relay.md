@@ -3,7 +3,7 @@
 Trigger sign again of relay msg
 
 ```
-sgnd tx cbridge sign-again-relay [flags]
+sgnd tx cbridge sign-again-relay [src-transfer-id] [flags]
 ```
 
 ### Options

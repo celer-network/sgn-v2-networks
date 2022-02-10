@@ -1,30 +1,47 @@
-## sgnd tx gov submit-proposal pegged-pair-delete
+## sgnd tx gov submit-proposal farming-batch-adjust-reward
 
-Submit a pegged pair delete proposal
+Submit an batchAdjustRewardProposal
 
 ### Synopsis
 
+Submit a BatchAdjustRewardProposal along with an initial deposit.
+The proposal details must be supplied via a JSON file.
 
-proposal file is path to json like below
+Example:
+$ <appd> gov submit-proposal farming-batch-adjust-reward <path/to/proposal.json> --from=<key_or_address>
+
+Where proposal.json contains:
 {
-	"title": "peg bridge pair delete",
-	"description": "delete a pair",
-	"pair_to_delete": {
-		"orig": {
-			"address": "3ff73bab93c505809c68b0a8e4321a2713d9255c",
-			"chain_id": 883
-		},
-		"pegged": {
-			"address": "283ab9db53f25d84fa30915816ec53f8affaa86e",
-			"chain_id": 884
-		}
-    },
-	"deposit": "0"
+  "title": "cbridge-DAI/1 reward adjustment",
+  "description": "Add DAI reward for cbridge-DAI/1 and adjust CELR reward",
+  "adjust_reward_infos": [
+    {
+      "pool_name": "cbridge-DAI/1",
+      "reward_adjustment_inputs": [
+        {
+          "add_amount": {
+            "denom": "CELR/1",
+            "amount": "100000000000000000000000"
+          },
+          "reward_start_block_delay": 0,
+          "new_reward_amount_per_block": "500000000000000000"
+        },
+        {
+          "add_amount": {
+            "denom": "USDT/1",
+            "amount": "100000000000"
+          },
+          "reward_start_block_delay": 3,
+          "new_reward_amount_per_block": "1000000"
+        }
+      ]
+    }
+  ],
+  "deposit": "10000000CELR/stake"
 }
 
-
 ```
-sgnd tx gov submit-proposal pegged-pair-delete [proposal-file] [flags]
+sgnd tx gov submit-proposal farming-batch-adjust-reward [proposal-file] [flags]
 ```
 
 ### Options
@@ -40,7 +57,7 @@ sgnd tx gov submit-proposal pegged-pair-delete [proposal-file] [flags]
       --gas-adjustment float     adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
       --gas-prices string        Gas prices in decimal format to determine the transaction fee (e.g. 0.1uatom)
       --generate-only            Build an unsigned transaction and write it to STDOUT (when enabled, the local Keybase is not accessible)
-  -h, --help                     help for pegged-pair-delete
+  -h, --help                     help for farming-batch-adjust-reward
       --keyring-backend string   Select keyring's backend (os|file|kwallet|pass|test|memory) (default "os")
       --keyring-dir string       The client Keyring directory; if omitted, the default 'home' directory will be used
       --ledger                   Use a connected Ledger device
