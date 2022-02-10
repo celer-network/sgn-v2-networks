@@ -17,7 +17,7 @@ Before claiming any reward, make sure you have read and followed the [Validator 
 
 ## Claim cbridge fee
 
-Query all claimable cbridge fee, as well as token amount and token usd value:
+Query all claimable cbridge fee, as well as token amount and token value in usd:
 ```shell
 sgnd query cbridge fee-share <validator-eth-address>
 ```
@@ -51,7 +51,7 @@ If none obvious error happens, congratulations, we've done for claiming cbridge 
 
 The process of claiming pegbridge fee is very similar to claiming cbridge fee.
 
-Query all claimable cbridge fee, as well as token amount and token usd value:
+Query all claimable cbridge fee, as well as token amount and token value in usd:
 ```shell
 sgnd query pegbridge fee <validator-eth-address>
 ```
