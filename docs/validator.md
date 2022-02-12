@@ -64,8 +64,8 @@ groups and a keypair that you have access to.
 1. From the `/home/ubuntu` directory, download and install the `sgnd` binary:
 
     ```sh
-    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.6.0/sgnd-v1.6.0-goleveldb-linux-amd64.tar.gz | tar -xz
-    # To use with cleveldb on Ubuntu, download https://github.com/celer-network/sgn-v2-networks/releases/download/v1.6.0/sgnd-v1.6.0-cleveldb-ubuntu-linux-amd64.tar.gz
+    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.6.1/sgnd-v1.6.1-goleveldb-linux-amd64.tar.gz | tar -xz
+    # To use with cleveldb on Ubuntu, download https://github.com/celer-network/sgn-v2-networks/releases/download/v1.6.1/sgnd-v1.6.1-cleveldb-ubuntu-linux-amd64.tar.gz
     mv sgnd $GOBIN
     ```
 
@@ -272,9 +272,7 @@ In this mode it replays and verifies all historical transactions starting from g
 
 3. Send some ETH to the address of the **signer key** for gas.
 
-4. (Optional) If you intend to serve as relayer / syncer for cBridge cross-chain requests, send corresponding native tokens as gas to the signer key on each chain specified in `$HOME/.sgnd/config/cbridge.toml`. Relayers are expected to keep good RPC connection to and reserve sufficient gas on all supported chains. Due to the technical requirement and significant responsibility involved, new relayers are carefully vetted and added via governance.
-
-5. Initialize the validator. Here we set a commission rate of 6% and a minimal self delegation of 10000 CELR tokens.
+4. Initialize the validator. Here we set a commission rate of 6% and a minimal self delegation of 10000 CELR tokens.
 
     - **For validator key on local keystore JSON file**
 
@@ -318,14 +316,12 @@ In this mode it replays and verifies all historical transactions starting from g
 
       - Find the `SGN` contract on Etherscan using the **sgn** address taken from `eth.contract_addresses` in `$HOME/.sgnd/sgn.toml` and connect the validator address to "Write Contract".
 
-      - Find the `updateSgnAddr` method.
+      - Find the `updateSgnAddr` method. Run following command
 
-        For `sgnAddr`, go to https://slowli.github.io/bech32-buffer/, select the "Data" tab on the left hand side and paste the
-        **sgn-prefixed validator account address** into the "Encoded data" field on the right hand side.
-
-        Click "Decode" to decode the address into a hex string. For or example, `sgn1gl6484ghn586km0pjlrznk4mdjxqxteq5ukfqx` should decode to `47f553d5179d0fab6de197c629dabb6c8c032f20`.
-
-        Paste the decoded output into the `sgnAddr` field on Etherscan.
+        ```sh
+        sgnd ops validator address
+        ```
+        Paste the value after **sgn acct address in hex** into the `sgnAddr` field on Etherscan.
 
         Click "Write" and send the transaction.
 
@@ -335,9 +331,7 @@ In this mode it replays and verifies all historical transactions starting from g
     sgnd query staking validator <val-eth-address>
     ```
 
-    You should see that your validator has a `tokens` field matching your delegated CELR amount. Make a note of the `consensus_address` - the address prefixed with `sgnvalcons`.
-
-6. Update validator description:
+5. Update validator description:
 
     ```sh
     echo $COSMOS_KEYRING_PASSPHRASE | sgnd tx staking edit-description --website "your-website" --contact "email-address"
@@ -351,29 +345,17 @@ In this mode it replays and verifies all historical transactions starting from g
     sgnd query staking validator <val-eth-address>
     ```
 
-7. To become a bonded validator, your validator needs to have more CELR tokens delegated to it. Note that additional delegation does not need to come from the validator account, so feel free to use any key that holds CELR tokens.
+6. To become a bonded validator, your validator needs to have at least a certain amount (currently 10000, configured through onchain gov) of CELR tokens delegated to it. Note that additional delegation does not need to come from the validator account, so feel free to use any key that holds CELR tokens.
 
-    - **For validator key on local keystore JSON file**
+    - **Using CLI with local keystore JSON file**
 
       ```sh
       sgnd ops delegator delegate --validator <val-eth-address> --amount 50000 --keystore <path-to-keystore-file> --passphrase <ks-passphrase>
       ```
 
-    - **For validator key on MetaMask / hardware wallet**
+    - **Using staking web with MetaMask / hardware wallet**
 
-      First, approve CELR tokens to the `Staking` contract following the instructions in step 4.
-
-      Then, delegate to the validator:
-
-      - Find the staking contract on Etherscan and connect the validator address to "Write Contract".
-
-      - Find the `delegate` method.
-
-        For `valAddr`, put the address of the **validator key**.
-
-        For `tokens`, put the amount of CELR tokens to delegate times 1e18.
-
-        Click "Write" and send the transaction.
+      Connect your wallet to the SGN staking website ([testnet](https://sgn-partner-testnet.celer.network/#/staking), [mainnet]()), choose your validator node, and then follow the process after click the `Delegate` button.
 
     After a while, verify the status:
 
@@ -393,7 +375,7 @@ In this mode it replays and verifies all historical transactions starting from g
     sgnd query tendermint-validator-set
     ```
 
-    You should see an entry with `address` matching the `consensus_address` obtained in step 4.
+    You should see an entry with `address` matching the `sgn consensus address` printed as the output of command `sgnd ops validator address`.
 
     You can also verify the delegation:
 
@@ -401,19 +383,11 @@ In this mode it replays and verifies all historical transactions starting from g
     sgnd query staking delegation <val-eth-address> <val-eth-address>
     ```
 
-8. (Optional) Bond validator manually using the validator key
+7. (Optional) If something went wrong and your validator is not bonded automatically, you can do so manually through the following command
 
-    - **For validator key on local keystore JSON file**
-
-      ```sh
-      sgnd ops validator bond --validator <val-eth-address> --keystore ~/.sgnd/eth-ks/val.json --passphrase <val-ks-passphrase>
-      ```
-
-    - **For validator key on MetaMask / hardware wallet**
-
-      - Find the staking contract on Etherscan and connect the validator address to "Write Contract".
-
-      - Find the `bondValidator` method and click "Write" to send the transaction.
+    ```sh
+    sgnd ops validator bond
+    ```
 
     After a while, verify the status:
 
