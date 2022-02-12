@@ -39,9 +39,9 @@ touch claim_fee.txt
 // submit a sgn transaction
 echo $COSMOS_KEYRING_PASSPHRASE | sgnd tx cbridge validator-claim-fee --file claim_fee.txt
 // check withdrawal request status
-echo $COSMOS_KEYRING_PASSPHRASE | sgnd ops withdraw-cbr-fee --file claim_fee.txt --query
+echo $COSMOS_KEYRING_PASSPHRASE | sgnd ops validator withdraw-cbr-fee --file claim_fee.txt --query
 // waiting for status of all requests come to [WD_WAITING_FOR_LP]
-echo $COSMOS_KEYRING_PASSPHRASE | sgnd ops withdraw-cbr-fee --file claim_fee.txt
+echo $COSMOS_KEYRING_PASSPHRASE | sgnd ops validator withdraw-cbr-fee --file claim_fee.txt
 ```
 
 If none obvious error happens, congratulations, we've done for claiming cbridge fee.
@@ -73,9 +73,9 @@ touch claim_fee.txt
 // submit a sgn transaction
 echo $COSMOS_KEYRING_PASSPHRASE | sgnd tx pegbridge validator-claim-fee --file claim_fee.txt
 // check withdrawal request status
-echo $COSMOS_KEYRING_PASSPHRASE | sgnd ops withdraw-pegbr-fee --file claim_fee.txt --query
+echo $COSMOS_KEYRING_PASSPHRASE | sgnd ops validator withdraw-pegbr-fee --file claim_fee.txt --query
 // waiting for status of all requests come to [enough signatures]
-echo $COSMOS_KEYRING_PASSPHRASE | sgnd ops withdraw-pegbr-fee --file claim_fee.txt
+echo $COSMOS_KEYRING_PASSPHRASE | sgnd ops validator withdraw-pegbr-fee --file claim_fee.txt
 ```
 
 If none obvious error happens, congratulations, we've done for claiming pegbridge fee.
@@ -94,12 +94,12 @@ echo $COSMOS_KEYRING_PASSPHRASE | sgnd tx distribution claim-staking-reward <val
 
 Check claiming request status:
 ```shell
-sgnd ops claim-staking-reward --query
+sgnd ops validator claim-staking-reward --query
 ```
 
 Until your request status comes to `enough signatures`, then:
 ```shell
-sgnd ops claim-staking-reward
+sgnd ops validator claim-staking-reward
 ```
 
 If none obvious error happens, congratulations, we've done for claiming staking reward.

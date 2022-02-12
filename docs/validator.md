@@ -281,7 +281,7 @@ In this mode it replays and verifies all historical transactions starting from g
       Initialize using the command line:
 
       ```sh
-      sgnd ops init-validator --commission-rate 0.06 --min-self-delegation 10000 --keystore ~/.sgnd/eth-ks/val.json --passphrase <val-ks-passphrase>
+      sgnd ops validator init --commission-rate 0.06 --min-self-delegation 10000 --keystore ~/.sgnd/eth-ks/val.json --passphrase <val-ks-passphrase>
       ```
 
     - **For validator key on MetaMask / hardware wallet**
@@ -356,7 +356,7 @@ In this mode it replays and verifies all historical transactions starting from g
     - **For validator key on local keystore JSON file**
 
       ```sh
-      sgnd ops delegate --validator <val-eth-address> --amount 50000 --keystore <path-to-keystore-file> --passphrase <ks-passphrase>
+      sgnd ops delegator delegate --validator <val-eth-address> --amount 50000 --keystore <path-to-keystore-file> --passphrase <ks-passphrase>
       ```
 
     - **For validator key on MetaMask / hardware wallet**
@@ -406,7 +406,7 @@ In this mode it replays and verifies all historical transactions starting from g
     - **For validator key on local keystore JSON file**
 
       ```sh
-      sgnd ops bond-validator --validator <val-eth-address> --keystore ~/.sgnd/eth-ks/val.json --passphrase <val-ks-passphrase>
+      sgnd ops validator bond --validator <val-eth-address> --keystore ~/.sgnd/eth-ks/val.json --passphrase <val-ks-passphrase>
       ```
 
     - **For validator key on MetaMask / hardware wallet**
