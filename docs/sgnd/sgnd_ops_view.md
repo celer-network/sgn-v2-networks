@@ -1,6 +1,6 @@
 ## sgnd ops view
 
-Operation subcommands
+View staking status on ethereum
 
 ```
 sgnd ops view [flags]

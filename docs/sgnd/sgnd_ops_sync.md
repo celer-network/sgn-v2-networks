@@ -1,6 +1,6 @@
 ## sgnd ops sync
 
-Sync an event from onchain to sidechain
+Sync onchain (staking, bridge) states to sgnchain
 
 ```
 sgnd ops sync [flags]
