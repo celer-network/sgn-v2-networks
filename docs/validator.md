@@ -131,7 +131,7 @@ groups and a keypair that you have access to.
 
     The validator key can be prepared via one of the two ways:
 
-    - **Using a local keystore JSON file**
+    - **Using a local keystore JSON file** (easier setup)
 
       Currently, the advantage of a local keystore JSON is that operations can be done via the command line. However, it will require saving a passphrase in clear text on the machine running the node, so please be careful about access control.
 
@@ -148,7 +148,7 @@ groups and a keypair that you have access to.
       cp <path-to-keystore-json> $HOME/.sgnd/eth-ks/val.json
       ```
 
-    - **Using MetaMask / hardware wallet**
+    - **Using MetaMask / hardware wallet** (better security)
 
       This approach is more secure than a local keystore, but it will require interacting with the staking contract via Etherscan.
 
@@ -158,11 +158,11 @@ groups and a keypair that you have access to.
 
     The signer key can be prepared via one of the two ways:
 
-    - **Using a local keystore JSON file**
+    - **Using a local keystore JSON file** (easier setup)
 
       Follow the same steps as preparing the validator key. Save the JSON file as `$HOME/.sgnd/eth-ks/signer.json`.
 
-    - **Using AWS Key Management Service (KMS)**
+    - **Using AWS Key Management Service (KMS)** (better security)
 
       For better security, we support using AWS KMS to manage the signer key.
       Follow [this doc](aws_kms.md) to set it up.
@@ -261,18 +261,15 @@ In this mode it replays and verifies all historical transactions starting from g
 
 ## Claim validator status
 
-1. For testnet, obtain some Goerli ETH from places like the Paradigm
-[faucet](https://faucet.paradigm.xyz/). Contact the Celer team for some Goerli test CELR tokens.
+1. For testnet, obtain some Goerli ETH from places like the Paradigm [faucet](https://faucet.paradigm.xyz/). Contact the Celer team for some Goerli test CELR tokens.
 
     For mainnet, prepare real ETH and CELR tokens.
 
     For both networks, contact the Celer team to get whitelisted for a validator spot.
 
-2. Send ETH and CELR to the address of the **validator key**. Make sure it has enough CELR for the intended self delegation and some ETH for gas.
+2. Send enough CELR for the intended self delegation to your **validator address**, and some ETH for gas to both the **validator and signer addresses**.
 
-3. Send some ETH to the address of the **signer key** for gas.
-
-4. Initialize the validator. Here we set a commission rate of 6% and a minimal self delegation of 10000 CELR tokens.
+3. Initialize the validator. Example below sets a commission rate of 6% and a minimal self delegation of 10000 CELR tokens.
 
     - **For validator key on local keystore JSON file**
 
@@ -316,12 +313,9 @@ In this mode it replays and verifies all historical transactions starting from g
 
       - Find the `SGN` contract on Etherscan using the **sgn** address taken from `eth.contract_addresses` in `$HOME/.sgnd/sgn.toml` and connect the validator address to "Write Contract".
 
-      - Find the `updateSgnAddr` method. Run following command
+      - Find the `updateSgnAddr` method.
 
-        ```sh
-        sgnd ops validator address
-        ```
-        Paste the value after **sgn acct address in hex** into the `sgnAddr` field on Etherscan.
+        Run the command `sgnd ops validator address`, paste the output value after **sgn acct address in hex** into the `sgnAddr` field on Etherscan.
 
         Click "Write" and send the transaction.
 
@@ -331,7 +325,7 @@ In this mode it replays and verifies all historical transactions starting from g
     sgnd query staking validator <val-eth-address>
     ```
 
-5. Update validator description:
+4. Update validator description:
 
     ```sh
     echo $COSMOS_KEYRING_PASSPHRASE | sgnd tx staking edit-description --website "your-website" --contact "email-address"
@@ -345,7 +339,7 @@ In this mode it replays and verifies all historical transactions starting from g
     sgnd query staking validator <val-eth-address>
     ```
 
-6. To become a bonded validator, your validator needs to have at least a certain amount (currently 10000, configured through onchain gov) of CELR tokens delegated to it. Note that additional delegation does not need to come from the validator account, so feel free to use any key that holds CELR tokens.
+5. To become a bonded validator, your validator needs to have at least a certain amount (currently 10000, configured through onchain gov) of CELR tokens delegated to it. The additional delegation can come from any key that holds CELR tokens.
 
     - **Using CLI with local keystore JSON file**
 
@@ -365,10 +359,6 @@ In this mode it replays and verifies all historical transactions starting from g
 
     If you have delegated enough tokens to qualify as a bonded validator, you should see that your validator has the status of `BOND_STATUS_BONDED`.
 
-    NOTE: The Staking contract implements a basic decentralization check. If you somehow delegated too many CELR tokens so that your validator
-    has more than 2/3 of the total stakes, you will not be able to bond the validator. Contact the Celer team to resolve the situation and refer
-    to step 7 to bond the validator manually.
-
     You can verify that your validator is in the Tendermint validator set:
 
     ```sh
@@ -383,7 +373,9 @@ In this mode it replays and verifies all historical transactions starting from g
     sgnd query staking delegation <val-eth-address> <val-eth-address>
     ```
 
-7. (Optional) If something went wrong and your validator is not bonded automatically, you can do so manually through the following command
+    NOTE: The Staking contract implements a basic decentralization check. If you somehow delegated too many CELR tokens so that your validator has more than 1/3 of the total stakes, you will not be able to bond the validator. Contact the Celer team to resolve the situation and refer to next step to bond the validator manually.
+
+6. (Optional) If something went wrong and your validator is not bonded automatically, you can do so manually through the following command
 
     ```sh
     sgnd ops validator bond
