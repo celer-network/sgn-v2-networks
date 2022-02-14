@@ -34,10 +34,10 @@ cp ./ ~/.executor/
 cp <your-keystore-file> ~/.executor/eth-ks
 
 # extract the executor binary
-cp ../binaries/executor-v1.6.0.-dev.2-linux-amd64.tar.gz ~/.executor/
+cp ../binaries/executor-v1.6.0.-dev.1-linux-amd64.tar.gz ~/.executor/
 cd ~/.executor
-tar -xz executor-v1.6.0-dev.2-linux-amd64.tar.gz
-cp executor-v1.6.0-dev.2-linux-amd64 ~/usr/local/bin
+tar -xz executor-v1.6.0-dev.1-linux-amd64.tar.gz
+cp executor-v1.6.0-dev.1-linux-amd64 ~/usr/local/bin
 ```
 
 ### 2. Setup Executor's Database
