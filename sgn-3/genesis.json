@@ -1,0 +1,706 @@
+{
+  "genesis_time": "2021-12-01T00:00:00.00000Z",
+  "chain_id": "sgn-3",
+  "initial_height": "1",
+  "consensus_params": {
+    "block": {
+      "max_bytes": "22020096",
+      "max_gas": "-1",
+      "time_iota_ms": "1000"
+    },
+    "evidence": {
+      "max_age_num_blocks": "100000",
+      "max_age_duration": "172800000000000",
+      "max_bytes": "1048576"
+    },
+    "validator": {
+      "pub_key_types": ["ed25519"]
+    },
+    "version": {}
+  },
+  "app_hash": "",
+  "app_state": {
+    "auth": {
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      },
+      "accounts": [
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "sgn1gl6484ghn586km0pjlrznk4mdjxqxteq5ukfqx",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        }
+      ]
+    },
+    "bank": {
+      "params": {
+        "send_enabled": [],
+        "default_send_enabled": true
+      },
+      "balances": [
+        {
+          "address": "sgn1gl6484ghn586km0pjlrznk4mdjxqxteq5ukfqx",
+          "coins": [
+            {
+              "denom": "CELR/stake",
+              "amount": "10000"
+            }
+          ]
+        }
+      ],
+      "supply": [
+        {
+          "denom": "CELR/stake",
+          "amount": "10000"
+        }
+      ],
+      "denom_metadata": []
+    },
+    "cbridge": {
+      "params": {
+        "signer_update_duration": "86400s",
+        "sign_again_cool_down_duration": "600s"
+      },
+      "config": {
+        "lp_fee_perc": 100,
+        "assets": [
+          {
+            "symbol": "USDT",
+            "chain_id": 1,
+            "addr": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "decimal": 6,
+            "max_fee_amount": "10000000000",
+            "max_out_amt": "1000000000000"
+          },
+          {
+            "symbol": "USDC",
+            "chain_id": 1,
+            "addr": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "decimal": 6,
+            "max_fee_amount": "10000000000",
+            "max_out_amt": "1000000000000"
+          },
+          {
+            "symbol": "WETH",
+            "chain_id": 1,
+            "addr": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "decimal": 18,
+            "max_fee_amount": "2500000000000000000",
+            "max_out_amt": "200000000000000000000"
+          },
+          {
+            "symbol": "DODO",
+            "chain_id": 1,
+            "addr": "0x43Dfc4159D86F3A37A5A4B3D4580b888ad7d4DDd",
+            "decimal": 18,
+            "max_fee_amount": "8000000000000000000000",
+            "max_out_amt": "400000000000000000000000"
+          },
+          {
+            "symbol": "BUSD",
+            "chain_id": 1,
+            "addr": "0x4fabb145d64652a948d72533023f6e7a623c7c53",
+            "decimal": 18,
+            "max_fee_amount": "10000000000000000000000",
+            "max_out_amt": "1000000000000000000000000"
+          },
+          {
+            "symbol": "WETH",
+            "chain_id": 10,
+            "addr": "0x4200000000000000000000000000000000000006",
+            "decimal": 18,
+            "max_fee_amount": "2500000000000000000",
+            "max_out_amt": "200000000000000000000"
+          },
+          {
+            "symbol": "USDT",
+            "chain_id": 10,
+            "addr": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+            "decimal": 6,
+            "max_fee_amount": "10000000000",
+            "max_out_amt": "1000000000000"
+          },
+          {
+            "symbol": "USDC",
+            "chain_id": 10,
+            "addr": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+            "decimal": 6,
+            "max_fee_amount": "10000000000",
+            "max_out_amt": "1000000000000"
+          },
+          {
+            "symbol": "USDT",
+            "chain_id": 56,
+            "addr": "0x55d398326f99059ff775485246999027b3197955",
+            "decimal": 18,
+            "max_fee_amount": "10000000000000000000000",
+            "max_out_amt": "1000000000000000000000000"
+          },
+          {
+            "symbol": "USDC",
+            "chain_id": 56,
+            "addr": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+            "decimal": 18,
+            "max_fee_amount": "10000000000000000000000",
+            "max_out_amt": "1000000000000000000000000"
+          },
+          {
+            "symbol": "WETH",
+            "chain_id": 56,
+            "addr": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+            "decimal": 18,
+            "max_fee_amount": "2500000000000000000",
+            "max_out_amt": "200000000000000000000"
+          },
+          {
+            "symbol": "DODO",
+            "chain_id": 56,
+            "addr": "0x67ee3cb086f8a16f34bee3ca72fad36f7db929e2",
+            "decimal": 18,
+            "max_fee_amount": "8000000000000000000000",
+            "max_out_amt": "400000000000000000000000"
+          },
+          {
+            "symbol": "BUSD",
+            "chain_id": 56,
+            "addr": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+            "decimal": 18,
+            "max_fee_amount": "10000000000000000000000",
+            "max_out_amt": "1000000000000000000000000"
+          },
+          {
+            "symbol": "USDT",
+            "chain_id": 42161,
+            "addr": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+            "decimal": 6,
+            "max_fee_amount": "10000000000",
+            "max_out_amt": "1000000000000"
+          },
+          {
+            "symbol": "USDC",
+            "chain_id": 42161,
+            "addr": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+            "decimal": 6,
+            "max_fee_amount": "10000000000",
+            "max_out_amt": "1000000000000"
+          },
+          {
+            "symbol": "WETH",
+            "chain_id": 42161,
+            "addr": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+            "decimal": 18,
+            "max_fee_amount": "2500000000000000000",
+            "max_out_amt": "200000000000000000000"
+          },
+          {
+            "symbol": "DODO",
+            "chain_id": 42161,
+            "addr": "0x69eb4fa4a2fbd498c257c57ea8b7655a2559a581",
+            "decimal": 18,
+            "max_fee_amount": "8000000000000000000000",
+            "max_out_amt": "400000000000000000000000"
+          },
+          {
+            "symbol": "USDT",
+            "chain_id": 137,
+            "addr": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+            "decimal": 6,
+            "max_fee_amount": "10000000000",
+            "max_out_amt": "1000000000000"
+          },
+          {
+            "symbol": "USDC",
+            "chain_id": 137,
+            "addr": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+            "decimal": 6,
+            "max_fee_amount": "10000000000",
+            "max_out_amt": "1000000000000"
+          },
+          {
+            "symbol": "WETH",
+            "chain_id": 137,
+            "addr": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
+            "decimal": 18,
+            "max_fee_amount": "2500000000000000000",
+            "max_out_amt": "200000000000000000000"
+          },
+          {
+            "symbol": "USDT",
+            "chain_id": 43114,
+            "addr": "0xc7198437980c041c805A1EDcbA50c1Ce5db95118",
+            "decimal": 6,
+            "max_fee_amount": "10000000000",
+            "max_out_amt": "1000000000000"
+          },
+          {
+            "symbol": "USDC",
+            "chain_id": 43114,
+            "addr": "0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664",
+            "decimal": 6,
+            "max_fee_amount": "10000000000",
+            "max_out_amt": "1000000000000"
+          },
+          {
+            "symbol": "WETH",
+            "chain_id": 43114,
+            "addr": "0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB",
+            "decimal": 18,
+            "max_fee_amount": "2500000000000000000",
+            "max_out_amt": "200000000000000000000"
+          },
+          {
+            "symbol": "USDT",
+            "chain_id": 250,
+            "addr": "0x049d68029688eabf473097a2fc38ef61633a3c7a",
+            "decimal": 6,
+            "max_fee_amount": "10000000000",
+            "max_out_amt": "1000000000000"
+          },
+          {
+            "symbol": "USDC",
+            "chain_id": 250,
+            "addr": "0x04068da6c83afcfa0e13ba15a6696662335d5b75",
+            "decimal": 6,
+            "max_fee_amount": "10000000000",
+            "max_out_amt": "1000000000000"
+          },
+          {
+            "symbol": "WETH",
+            "chain_id": 250,
+            "addr": "0x74b23882a30290451A17c44f4F05243b6b58C76d",
+            "decimal": 18,
+            "max_fee_amount": "2500000000000000000",
+            "max_out_amt": "200000000000000000000"
+          }
+        ],
+        "chain_pairs": [
+          {
+            "chid1": 1,
+            "chid2": 56,
+            "weight1": 100,
+            "fee1to2": 400,
+            "fee2to1": 400,
+            "const_a": 5000
+          },
+          {
+            "chid1": 1,
+            "chid2": 42161,
+            "weight1": 100,
+            "fee1to2": 100,
+            "fee2to1": 1000,
+            "const_a": 2000
+          },
+          {
+            "chid1": 1,
+            "chid2": 137,
+            "weight1": 100,
+            "fee1to2": 400,
+            "fee2to1": 400,
+            "const_a": 5000
+          },
+          {
+            "chid1": 1,
+            "chid2": 43114,
+            "weight1": 100,
+            "fee1to2": 400,
+            "fee2to1": 400,
+            "const_a": 5000
+          },
+          {
+            "chid1": 1,
+            "chid2": 250,
+            "weight1": 100,
+            "fee1to2": 400,
+            "fee2to1": 400,
+            "const_a": 5000
+          },
+          {
+            "chid1": 1,
+            "chid2": 10,
+            "weight1": 100,
+            "fee1to2": 100,
+            "fee2to1": 2000,
+            "const_a": 2000
+          },
+          {
+            "chid1": 10,
+            "chid2": 56,
+            "weight1": 100,
+            "fee1to2": 2000,
+            "fee2to1": 100,
+            "const_a": 2000
+          },
+          {
+            "chid1": 10,
+            "chid2": 137,
+            "weight1": 100,
+            "fee1to2": 2000,
+            "fee2to1": 100,
+            "const_a": 2000
+          },
+          {
+            "chid1": 10,
+            "chid2": 250,
+            "weight1": 100,
+            "fee1to2": 2000,
+            "fee2to1": 100,
+            "const_a": 2000
+          },
+          {
+            "chid1": 10,
+            "chid2": 42161,
+            "weight1": 100,
+            "fee1to2": 2000,
+            "fee2to1": 100,
+            "const_a": 2000
+          },
+          {
+            "chid1": 10,
+            "chid2": 43114,
+            "weight1": 100,
+            "fee1to2": 2000,
+            "fee2to1": 100,
+            "const_a": 2000
+          },
+          {
+            "chid1": 56,
+            "chid2": 42161,
+            "weight1": 100,
+            "fee1to2": 100,
+            "fee2to1": 1000,
+            "const_a": 2000
+          },
+          {
+            "chid1": 56,
+            "chid2": 137,
+            "weight1": 100,
+            "fee1to2": 400,
+            "fee2to1": 400,
+            "const_a": 5000
+          },
+          {
+            "chid1": 56,
+            "chid2": 43114,
+            "weight1": 100,
+            "fee1to2": 400,
+            "fee2to1": 400,
+            "const_a": 5000
+          },
+          {
+            "chid1": 56,
+            "chid2": 250,
+            "weight1": 100,
+            "fee1to2": 400,
+            "fee2to1": 400,
+            "const_a": 5000
+          },
+          {
+            "chid1": 137,
+            "chid2": 42161,
+            "weight1": 100,
+            "fee1to2": 100,
+            "fee2to1": 1000,
+            "const_a": 2000
+          },
+          {
+            "chid1": 42161,
+            "chid2": 43114,
+            "weight1": 100,
+            "fee1to2": 1000,
+            "fee2to1": 100,
+            "const_a": 2000
+          },
+          {
+            "chid1": 250,
+            "chid2": 42161,
+            "weight1": 100,
+            "fee1to2": 100,
+            "fee2to1": 1000,
+            "const_a": 2000
+          },
+          {
+            "chid1": 137,
+            "chid2": 43114,
+            "weight1": 100,
+            "fee1to2": 400,
+            "fee2to1": 400,
+            "const_a": 5000
+          },
+          {
+            "chid1": 137,
+            "chid2": 250,
+            "weight1": 100,
+            "fee1to2": 400,
+            "fee2to1": 400,
+            "const_a": 5000
+          },
+          {
+            "chid1": 250,
+            "chid2": 43114,
+            "weight1": 100,
+            "fee1to2": 400,
+            "fee2to1": 400,
+            "const_a": 5000
+          }
+        ],
+        "relay_gas_cost": [
+          {
+            "chain_id": 1,
+            "cost_base": 105307,
+            "per_validator": 952,
+            "per_sig": 6825
+          },
+          {
+            "chain_id": 10,
+            "cost_base": 119895,
+            "per_validator": 951,
+            "per_sig": 9325
+          },
+          {
+            "chain_id": 56,
+            "cost_base": 99551,
+            "per_validator": 951,
+            "per_sig": 7423
+          },
+          {
+            "chain_id": 137,
+            "cost_base": 106823,
+            "per_validator": 952,
+            "per_sig": 6823
+          },
+          {
+            "chain_id": 250,
+            "cost_base": 105816,
+            "per_validator": 954,
+            "per_sig": 6823
+          },
+          {
+            "chain_id": 42161,
+            "cost_base": 1210757,
+            "per_validator": 58452,
+            "per_sig": 168728
+          },
+          {
+            "chain_id": 43114,
+            "cost_base": 106807,
+            "per_validator": 951,
+            "per_sig": 6822
+          }
+        ],
+        "cbr_contracts": [
+          {
+            "chain_id": 1,
+            "address": "0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820"
+          },
+          {
+            "chain_id": 10,
+            "address": "0x9D39Fc627A6d9d9F8C831c16995b209548cc3401"
+          },
+          {
+            "chain_id": 56,
+            "address": "0xdd90E5E87A2081Dcf0391920868eBc2FFB81a1aF"
+          },
+          {
+            "chain_id": 137,
+            "address": "0x88DCDC47D2f83a99CF0000FDF667A468bB958a78"
+          },
+          {
+            "chain_id": 250,
+            "address": "0x374B8a9f3eC5eB2D97ECA84Ea27aCa45aa1C57EF"
+          },
+          {
+            "chain_id": 42161,
+            "address": "0x1619DE6B6B20eD217a58d00f37B9d47C7663feca"
+          },
+          {
+            "chain_id": 43114,
+            "address": "0xef3c714c9425a8F3697A9C969Dc1af30ba82e5d4"
+          }
+        ]
+      },
+      "price": {
+        "update_epoch": 1634786000,
+        "asset_price": [
+          {
+            "symbol": "USDT",
+            "price": 10000
+          },
+          {
+            "symbol": "USDC",
+            "price": 10000
+          },
+          {
+            "symbol": "WETH",
+            "chain_ids": [1, 10, 42161],
+            "price": 46000000
+          },
+          {
+            "symbol": "BNB",
+            "chain_ids": [56],
+            "price": 5702700
+          },
+          {
+            "symbol": "MATIC",
+            "chain_ids": [137],
+            "price": 15000
+          },
+          {
+            "symbol": "AVAX",
+            "chain_ids": [43114],
+            "price": 944600
+          },
+          {
+            "symbol": "FTM",
+            "chain_ids": [250],
+            "price": 21000
+          }
+        ],
+        "gas_price": [
+          {
+            "chain_id": 1,
+            "price": "140000000000"
+          },
+          {
+            "chain_id": 56,
+            "price": "500000000"
+          },
+          {
+            "chain_id": 42161,
+            "price": "500000000"
+          },
+          {
+            "chain_id": 137,
+            "price": "500000000"
+          },
+          {
+            "chain_id": 43114,
+            "price": "500000000"
+          },
+          {
+            "chain_id": 250,
+            "price": "500000000"
+          }
+        ]
+      }
+    },
+    "distribution": {
+      "params": {
+        "community_tax": "0.000000000000000000",
+        "base_proposer_reward": "0.010000000000000000",
+        "bonus_proposer_reward": "0.040000000000000000",
+        "withdraw_addr_enabled": false,
+        "claim_cooldown": "60s",
+        "reward_contract": {
+          "chain_id": 1,
+          "address": "0xb01fd7Bc0B3c433e313bf92daC09FF3942212b42"
+        }
+      },
+      "fee_pool": {
+        "community_pool": []
+      },
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "",
+      "outstanding_rewards": [],
+      "validator_accumulated_commissions": [],
+      "validator_historical_rewards": [],
+      "validator_current_rewards": [],
+      "delegator_starting_infos": []
+    },
+    "farming": {
+      "params": {
+        "claim_cooldown": "60s"
+      },
+      "pool_current_rewards": [],
+      "pool_historical_rewards": [],
+      "pools": [],
+      "reward_contracts": [
+        {
+          "chain_id": 1,
+          "address": "0x61f85fF2a2f4289Be4bb9B72Fc7010B3142B5f41"
+        }
+      ]
+    },
+    "gov": {
+      "starting_proposal_id": "1",
+      "deposits": [],
+      "votes": [],
+      "proposals": [],
+      "deposit_params": {
+        "min_deposit": "0",
+        "max_deposit_period": "120s"
+      },
+      "voting_params": {
+        "voting_period": "300s"
+      },
+      "tally_params": {
+        "quorum": "0.334000000000000000",
+        "threshold": "0.500000000000000000",
+        "veto": "0.334000000000000000"
+      }
+    },
+    "mint": {
+      "minter": {
+        "annual_provisions": "0"
+      },
+      "params": {
+        "mint_denom": "CELR/reward",
+        "blocks_per_year": "6311520"
+      }
+    },
+    "params": null,
+    "slashing": {
+      "params": {
+        "enable_slash": false,
+        "signed_blocks_window": "1000",
+        "slash_timeout": "150000",
+        "slash_factor_double_sign": "50000",
+        "slash_factor_downtime": "10000",
+        "jail_period": "0",
+        "min_signed_per_window": "0.500000000000000000",
+        "staking_contract": {
+          "chain_id": 1,
+          "address": "0x8a4B4C2aCAdeAa7206Df96F00052e41d74a015CE"
+        }
+      },
+      "slashes": [],
+      "slash_nonce": "0"
+    },
+    "staking": {
+      "params": {
+        "syncer_duration": "180"
+      },
+      "syncer": null,
+      "validators": [
+        {
+          "eth_address": "0x0023d2bf86c22BA127c578d4d59773766fC60258",
+          "eth_signer": "0xA58988e42413763A13D25B465A01B06666dc7D19",
+          "sgn_address": "sgn1gl6484ghn586km0pjlrznk4mdjxqxteq5ukfqx",
+          "consensus_pubkey": {
+            "@type": "/cosmos.crypto.ed25519.PubKey",
+            "key": "OB3Bp19mKvyLTcgaqxD26ZbdFyrLZej3pnOOO9xWGXk="
+          },
+          "status": "BOND_STATUS_BONDED",
+          "tokens": "1000000000000",
+          "delegator_shares": "1000000000000",
+          "commission_rate": "0",
+          "description": null
+        }
+      ],
+      "delegations": []
+    },
+    "sync": {
+      "params": {
+        "voting_period": "600",
+        "tally_threshold": "0.667000000000000000"
+      },
+      "start_update_id": "0"
+    },
+    "upgrade": {}
+  }
+}
