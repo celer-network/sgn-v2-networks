@@ -22,6 +22,11 @@ farming_rewards = "0x61f85fF2a2f4289Be4bb9B72Fc7010B3142B5f41"
 govern = "0xea129aE043C4cB73DcB241AAA074F9E667641BA0"
 viewer = "0x5803457E3074E727FA7F9aED60454bf2F127853b"
 
+[eth.check_interval]
+validator_notice = 3
+validator_status_update = 3
+delegation_update = 2
+
 [log]
 color = false
 level = "debug"
