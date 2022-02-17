@@ -1,15 +1,15 @@
-## sgnd ops view delegator
+## sgnd ops view params
 
-Get delegator info from eth staking contract
+Get staking contract params
 
 ```
-sgnd ops view delegator [delegator-eth-addr] [flags]
+sgnd ops view params [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help   help for delegator
+  -h, --help   help for params
 ```
 
 ### SEE ALSO
