@@ -264,14 +264,14 @@ In this mode it replays and verifies all historical transactions starting from g
 1. Contact the Celer team to get whitelisted for a validator spot.
 
 2. Run `sgnd ops view params` to check the staking contract parameters. Take notes of the following two values:
-    - `Min validator tokens`: the minimum delegated tokens to become a bonded valdiator.
-    - `Min self delegations`: the minimum self-delegated tokens become a bonded valdiator.
+    - `Min validator tokens`: the minimum delegated tokens to become a bonded validator.
+    - `Min self delegations`: the minimum self-delegated tokens become a bonded validator.
 
 3. Send enough CELR for the intended self delegation to your **validator address**, and some ETH for gas to both the **validator and signer addresses**.
 
     For testnet, obtain some Goerli ETH from places like the Paradigm [faucet](https://faucet.paradigm.xyz/). Contact the Celer team for some Goerli test CELR tokens.
 
-4. Initialize the validator by calling [initializeValidator](https://github.com/celer-network/sgn-v2-contracts/blob/main/contracts/Staking.sol#L94-L104) on the staking contract and [updateSgnAddr](https://github.com/celer-network/sgn-v2-contracts/blob/main/contracts/SGN.sol#L42) on the sgn contract. 
+4. Initialize the validator by calling [initializeValidator](https://github.com/celer-network/sgn-v2-contracts/blob/main/contracts/Staking.sol#L94-L104) on the staking contract and [updateSgnAddr](https://github.com/celer-network/sgn-v2-contracts/blob/main/contracts/SGN.sol#L42) on the sgn contract.
 
     Example below sets a `_commissionRate` of 6% and `_minSelfDelegation` (must be equal or greater than the `min self delegations` value obtained at step 2) of 10000 CELR.
 
@@ -353,7 +353,7 @@ In this mode it replays and verifies all historical transactions starting from g
 
       Connect your wallet to the SGN staking website ([testnet](https://sgn-partner-testnet.celer.network/#/staking), [mainnet]()), choose your validator node, and then follow the process after click the `Delegate` button.
 
-7. Verify validator status. Run following command a few minutes after your validator has enough delegations. 
+7. Verify validator status. Run following command a few minutes after your validator has enough delegations.
 
     ```sh
     sgnd query staking validator <val-eth-address>
