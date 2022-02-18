@@ -64,8 +64,8 @@ groups and a keypair that you have access to.
 1. From the `/home/ubuntu` directory, download and install the `sgnd` binary:
 
     ```sh
-    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.6.1/sgnd-v1.6.1-goleveldb-linux-amd64.tar.gz | tar -xz
-    # To use with cleveldb on Ubuntu, download https://github.com/celer-network/sgn-v2-networks/releases/download/v1.6.1/sgnd-v1.6.1-cleveldb-ubuntu-linux-amd64.tar.gz
+    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.6.2/sgnd-v1.6.2-goleveldb-linux-amd64.tar.gz | tar -xz
+    # To use with cleveldb on Ubuntu, download https://github.com/celer-network/sgn-v2-networks/releases/download/v1.6.2/sgnd-v1.6.2-cleveldb-ubuntu-linux-amd64.tar.gz
     mv sgnd $GOBIN
     ```
 
@@ -261,25 +261,27 @@ In this mode it replays and verifies all historical transactions starting from g
 
 ## Claim validator status
 
-1. For testnet, obtain some Goerli ETH from places like the Paradigm [faucet](https://faucet.paradigm.xyz/). Contact the Celer team for some Goerli test CELR tokens.
+1. Contact the Celer team to get whitelisted for a validator spot.
 
-    For mainnet, prepare real ETH and CELR tokens.
+2. Run `sgnd ops view params` to check the staking contract parameters. Take notes of the following two values:
+    - `Min validator tokens`: the minimum delegated tokens to become a bonded valdiator.
+    - `Min self delegations`: the minimum self-delegated tokens become a bonded valdiator.
 
-    For both networks, contact the Celer team to get whitelisted for a validator spot.
+3. Send enough CELR for the intended self delegation to your **validator address**, and some ETH for gas to both the **validator and signer addresses**.
 
-2. Send enough CELR for the intended self delegation to your **validator address**, and some ETH for gas to both the **validator and signer addresses**.
+    For testnet, obtain some Goerli ETH from places like the Paradigm [faucet](https://faucet.paradigm.xyz/). Contact the Celer team for some Goerli test CELR tokens.
 
-3. Initialize the validator. Example below sets a commission rate of 6% and a minimal self delegation of 10000 CELR tokens.
+4. Initialize the validator by calling [initializeValidator](https://github.com/celer-network/sgn-v2-contracts/blob/main/contracts/Staking.sol#L94-L104) on the staking contract and [updateSgnAddr](https://github.com/celer-network/sgn-v2-contracts/blob/main/contracts/SGN.sol#L42) on the sgn contract. 
 
-    - **For validator key on local keystore JSON file**
+    Example below sets a `_commissionRate` of 6% and `_minSelfDelegation` (must be equal or greater than the `min self delegations` value obtained at step 2) of 10000 CELR.
 
-      Initialize using the command line:
+    - **For validator key on local keystore JSON file**: use command line
 
       ```sh
       sgnd ops validator init --commission-rate 0.06 --min-self-delegation 10000 --keystore ~/.sgnd/eth-ks/val.json --passphrase <val-ks-passphrase>
       ```
 
-    - **For validator key on MetaMask / hardware wallet**
+    - **For validator key on MetaMask / hardware wallet**: interact through etherscan.
 
       First, approve CELR tokens to the `Staking` contract:
 
@@ -325,13 +327,13 @@ In this mode it replays and verifies all historical transactions starting from g
     sgnd query staking validator <val-eth-address>
     ```
 
-4. Update validator description:
+5. Update validator description:
 
     ```sh
     echo $COSMOS_KEYRING_PASSPHRASE | sgnd tx staking edit-description --website "your-website" --contact "email-address"
     ```
 
-    Note that `COSMOS_KEYRING_PASSPHRASE` here is the passphrase for the keyring used in `sgnd keys add`, not the ones for the Ethereum JSON files.
+    Note that `COSMOS_KEYRING_PASSPHRASE` here is the passphrase for the keyring used in `sgnd keys add`.
 
     After a while, verify the updated description:
 
@@ -339,19 +341,19 @@ In this mode it replays and verifies all historical transactions starting from g
     sgnd query staking validator <val-eth-address>
     ```
 
-5. To become a bonded validator, your validator needs to have at least a certain amount (currently 10000, configured through onchain gov) of CELR tokens delegated to it. The additional delegation can come from any key that holds CELR tokens.
+6. Delegate more tokens if your `_minSelfDelegation` is smaller than `min validator tokens` value obtained at step 2. The additional delegation can come from any key.
 
     - **Using CLI with local keystore JSON file**
 
       ```sh
-      sgnd ops delegator delegate --validator <val-eth-address> --amount 50000 --keystore <path-to-keystore-file> --passphrase <ks-passphrase>
+      sgnd ops delegator delegate --validator <val-eth-address> --amount <amount> --keystore <path-to-keystore-file> --passphrase <ks-passphrase>
       ```
 
     - **Using staking web with MetaMask / hardware wallet**
 
       Connect your wallet to the SGN staking website ([testnet](https://sgn-partner-testnet.celer.network/#/staking), [mainnet]()), choose your validator node, and then follow the process after click the `Delegate` button.
 
-    After a while, verify the status:
+7. Verify validator status. Run following command a few minutes after your validator has enough delegations. 
 
     ```sh
     sgnd query staking validator <val-eth-address>
@@ -365,7 +367,7 @@ In this mode it replays and verifies all historical transactions starting from g
     sgnd query tendermint-validator-set
     ```
 
-    You should see an entry with `address` matching the `sgn consensus address` printed as the output of command `sgnd ops validator address`.
+    You should see an entry with `address` matching the `sgn consensus address` printed as the output of `sgnd ops validator address`.
 
     You can also verify the delegation:
 
@@ -375,7 +377,7 @@ In this mode it replays and verifies all historical transactions starting from g
 
     NOTE: The Staking contract implements a basic decentralization check. If you somehow delegated too many CELR tokens so that your validator has more than 1/3 of the total stakes, you will not be able to bond the validator. Contact the Celer team to resolve the situation and refer to next step to bond the validator manually.
 
-6. (Optional) If something went wrong and your validator is not bonded automatically, you can do so manually through the following command
+8. (Optional) If something went wrong and your validator is not bonded automatically, you can do so manually through the following command
 
     ```sh
     sgnd ops validator bond
