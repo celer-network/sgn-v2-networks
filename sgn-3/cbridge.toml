@@ -16,7 +16,8 @@ delegation_update = 20
 [[multichain]]
 chainID = 1
 name = "Ethereum mainnet"
-gateway = ""
+# Private gateway endpoint recommended
+gateway = "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
 blkinterval = 15
 blkdelay = 8
 forwardblkdelay = 5
@@ -28,7 +29,8 @@ addgasestimateratio = 0.6
 [[multichain]]
 chainID = 56
 name = "BSC"
-gateway = ""
+# Private gateway endpoint recommended
+gateway = "https://bsc-dataseed.binance.org"
 blkinterval = 15
 blkdelay = 20
 forwardblkdelay = 50
@@ -42,7 +44,8 @@ addgasestimateratio = 0.3
 [[multichain]]
 chainID = 42161
 name = "Arbitrum"
-gateway = ""
+# Private gateway endpoint recommended
+gateway = "https://arb1.arbitrum.io/rpc"
 blkinterval = 10
 blkdelay = 1
 forwardblkdelay = 500
@@ -55,7 +58,8 @@ addgasestimateratio = 0.3
 [[multichain]]
 chainID = 137
 name = "Polygon"
-gateway = ""
+# Private gateway endpoint recommended
+gateway = "https://polygon-rpc.com"
 blkinterval = 15
 blkdelay = 80
 forwardblkdelay = 50
@@ -80,7 +84,8 @@ addgasestimateratio = 0.3
 [[multichain]]
 chainID = 250
 name = "Fantom"
-gateway = ""
+# Private gateway endpoint recommended
+gateway = "https://rpc.ftm.tools"
 blkinterval = 10
 blkdelay = 30
 maxblkdelta = 10000
@@ -94,7 +99,8 @@ addgasestimateratio = 0.3
 [[multichain]]
 chainID = 10
 name = "Optimism"
-gateway = ""
+# Private gateway endpoint recommended
+gateway = "https://mainnet.optimism.io"
 blkinterval = 10
 blkdelay = 1
 forwardblkdelay = 50
