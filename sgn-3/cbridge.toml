@@ -176,7 +176,7 @@ addgasestimateratio = 0.3
 [[multichain]]
 chainID = 1285
 name = "Moonriver"
-gateway = "https://rpc.moonriver.moonbeam.network"
+gateway = "https://rpc.api.moonriver.moonbeam.network"
 blkinterval = 20
 blkdelay = 6
 forwardblkdelay = 200
