@@ -276,7 +276,7 @@ addgasestimateratio = 0.3
 [[multichain]]
 chainID = 336
 name = "ShidenNetworkMainnet"
-gateway = "https://rpc.shiden.astar.network:8545"
+gateway = "https://shiden.api.onfinality.io/public"
 blkinterval = 20
 blkdelay = 6
 maxblkdelta = 300
