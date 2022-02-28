@@ -125,7 +125,7 @@ addgasestimateratio = 0.3
 [[multichain]]
 chainID = 1666600000
 name = "Harmony"
-gateway = "https://api.harmony.one"
+gateway = "https://harmony-0-rpc.gateway.pokt.network"
 blkinterval = 10
 blkdelay = 15
 forwardblkdelay = 500
