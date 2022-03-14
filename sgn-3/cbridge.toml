@@ -78,6 +78,7 @@ gateway = "https://rpc.ankr.com/avalanche"
 blkinterval = 15
 blkdelay = 15
 forwardblkdelay = 50
+maxblkdelta = 3000
 cbridge = "0xef3c714c9425a8F3697A9C969Dc1af30ba82e5d4"
 otvault = "0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820"
 ptbridge = "0x88DCDC47D2f83a99CF0000FDF667A468bB958a78"
