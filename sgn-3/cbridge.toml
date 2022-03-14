@@ -72,7 +72,9 @@ addgasestimateratio = 0.3
 [[multichain]]
 chainID = 43114
 name = "Avalanche"
-gateway = "https://api.avax.network/ext/bc/C/rpc"
+# Private gateway endpoint recommended
+gateway = "https://rpc.ankr.com/avalanche"
+# gateway = "https://api.avax.network/ext/bc/C/rpc"
 blkinterval = 15
 blkdelay = 15
 forwardblkdelay = 50
