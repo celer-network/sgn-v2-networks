@@ -17,9 +17,7 @@ If you only intend to run an SGN node to sync and verify the blocks, stop after 
 
 We run on Ubuntu Linux amd64 with Amazon EC2 as an example. Feel free to experiment with other VPS or physical server setups on your own.
 
-1. Start an EC2 machine with the Ubuntu 20.04 LTS image. We recommend using `c5a.xlarge` (4 vCPUs, 8GB RAM and 10Gbps network bandwidth) with an EBS volume of at least
-100GB for testnet and `c5a.2xlarge` (8 vCPUs, 16GB RAM and 10Gbps network bandwidth) with an EBS volume of at least 500GB for mainnet. Use the appropriate security
-groups and a keypair that you have access to.
+1. Start an EC2 machine with the Ubuntu 20.04 LTS image. We recommend using `c6a.2xlarge` if available in the region or `c5.2xlarge` (8 vCPUs, 16GB RAM and 10Gbps network bandwidth) with an EBS volume of at least 500GB. Use the appropriate security groups and a keypair that you have access to.
 
 2. Install go (at least 1.16):
 
