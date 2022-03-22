@@ -14,4 +14,4 @@ Please refer to the [instructions](./docs/) to see how to [run a validator](./do
 Feel free to try out cBridge and SGN functionalities via the frontend UIs:
 
 - Testnet: [cBridge](https://cbridge-partner-testnet.celer.network/), [SGN staking](https://sgn-partner-testnet.celer.network/)
-- Mainnet: [cBridge](https://cbridge.celer.network/)
+- Mainnet: [cBridge](https://cbridge.celer.network/), [SGN staking](https://sgn.celer.network/)
