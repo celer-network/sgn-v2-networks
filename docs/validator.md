@@ -87,7 +87,10 @@ We run on Ubuntu Linux amd64 with Amazon EC2 as an example. Feel free to experim
     `node-name` is a name you specify for the node.
 
     ```sh
-    sgnd init <node-name> --chain-id <network-name> --home $HOME/.sgnd
+    # Remove existing genesis.json first
+    rm $HOME/.sgnd/config/genesis.json
+    # Initialize default genesis.json and config.toml
+    sgnd init <node-name> --chain-id.toml<network-name> --home $HOME/.sgnd
     # Overwrite genesis.json and config.toml with the ones from sgn-v2-networks
     cp genesis.json config.toml $HOME/.sgnd/config
     # Create an empty Tendermint snapshots directory
