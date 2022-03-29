@@ -272,7 +272,7 @@ In this mode it replays and verifies all historical transactions starting from g
 
     For testnet, obtain some Goerli ETH from places like the Paradigm [faucet](https://faucet.paradigm.xyz/). Contact the Celer team for some Goerli test CELR tokens.
 
-4. Initialize the validator by calling [initializeValidator](https://github.com/celer-network/sgn-v2-contracts/blob/main/contracts/Staking.sol#L94-L104) on the staking contract and [updateSgnAddr](https://github.com/celer-network/sgn-v2-contracts/blob/main/contracts/SGN.sol#L42) on the sgn contract.
+4. Initialize the validator by calling [initializeValidator](https://github.com/celer-network/sgn-v2-contracts/blob/448974bb9dd5d2737385a688c4d043ee486e511c/contracts/staking/Staking.sol#L100) on the `Staking` contract and [updateSgnAddr](https://github.com/celer-network/sgn-v2-contracts/blob/448974bb9dd5d2737385a688c4d043ee486e511c/contracts/staking/SGN.sol#L42) on the `SGN` contract.
 
     Example below sets a `_commissionRate` of 6% and `_minSelfDelegation` (must be equal or greater than the `min self delegations` value obtained at step 2) of 10000 CELR.
 
