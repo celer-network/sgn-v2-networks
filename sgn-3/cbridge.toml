@@ -39,6 +39,7 @@ cbridge = "0xdd90E5E87A2081Dcf0391920868eBc2FFB81a1aF"
 otvault = "0x78bc5Ee9F11d133A08b331C2e18fE81BE0Ed02DC"
 ptbridge = "0xd443FE6bf23A4C9B78312391A30ff881a097580E"
 addgasgwei = 2
+mingasgwei = 5
 addgasestimateratio = 0.3
 
 [[multichain]]
