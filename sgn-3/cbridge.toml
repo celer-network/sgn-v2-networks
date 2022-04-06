@@ -25,6 +25,7 @@ cbridge = "0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820"
 otvault = "0xB37D31b2A74029B5951a2778F959282E2D518595"
 ptbridge = "0x16365b45EB269B5B5dACB34B4a15399Ec79b95eB"
 addgasestimateratio = 0.6
+maxfeepergasgwei = 500
 
 [[multichain]]
 chainID = 56
