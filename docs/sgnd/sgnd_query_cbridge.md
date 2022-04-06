@@ -29,6 +29,8 @@ sgnd query cbridge [flags]
 * [sgnd query cbridge getany](sgnd_query_cbridge_getany.md)	 - Query any kv value for given full key
 * [sgnd query cbridge latest-signers](sgnd_query_cbridge_latest-signers.md)	 - Query the latest signers
 * [sgnd query cbridge liqsum](sgnd_query_cbridge_liqsum.md)	 - Query liq sum of chain,token, return both liqsum and itersum over lm- keys
+* [sgnd query cbridge lp-balance](sgnd_query_cbridge_lp-balance.md)	 - Query lp balance for a certain token
+* [sgnd query cbridge lp-origin](sgnd_query_cbridge_lp-origin.md)	 - Query lp original chain id
 * [sgnd query cbridge params](sgnd_query_cbridge_params.md)	 - Query the current cbridge parameters information
 * [sgnd query cbridge transfer](sgnd_query_cbridge_transfer.md)	 - Query transfer info
 * [sgnd query cbridge withdraw](sgnd_query_cbridge_withdraw.md)	 - Query withdraw info

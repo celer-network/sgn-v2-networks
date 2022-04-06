@@ -14,6 +14,7 @@ sgnd ops bridge submit-relay [flags]
 ### Options
 
 ```
+      --gasprice uint   force gas price in gwei
   -h, --help            help for submit-relay
       --xferid string   transferId, used to retry submit relay
 ```

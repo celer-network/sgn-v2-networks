@@ -24,6 +24,7 @@ sgnd query [flags]
 * [sgnd query distribution](sgnd_query_distribution.md)	 - Querying commands for the distribution module
 * [sgnd query farming](sgnd_query_farming.md)	 - Querying commands for the farming module
 * [sgnd query gov](sgnd_query_gov.md)	 - Querying commands for the governance module
+* [sgnd query message](sgnd_query_message.md)	 - Querying commands for the message module
 * [sgnd query mint](sgnd_query_mint.md)	 - Querying commands for the minting module
 * [sgnd query params](sgnd_query_params.md)	 - Querying commands for the params module
 * [sgnd query pegbridge](sgnd_query_pegbridge.md)	 - Querying commands for the pegbridge module

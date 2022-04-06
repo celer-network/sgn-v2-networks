@@ -75,6 +75,7 @@ sgnd tx gov submit-proposal [flags]
 * [sgnd tx gov submit-proposal farming-batch-add-pool](sgnd_tx_gov_submit-proposal_farming-batch-add-pool.md)	 - Submit a BatchAddPoolProposal
 * [sgnd tx gov submit-proposal farming-batch-adjust-reward](sgnd_tx_gov_submit-proposal_farming-batch-adjust-reward.md)	 - Submit an batchAdjustRewardProposal
 * [sgnd tx gov submit-proposal farming-set-reward-contracts](sgnd_tx_gov_submit-proposal_farming-set-reward-contracts.md)	 - Submit an SetRewardContractsProposal
+* [sgnd tx gov submit-proposal message-update](sgnd_tx_gov_submit-proposal_message-update.md)	 - Submit a message buses update proposal
 * [sgnd tx gov submit-proposal mint-adjust-provisions](sgnd_tx_gov_submit-proposal_mint-adjust-provisions.md)	 - Submit an AdjustProvisionsProposal
 * [sgnd tx gov submit-proposal param-change](sgnd_tx_gov_submit-proposal_param-change.md)	 - Submit a parameter change proposal
 * [sgnd tx gov submit-proposal pegbridge-change](sgnd_tx_gov_submit-proposal_pegbridge-change.md)	 - Submit a pegbridge config change proposal

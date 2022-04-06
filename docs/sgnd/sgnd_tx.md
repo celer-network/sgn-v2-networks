@@ -26,6 +26,7 @@ sgnd tx [flags]
 * [sgnd tx encode](sgnd_tx_encode.md)	 - Encode transactions generated offline
 * [sgnd tx farming](sgnd_tx_farming.md)	 - farming transactions subcommands
 * [sgnd tx gov](sgnd_tx_gov.md)	 - Governance transactions subcommands
+* [sgnd tx message](sgnd_tx_message.md)	 - message transactions subcommands
 * [sgnd tx mint](sgnd_tx_mint.md)	 - mint transactions subcommands
 * [sgnd tx multisign](sgnd_tx_multisign.md)	 - Generate multisig signatures for transactions generated offline
 * [sgnd tx multisign-batch](sgnd_tx_multisign-batch.md)	 - Assemble multisig transactions in batch from batch signatures
