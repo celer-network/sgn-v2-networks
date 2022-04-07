@@ -8,7 +8,7 @@ Prior experience with Cosmos SDK and Ethereum transactions will be helpful.**
 ## Table of Contents
 - [Prepare machine and install dependencies](#prepare-machine-and-install-dependencies)
 - [Setup binary, config and accounts](#setup-binary-config-and-accounts)
-- [Run node with systemd](#run-node-with-systemd)
+- [Run validator with systemd](#run-validator-with-systemd)
 - [Claim validator status](#claim-validator-status)
 
 If you only intend to run an SGN node to sync and verify the blocks, stop after [run node with systemd](#run-validator-with-systemd).
