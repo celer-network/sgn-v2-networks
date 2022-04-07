@@ -358,3 +358,14 @@ cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
 addgasestimateratio = 0.3
 proxyport = 10307
+
+[[multichain]]
+chainID = 12340001
+name = "Flow Mainnet"
+gateway = "access.mainnet.nodes.onflow.org:9000"
+blkinterval = 0
+blkdelay = 0
+maxblkdelta = 240
+cbridge = "08dd120226ec2213"
+otvault = "08dd120226ec2213"
+ptbridge = "08dd120226ec2213"
