@@ -34,19 +34,28 @@ nodes.
 
 1. Install `jq` if necessary.
 
-2. Query for a trusted block height and hash from an up-to-date node:
-
-    Eg.:
+2. Query for a trusted block height and hash from an up-to-date node. First, query for the most recent block:
 
     ```sh
     curl -s http://<up-to-date-node-ip>:26657/block | \
+      jq -r '.result.block.header.height
+    ```
+
+    The command should print a block height and hash like `2077077`.
+
+    Given that Celer foundation nodes take a snapshot every 1000 blocks, to speedup state-sync, you
+    can set the trusted block height to the last multiple of 1000. Query for the block hash at that
+    block:
+
+    ```sh
+    curl -s http://<up-to-date-node-ip>:26657/block?height=<latest-snapshot-height> | \
       jq -r '.result.block.header.height + "\n" + .result.block_id.hash'
     ```
 
     The command should print a block height and hash like:
 
     ```
-    1964
+    2077000
     6FD28DAAAC79B77F589AE692B6CD403412CE27D0D2629E81951607B297696E5B
     ```
 
@@ -56,7 +65,7 @@ nodes.
     [statesync]
     enable = true
     rpc_servers = "<up-to-date-node-A-ip>:26657,<up-to-date-node-B-ip>:26657"
-    trust_height = 1964 # <trusted-block-height>
+    trust_height = 2077000 # <trusted-block-height>
     trust_hash = "6FD28DAAAC79B77F589AE692B6CD403412CE27D0D2629E81951607B297696E5B" # <trusted-block-hash>
     trust_period = "6h" # Recommended to be about 2/3 of unbonding time
     ```
