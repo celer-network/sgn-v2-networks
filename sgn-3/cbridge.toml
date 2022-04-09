@@ -24,6 +24,7 @@ forwardblkdelay = 5
 cbridge = "0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820"
 otvault = "0xB37D31b2A74029B5951a2778F959282E2D518595"
 ptbridge = "0x16365b45EB269B5B5dACB34B4a15399Ec79b95eB"
+msgbus = "0x4066d196a423b2b3b8b054f4f40efb47a74e200c"
 addgasestimateratio = 0.6
 maxfeepergasgwei = 500
 
@@ -39,6 +40,7 @@ maxblkdelta = 5000
 cbridge = "0xdd90E5E87A2081Dcf0391920868eBc2FFB81a1aF"
 otvault = "0x78bc5Ee9F11d133A08b331C2e18fE81BE0Ed02DC"
 ptbridge = "0xd443FE6bf23A4C9B78312391A30ff881a097580E"
+msgbus = "0x95714818fdd7a5454f73da9c777b3ee6ebaeea6b"
 addgasgwei = 2
 mingasgwei = 5
 addgasestimateratio = 0.3
@@ -55,6 +57,7 @@ maxblkdelta = 99999
 cbridge = "0x1619DE6B6B20eD217a58d00f37B9d47C7663feca"
 otvault = "0xFe31bFc4f7C9b69246a6dc0087D91a91Cb040f76"
 ptbridge = "0xbdd2739AE69A054895Be33A22b2D2ed71a1DE778"
+msgbus = "0x3ad9d0648cdaa2426331e894e980d0a5ed16257f"
 addgasestimateratio = 0.3
 
 [[multichain]]
@@ -69,6 +72,7 @@ maxblkdelta = 5000
 cbridge = "0x88DCDC47D2f83a99CF0000FDF667A468bB958a78"
 otvault = "0xc1a2D967DfAa6A10f3461bc21864C23C1DD51EeA"
 ptbridge = "0x4d58FDC7d0Ee9b674F49a0ADE11F26C3c9426F7A"
+msgbus = "0xaFDb9C40C7144022811F034EE07Ce2E110093fe6"
 addgasestimateratio = 0.3
 
 [[multichain]]
@@ -84,6 +88,7 @@ maxblkdelta = 3000
 cbridge = "0xef3c714c9425a8F3697A9C969Dc1af30ba82e5d4"
 otvault = "0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820"
 ptbridge = "0x88DCDC47D2f83a99CF0000FDF667A468bB958a78"
+msgbus = "0x5a926eeeafc4d217add17e9641e8ce23cd01ad57"
 addgasestimateratio = 0.3
 
 [[multichain]]
@@ -98,6 +103,7 @@ forwardblkdelay = 80
 cbridge = "0x374B8a9f3eC5eB2D97ECA84Ea27aCa45aa1C57EF"
 otvault = "0x7D91603E79EA89149BAf73C9038c51669D8F03E9"
 ptbridge = "0x38D1e20B0039bFBEEf4096be00175227F8939E51"
+msgbus = "0xFF4E183a0Ceb4Fa98E63BbF8077B929c8E5A2bA4"
 addgasgwei = 2
 addgasestimateratio = 0.3
 
@@ -177,6 +183,7 @@ forwardblkdelay = 200
 maxblkdelta = 10000
 cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 ptbridge = "0x4384d5a9D7354C65cE3aee411337bd40493Ad1bC"
+msgbus = "0xc1a2D967DfAa6A10f3461bc21864C23C1DD51EeA"
 addgasestimateratio = 0.3
 
 [[multichain]]
@@ -189,6 +196,7 @@ forwardblkdelay = 200
 maxblkdelta = 10000
 cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 ptbridge = "0x374B8a9f3eC5eB2D97ECA84Ea27aCa45aa1C57EF"
+msgbus = "0x940dAAbA3F713abFabD79CdD991466fe698CBe54"
 addgasestimateratio = 0.3
 maxpriorityfeepergasgwei = 1
 
