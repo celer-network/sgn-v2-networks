@@ -25,8 +25,8 @@ cbridge = "0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820"
 otvault = "0xB37D31b2A74029B5951a2778F959282E2D518595"
 ptbridge = "0x16365b45EB269B5B5dACB34B4a15399Ec79b95eB"
 msgbus = "0x4066d196a423b2b3b8b054f4f40efb47a74e200c"
-addgasestimateratio = 0.6
 maxfeepergasgwei = 500
+addgasestimateratio = 0.6
 
 [[multichain]]
 chainID = 56
@@ -144,6 +144,7 @@ forwardblkdelay = 500
 maxblkdelta = 1024
 cbridge = "0x78a21c1d3ed53a82d4247b9ee5bf001f4620ceec"
 ptbridge = "0xdd90e5e87a2081dcf0391920868ebc2ffb81a1af"
+maxgasgwei = 30
 addgasestimateratio = 0.3
 proxyport = 10300
 
