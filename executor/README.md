@@ -1,8 +1,6 @@
 # Message Executor
 
-The message executor queries SGN for messages to be executed on-chain and submits them
-
-Current release doesn't support re-submitting if the execution fails due to
+The message executor queries SGN for messages to be executed on-chain and submits them. A detailed walkthrough guide can be found in the [Integration Guide](https://im-docs.celer.network/developer/integration-guide#executor)'s "Executor" section
 
 ## Steps to Run Executor
 
@@ -31,13 +29,13 @@ cd executor
 cp ./ ~/.executor/
 
 # copy your signer keystore file to eth-ks/
-cp <your-keystore-file> ~/.executor/eth-ks
+cp <your-keystore-file-path> ~/.executor/eth-ks
 
 # extract the executor binary
-cp ../binaries/executor-v1.6.0.-dev.1-linux-amd64.tar.gz ~/.executor/
+cp ../binaries/<latest-executor-version>.tar.gz ~/.executor/
 cd ~/.executor
-tar -xz executor-v1.6.0-dev.1-linux-amd64.tar.gz
-cp executor-v1.6.0-dev.1-linux-amd64 ~/usr/local/bin
+tar -xz <latest-executor-version>.tar.gz
+cp <latest-executor-version> ~/usr/local/bin
 ```
 
 ### 2. Setup Executor's Database
@@ -83,7 +81,7 @@ Description=Executor pulls active messages from sgn and executes them on-chain
 After=network-online.target
 
 [Service]
-ExecStart=/usr/local/bin/executor -loglevel=debug -home=<your-executor-home>
+ExecStart=/usr/local/bin/executor start --loglevel debug --home <your-executor-home>
 StandardOutput=append:/var/log/executor/app.log
 StandardError=append:/var/log/executor/app.log
 Restart=always
