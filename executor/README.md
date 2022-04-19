@@ -2,6 +2,38 @@
 
 The message executor queries SGN for messages to be executed on-chain and submits them. A detailed walkthrough guide can be found in the [Integration Guide](https://im-docs.celer.network/developer/integration-guide#executor)'s "Executor" section
 
+## Status & Meanings
+
+### Unknown
+placeholder status that should never happen
+
+### Unexecuted
+when a message is queried from SGN, it is first saved as this status
+
+### Init_Refund_Executing
+only applicable if "enable_auto_refund" is on. indicates that the init refund call to SGN Gateway is ongoing.
+
+### Init_Refund_Executed
+only applicable if "enable_auto_refund" is on. indicates the init refund call is finished and executor has got the necessary data to submit the refund withdrawal on-chain.
+
+### Init_Refund_Failed
+only applicable if "enable_auto_refund" is on. indicates that the executor failed to call SGN Gateway to acquire the refund data.
+
+### Executing
+transient status. indicates that the executor is attempting to execute the message.
+
+### Succeeded
+final status. changed when the executor receives the "Executed" event from the MessageBus contract. indicates that the message/messageWithTransfer/refund is executed successfully on-chain.
+
+### Fallback
+final status. changed when the executor receives the "Executed" event from the MessageBus contract. indicates that the submited tx has a successful status but a revert happens in your application contract. MessageBus called your contract's executeMessageWithTransferFallback() function.
+
+### Failed
+final status. changed when the executor receives the "Executed" event from the MessageBus contract. indicates that the tx calling MessageBus has failed OR the call from MessageBus to your contract's executeMessageWithTransferFallback() function has failed.
+
+### Ignored
+final status. only applicable if you have executor.contracts.allow_sender_groups and executor.contract_sender_groups configured. indicates that a message sent to one of your contracts is not originated from the allowed sender you defined.
+
 ## Steps to Run Executor
 
 ### 1. Prepare the Executor Home Directory
