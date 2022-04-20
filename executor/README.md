@@ -2,36 +2,82 @@
 
 The message executor queries SGN for messages to be executed on-chain and submits them. A detailed walkthrough guide can be found in the [Integration Guide](https://im-docs.celer.network/developer/integration-guide#executor)'s "Executor" section
 
+## Configurations
+
+### executor.toml
+
+A complete executor.toml looks like this
+
+```toml
+ [executor]
+ enable_auto_refund = false
+ [[executor.contracts]]
+ chain_id = 1
+ address = "<app-contract-address>"
+ allow_sender_groups = ["my-contracts"]
+ [[executor.contracts]]
+ chain_id = 56
+ address = "<app-contract-address>"
+ allow_sender_groups = ["my-contracts"]
+ [[executor.contract_sender_groups]]
+ name = "my-contracts"
+ allow = [
+   { chain_id = 1, address = "<app-contract-address>" },
+   { chain_id = 56, address = "<app-contract-address>" },
+ ]
+
+ [sgnd]
+ sgn_grpc = "cbridge-prod2.celer.network:9094"
+ gateway_grpc = "cbridge-prod2.celer.network:9094"
+
+ [eth]
+ signer_keystore = "<path-to-signer-keystore-json>"
+ signer_passphrase = "<keystore-passphrase>"
+
+ [db]
+ url = "localhost:26257"
+
+ [alert]
+ type = "slack" # only slack is supported for now
+ webhook = "<slack-web-hook-url>"
+ [[alert.low_gas_thresholds]]
+ chain_id = 1
+ threshold = "2000000000000000000"
+ [[alert.low_gas_thresholds]]
+ chain_id = 56
+ threshold = "1000000000000000000"
+```
+
 ## Status & Meanings
 
-### Unknown
+#### Unknown
 placeholder status that should never happen
 
-### Unexecuted
+#### Unexecuted
 when a message is queried from SGN, it is first saved as this status
 
-### Init_Refund_Executing
+#### Init_Refund_Executing
 only applicable if "enable_auto_refund" is on. indicates that the init refund call to SGN Gateway is ongoing.
 
-### Init_Refund_Executed
+#### Init_Refund_Executed
 only applicable if "enable_auto_refund" is on. indicates the init refund call is finished and executor has got the necessary data to submit the refund withdrawal on-chain.
 
-### Init_Refund_Failed
+#### Init_Refund_Failed
 only applicable if "enable_auto_refund" is on. indicates that the executor failed to call SGN Gateway to acquire the refund data.
 
-### Executing
+#### Executing
 transient status. indicates that the executor is attempting to execute the message.
 
-### Succeeded
+####k Succeeded
 final status. changed when the executor receives the "Executed" event from the MessageBus contract. indicates that the message/messageWithTransfer/refund is executed successfully on-chain.
 
-### Fallback
+#### Fallback
 final status. changed when the executor receives the "Executed" event from the MessageBus contract. indicates that the submited tx has a successful status but a revert happens in your application contract. MessageBus called your contract's executeMessageWithTransferFallback() function.
 
-### Failed
+#### Failed
 final status. changed when the executor receives the "Executed" event from the MessageBus contract. indicates that the tx calling MessageBus has failed OR the call from MessageBus to your contract's executeMessageWithTransferFallback() function has failed.
 
-### Ignored
+#### Ignored
 final status. only applicable if you have executor.contracts.allow_sender_groups and executor.contract_sender_groups configured. indicates that a message sent to one of your contracts is not originated from the allowed sender you defined.
 
 ## Steps to Run Executor
