@@ -1,18 +1,3 @@
-[bridge.default_check_interval]
-# cbridge events
-send = 2
-relay = 2
-liquidity_added = 2
-withdraw_done = 3
-signers_updated = 2
-# pegbridge events
-deposited = 2
-mint = 3
-burn = 2
-withdrawn = 3
-# eth events
-delegation_update = 20
-
 [[multichain]]
 chainID = 1
 name = "Ethereum mainnet"
