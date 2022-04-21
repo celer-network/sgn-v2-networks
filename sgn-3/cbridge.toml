@@ -214,7 +214,7 @@ addgasestimateratio = 0.3
 [[multichain]]
 chainID = 128
 name = "Heco"
-gateway = "https://http-mainnet-node.huobichain.com"
+gateway = "https://http-mainnet.hecochain.com"
 blkinterval = 15
 blkdelay = 12
 forwardblkdelay = 200
