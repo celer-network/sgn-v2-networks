@@ -252,7 +252,7 @@ maxpriorityfeepergasgwei = 1
 [[multichain]]
 chainID = 592
 name = "Astar"
-gateway = "https://rpc.astar.bldnodes.org/"
+gateway = "https://astar.api.onfinality.io/public"
 blkinterval = 30
 blkdelay = 6
 forwardblkdelay = 200
