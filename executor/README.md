@@ -6,19 +6,19 @@ The message executor queries SGN for messages to be executed on-chain and submit
 
 ### executor.toml
 
-A complete executor.toml looks like this
+A complete executor.toml looks like this. Individual configs will be broken down and explained later.
 
 ```toml
  [executor]
  enable_auto_refund = false
  [[executor.contracts]]
  chain_id = 1
- address = "<app-contract-address>"
- allow_sender_groups = ["my-contracts"]
+ address = "<app-contract-address>" # this contract address is used to query messages from SGN
+ allow_sender_groups = ["my-contracts"] # mount sender groups here. if not configured, sender checking is skipped
  [[executor.contracts]]
  chain_id = 56
  address = "<app-contract-address>"
- allow_sender_groups = ["my-contracts"]
+ allow_sender_groups = ["my-contracts"] # you can also list multiple sender groups. message execution is allowed if a sender is found in ANY of the sender groups
  [[executor.contract_sender_groups]]
  name = "my-contracts"
  allow = [
@@ -48,36 +48,90 @@ A complete executor.toml looks like this
  threshold = "1000000000000000000"
 ```
 
+### Auto Refund
+
+For messages that has attached transfers, sometimes the transfer would fail at bridge due to slippage or other reasons. You can enable executor's auto refund config to let executor handle the refund case for you. If this is enabled, executor automatically calls the MessageBus's `executeMessageWithTransferRefund()` on source chain.
+
+```toml
+enable_auto_refund = true # if not configured, the default is false
+```
+
+### Sender Groups
+
+Under the current IM architecture, any contracts can send messages to any other contracts. This means that a malicious party can forge messages that conform to your contracts' message data type, send it to your contract, and exhaust your executor's gas fund. Thus, in production, it is important that executor checks where a message is originated from. Sender groups are designed just for that.
+
+If you have experience with cloud services such as AWS, your might recognize that a sender group is pretty much a "security group".
+
+An example sender group looks like this
+
+```toml
+[[executor.contract_sender_groups]]
+# the name/ID of the group. executor.contracts refer to a sender group in allow_sender_groups
+name = "my-contracts" 
+allow = [
+  # allow and execute messages originated from <app-contract-address> on chain 1
+  { chain_id = 1, address = "<app-contract-address>" },
+  # allow and execute messages originated from <app-contract-address> on chain 56
+  { chain_id = 56, address = "<app-contract-address>" },
+]
+```
+
+### Low Gas Alert
+
+In production, you might want to monitor your executor's balance of gas token on each chain. In this config you can specify a threshold amount for each chain. Executor periodically checks the balance and once the threshold is hit, it triggers an alert action. Currently only slack alert is supported.
+
+```toml
+[alert]
+type = "slack" # only slack is supported for now
+webhook = "<slack-web-hook-url>"
+[[alert.low_gas_thresholds]]
+chain_id = 1
+threshold = "2000000000000000000" # balance in wei
+[[alert.low_gas_thresholds]]
+chain_id = 56
+threshold = "1000000000000000000"
+```
+
 ## Status & Meanings
 
 #### Unknown
+
 placeholder status that should never happen
 
 #### Unexecuted
+
 when a message is queried from SGN, it is first saved as this status
 
 #### Init_Refund_Executing
+
 only applicable if "enable_auto_refund" is on. indicates that the init refund call to SGN Gateway is ongoing.
 
 #### Init_Refund_Executed
+
 only applicable if "enable_auto_refund" is on. indicates the init refund call is finished and executor has got the necessary data to submit the refund withdrawal on-chain.
 
 #### Init_Refund_Failed
+
 only applicable if "enable_auto_refund" is on. indicates that the executor failed to call SGN Gateway to acquire the refund data.
 
 #### Executing
+
 transient status. indicates that the executor is attempting to execute the message.
 
-####k Succeeded
+#### k Succeeded
+
 final status. changed when the executor receives the "Executed" event from the MessageBus contract. indicates that the message/messageWithTransfer/refund is executed successfully on-chain.
 
 #### Fallback
+
 final status. changed when the executor receives the "Executed" event from the MessageBus contract. indicates that the submited tx has a successful status but a revert happens in your application contract. MessageBus called your contract's executeMessageWithTransferFallback() function.
 
 #### Failed
+
 final status. changed when the executor receives the "Executed" event from the MessageBus contract. indicates that the tx calling MessageBus has failed OR the call from MessageBus to your contract's executeMessageWithTransferFallback() function has failed.
 
 #### Ignored
+
 final status. only applicable if you have executor.contracts.allow_sender_groups and executor.contract_sender_groups configured. indicates that a message sent to one of your contracts is not originated from the allowed sender you defined.
 
 ## Steps to Run Executor
