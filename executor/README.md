@@ -58,7 +58,7 @@ enable_auto_refund = true # if not configured, the default is false
 
 ### Service
 
-From now on, multi-client is supported for one executor instance. That means for every msg, you could decide which signer would be used to execute it. You can configue different clients by simply duplicating `[[service]]` within `executor.toml`. For each `[[service]]`, `signer_keystore` and `signer_passphrase` define the signer used by this `service` to send tx. `[[service.contracts]]` defines which contracts on which chains are cared by this `[[service]]`. A `[[service]]` would only execute msgs that went to an already configurred pair of contract addr and chain id. Besides, [Sender Groups](#sender-groups) is another available config option for `[[service]]`.
+From now on, multi-client is supported for one executor instance. That means for every msg, you could decide which signer would be used to execute it. You can configue different clients by simply duplicating `[[service]]` within `executor.toml`. For each `[[service]]`, `signer_keystore` and `signer_passphrase` define the signer used by this `[[service]]` to send tx. `[[service.contracts]]` defines which contracts on which chains are cared by this `[[service]]`. A `[[service]]` would only execute msgs that went to an already configurred pair of contract addr and chain id. Besides, [Sender Groups](#sender-groups) is another available config option for `[[service]]`.
 
 ### Sender Groups
 
