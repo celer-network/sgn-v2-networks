@@ -56,6 +56,10 @@ For messages that has attached transfers, sometimes the transfer would fail at b
 enable_auto_refund = true # if not configured, the default is false
 ```
 
+### Service
+
+From now on, multi-client is supported for one executor instance. That means for every msg, you could decide which signer would be used to execute it. You can configue different clients by simply duplicating `[[service]]` within `executor.toml`. For each `service`, `signer_keystore` and `signer_passphrase` define the signer used by this `service` to send tx. `service.contracts` defines which contracts on which chains are cared by this `service`. A `service` would only execute msgs that went to an already configurred pair of contract addr and chain id. Besides, [Sender Groups](#sender-groups) is another available config option for `service`.
+
 ### Sender Groups
 
 Under the current IM architecture, any contracts can send messages to any other contracts. This means that a malicious party can forge messages that conform to your contracts' message data type, send it to your contract, and exhaust your executor's gas fund. Thus, in production, it is important that executor checks where a message is originated from. Sender groups are designed just for that.
@@ -65,8 +69,8 @@ If you have experience with cloud services such as AWS, your might recognize tha
 An example sender group looks like this
 
 ```toml
-[[executor.contract_sender_groups]]
-# the name/ID of the group. executor.contracts refer to a sender group in allow_sender_groups
+[[service.contract_sender_groups]]
+# the name/ID of the group. service.contracts refer to a sender group in allow_sender_groups
 name = "my-contracts" 
 allow = [
   # allow and execute messages originated from <app-contract-address> on chain 1
