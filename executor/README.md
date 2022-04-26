@@ -11,15 +11,19 @@ A complete executor.toml looks like this. Individual configs will be broken down
 ```toml
  [executor]
  enable_auto_refund = false
- [[executor.contracts]]
+ 
+ [[service]] # executor supports multi-client service. every service instance represents one client with different configuration.
+ signer_keystore = "<path-to-signer-keystore-json>"
+ signer_passphrase = "<keystore-passphrase>"
+ [[service.contracts]]
  chain_id = 1
  address = "<app-contract-address>" # this contract address is used to query messages from SGN
  allow_sender_groups = ["my-contracts"] # mount sender groups here. if not configured, sender checking is skipped
- [[executor.contracts]]
+ [[service.contracts]]
  chain_id = 56
  address = "<app-contract-address>"
  allow_sender_groups = ["my-contracts"] # you can also list multiple sender groups. message execution is allowed if a sender is found in ANY of the sender groups
- [[executor.contract_sender_groups]]
+ [[service.contract_sender_groups]]
  name = "my-contracts"
  allow = [
    { chain_id = 1, address = "<app-contract-address>" },
@@ -29,10 +33,6 @@ A complete executor.toml looks like this. Individual configs will be broken down
  [sgnd]
  sgn_grpc = "cbridge-prod2.celer.network:9094"
  gateway_grpc = "cbridge-prod2.celer.network:9094"
-
- [eth]
- signer_keystore = "<path-to-signer-keystore-json>"
- signer_passphrase = "<keystore-passphrase>"
 
  [db]
  url = "localhost:26257"
