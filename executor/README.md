@@ -242,3 +242,24 @@ Check if logs look ok
 ```sh
 tail -f -n 200 /var/log/executor/app.log
 ```
+
+## Query command
+
+You can query the status of a message by command below with its id:
+
+```sh
+executor query message <message-id>
+```
+
+The query logic is very simple. There are two steps to find the message we need. 
+
+1. query the message in local-db by its id.
+2. if no message found in local-db, then query the message in sgn by its id. 
+
+Once we found the right message, its status would be printed out directly. You can take a signt at [Status & Meanings](#status--meanings) to get an explanation of the status.
+
+If you got an error like "failed to load (whatever-path)/executor.toml", please re-run the query command with `home` flag just like this:
+
+```sh
+executor query message <message-id> --home <your-executor-home>
+```
