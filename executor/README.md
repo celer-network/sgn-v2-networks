@@ -290,4 +290,4 @@ Once you restart your executor with `server` flag, you can send a query request 
 curl http://localhost:<port>/message-status?messageId=<message-id>
 ```
 
-Or just go to `http://localhost:<port>/message-status?messageId=<message-id>` on your exeplorer. Then you'll get your response.
+Or just go to `http://localhost:<port>/message-status?messageId=<message-id>` on your explorer. Then you'll get your response.
