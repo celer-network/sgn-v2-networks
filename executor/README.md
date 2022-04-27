@@ -251,10 +251,10 @@ You can query the status of a message by command below with its id:
 executor query message <message-id>
 ```
 
-The query logic is very simple. There are two steps to find the message we need. 
+The query logic is very simple. There are two steps to find the message we need.
 
 1. query the message in local-db by its id.
-2. if no message found in local-db, then query the message in sgn by its id. 
+2. if no message found in local-db, then query the message in sgn by its id.
 
 Once we found the right message, its status would be printed out directly. You can take a signt at [Status & Meanings](#status--meanings) to get an explanation of the status.
 
@@ -263,3 +263,31 @@ If you got an error like "failed to load (whatever-path)/executor.toml", please 
 ```sh
 executor query message <message-id> --home <your-executor-home>
 ```
+
+## Process remote query request
+
+If you want to remotely interact with your executor service to query a message's status, restart your executor service with `server` flag. Replace `ExecStart` in `executor.service` file by:
+
+```sh
+ExecStart=/usr/local/bin/executor start --loglevel debug --home <your-executor-home> --server
+```
+
+Then restart your service
+
+```sh
+sudo systemctl restart executor
+```
+
+That would start a local http server listening on 8090 by default. Port of this server can be modified by `port` flag. Like:
+
+```sh
+ExecStart=/usr/local/bin/executor start --loglevel debug --home <your-executor-home> --server --port <your-preferred-port>
+```
+
+Once you restart your executor with `server` flag, you can send a query request about a message's status to your executor by:
+
+```sh
+curl http://localhost:<port>/message-status?messageId=<message-id>
+```
+
+Or just go to `http://localhost:<port>/message-status?messageId=<message-id>` on your explorer. Then you'll get your response.
