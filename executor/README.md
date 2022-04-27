@@ -256,4 +256,4 @@ The query logic is very simple. There are two steps to find the message we need.
 1. query the message in local-db by its id.
 2. if no message found in local-db, then query the message in sgn by its id. 
 
-Once we found the right message, its status would be printed out directly. You can take a signt at [Status & Meanings](#status-&-meanings) to get an explanation of the status.
+Once we found the right message, its status would be printed out directly. You can take a signt at [Status & Meanings](#status--meanings) to get an explanation of the status.
