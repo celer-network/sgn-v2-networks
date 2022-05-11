@@ -103,6 +103,7 @@ forwardblkdelay = 50
 maxblkdelta = 10000
 cbridge = "0x9D39Fc627A6d9d9F8C831c16995b209548cc3401"
 ptbridge = "0x61f85fF2a2f4289Be4bb9B72Fc7010B3142B5f41"
+msgbus = "0x0D71D18126E03646eb09FEc929e2ae87b7CAE69d"
 addgasestimateratio = 0.3
 
 [[multichain]]
