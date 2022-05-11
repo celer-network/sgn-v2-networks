@@ -98,43 +98,43 @@ threshold = "1000000000000000000"
 
 ## Status & Meanings
 
-#### Unknown
+#### Unknown (0)
 
 placeholder status that should never happen
 
-#### Unexecuted
+#### Unexecuted (1)
 
 when a message is queried from SGN, it is first saved as this status
 
-#### Init_Refund_Executing
+#### Init_Refund_Executing (2)
 
 only applicable if "enable_auto_refund" is on. indicates that the init refund call to SGN Gateway is ongoing.
 
-#### Init_Refund_Executed
+#### Init_Refund_Executed (3)
 
 only applicable if "enable_auto_refund" is on. indicates the init refund call is finished and executor has got the necessary data to submit the refund withdrawal on-chain.
 
-#### Init_Refund_Failed
+#### Init_Refund_Failed (4)
 
 only applicable if "enable_auto_refund" is on. indicates that the executor failed to call SGN Gateway to acquire the refund data.
 
-#### Executing
+#### Executing (5)
 
 transient status. indicates that the executor is attempting to execute the message.
 
-#### k Succeeded
+#### Succeeded (6)
 
 final status. changed when the executor receives the "Executed" event from the MessageBus contract. indicates that the message/messageWithTransfer/refund is executed successfully on-chain.
 
-#### Fallback
+#### Fallback (7)
 
 final status. changed when the executor receives the "Executed" event from the MessageBus contract. indicates that the submited tx has a successful status but a revert happens in your application contract. MessageBus called your contract's executeMessageWithTransferFallback() function.
 
-#### Failed
+#### Failed (8)
 
 final status. changed when the executor receives the "Executed" event from the MessageBus contract. indicates that the tx calling MessageBus has failed OR the call from MessageBus to your contract's executeMessageWithTransferFallback() function has failed.
 
-#### Ignored
+#### Ignored (9)
 
 final status. only applicable if you have executor.contracts.allow_sender_groups and executor.contract_sender_groups configured. indicates that a message sent to one of your contracts is not originated from the allowed sender you defined.
 
