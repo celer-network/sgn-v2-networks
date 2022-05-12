@@ -243,7 +243,22 @@ Check if logs look ok
 tail -f -n 200 /var/log/executor/app.log
 ```
 
-## Query command
+## Action Commands
+
+Actions commands are a means of interacting with the executor DB and on-chain data to fix various issues.
+
+```sh
+executor tx unstuck --id <message-id>
+```
+
+This command does the following things: 
+1. looks up a message by its id 
+2. submits an empty tx onchain at the current pending nonce of the executor account
+3. reverts the message to UNEXECUTED, so that it will get executed in the next around
+
+There are several optional flags to set, check use `--help` to see your options.
+
+## Query Commands
 
 You can query the status of a message by command below with its id:
 
