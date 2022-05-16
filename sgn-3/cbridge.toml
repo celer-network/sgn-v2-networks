@@ -313,8 +313,9 @@ blkinterval = 30
 blkdelay = 15
 maxblkdelta = 10000
 forwardblkdelay = 200
-cbridge = "0x841ce48f9446c8e281d3f1444cb859b4a6d0738c"
-ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
+cbridge = "0x5F52B9d1C0853da636e178169e6B426E4cCfA813"
+ptbridge = "0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820"
+ptbridge2 = "0xC1d6E421a062Fdbb26C31Db4a2113dF0F678CD04"
 addgasestimateratio = 0.3
 
 [[multichain]]
