@@ -414,3 +414,14 @@ maxblkdelta = 10000
 cbridge = "0xb51541df05DE07be38dcfc4a80c05389A54502BB"
 ptbridge2 = "0xF8Bf9988206c4de87F52A3c24486E4367B7088CB"
 addgasestimateratio = 0.3
+
+[[multichain]]
+chainID = 416
+name = "SX Network"
+gateway = "https://rpc.sx.technology"
+blkinterval = 30
+blkdelay = 20
+maxblkdelta = 10000
+cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+ptbridge2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
+proxyport = 10310
