@@ -100,7 +100,7 @@ otvault = "0x7D91603E79EA89149BAf73C9038c51669D8F03E9"
 ptbridge = "0x38D1e20B0039bFBEEf4096be00175227F8939E51"
 ptbridge2 = "0x30F7Aa65d04d289cE319e88193A33A8eB1857fb9"
 msgbus = "0xFF4E183a0Ceb4Fa98E63BbF8077B929c8E5A2bA4"
-addgasgwei = 2
+addgasgwei = 10
 addgasestimateratio = 0.3
 
 [[multichain]]
@@ -276,7 +276,6 @@ maxblkdelta = 10000
 cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 otvault = "0xbCfeF6Bb4597e724D720735d32A9249E0640aA11"
 ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
-addgasgwei = 1
 addgasestimateratio = 0.3
 proxyport = 10304
 
@@ -296,15 +295,14 @@ addgasestimateratio = 0.3
 [[multichain]]
 chainID = 336
 name = "ShidenNetworkMainnet"
-gateway = "https://evm.shiden.astar.network"
-# gateway = "https://shiden.api.onfinality.io/public"
+gateway = "https://shiden.api.onfinality.io/public"
+# gateway = "https://evm.shiden.astar.network"
 blkinterval = 20
 blkdelay = 6
 maxblkdelta = 300
 forwardblkdelay = 100
 cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 otvault = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
-addgasgwei = 1
 addgasestimateratio = 0.3
 proxyport = 10305
 
