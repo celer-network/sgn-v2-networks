@@ -1,14 +1,18 @@
 [executor]
 enable_auto_refund = false
+[executor.retry]
+initial_backoff_seconds = 30 # default 30
+interval_seconds = 30 # default 30
+scaling_factor = 1 # default 1
 
-[[service]] # executor supports multi-client service. every service instance represents one client with different configuration.
-# the location of your eth keystore. it is used for submitting execution on-chain
-signer_keystore = "/home/ubuntu/.executor/eth-ks/signer.json"
-# don't forget to populate the passphrase of your keystore
-signer_passphrase = "<your keystore passphrase>"
-# these contract info filters tells the executor for messages initiated from which contracts 
-# it should submit the execution on-chain. basically these are the message passing app contracts 
-# (the ones that implements MessageSenderApp/MessageReceiverApp) you deploy on source/destination chains
+[server] # optional
+enable = true # default false
+port = 24242
+
+[[service]] # a service represents a set of contracts and an account
+id = "my-service" # optional if only one service is configured
+signer_keystore = "<path-to-signer-keystore-json>"
+signer_passphrase = "<keystore-passphrase>"
 [[service.contracts]]
 chain_id = 1
 address = "<app-contract-address>" # this contract address is used to query messages from SGN
@@ -25,11 +29,18 @@ allow = [
 ]
 
 [sgnd]
-# all read queries are executed through sgn node 0 grpc
-sgn_grpc = "35.165.81.166:9090"
-# all writes to sgn (sending transactions) are delegated through sgn gateway for now so you don't
-# need to have a sgn account key
-gateway_grpc = "35.165.81.166:20000"
+sgn_grpc = "cbridge-prod2.celer.network:9094"
+gateway_grpc = "cbridge-prod2.celer.network:9094"
 
 [db]
 url = "localhost:26257"
+
+[alert]
+type = "slack" # only slack is supported for now
+webhook = "<slack-web-hook-url>"
+[[alert.low_gas_thresholds]]
+chain_id = 1
+threshold = "2000000000000000000"
+[[alert.low_gas_thresholds]]
+chain_id = 56
+threshold = "1000000000000000000"
