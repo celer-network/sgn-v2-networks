@@ -29,8 +29,8 @@ allow = [
 ]
 
 [sgnd]
-sgn_grpc = "cbridge-test.celer.network:9094"
-gateway_grpc = "cbridge-test.celer.network:9094"
+sgn_grpc = "cbridge-v2-test.celer.network:9094"
+gateway_grpc = "cbridge-v2-test.celer.network:9094"
 
 [db]
 url = "localhost:26257"
