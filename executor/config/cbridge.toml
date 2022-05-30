@@ -7,7 +7,7 @@ blkdelay = 5
 maxblkdelta = 5000
 cbridge = "0x358234B325EF9eA8115291A8b81b7d33A2Fa762D"
 otvault = "0x28b37266a82aA7aae2b5ACA5a557C4Af0717b114"
-msgbus = "0x942E8e0e4b021F55b89660c886146e0Ec57F4b5B"
+msgbus = "0xF25170F86E4291a99a9A560032Fe9948b8BcFBB2"
 
 [[multichain]]
 chainID = 97
