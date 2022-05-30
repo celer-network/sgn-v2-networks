@@ -15,7 +15,7 @@ sgnd ops [flags]
 ### SEE ALSO
 
 * [sgnd](sgnd.md)	 - SGN App
-* [sgnd ops bridge](sgnd_ops_bridge.md)	 - Bridge subcommands (submit relay, sync farming, etc.)
+* [sgnd ops bridge](sgnd_ops_bridge.md)	 - Bridge subcommands (submit relay, sync farming, migrate vault, etc.)
 * [sgnd ops delegator](sgnd_ops_delegator.md)	 - Delegator subcommands (delegate, undelegate, etc.)
 * [sgnd ops sync](sgnd_ops_sync.md)	 - Sync onchain (staking, bridge) states to sgnchain
 * [sgnd ops validator](sgnd_ops_validator.md)	 - Validator subcommands (init, bond, collect fees, etc.)

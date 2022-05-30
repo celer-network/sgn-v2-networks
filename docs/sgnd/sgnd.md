@@ -20,12 +20,12 @@ SGN App
 * [sgnd keys](sgnd_keys.md)	 - Manage your application's keys
 * [sgnd ops](sgnd_ops.md)	 - Operation subcommands
 * [sgnd query](sgnd_query.md)	 - Querying subcommands
+* [sgnd rollback](sgnd_rollback.md)	 - rollback cosmos-sdk and tendermint state by one height
 * [sgnd rosetta](sgnd_rosetta.md)	 - spin up a rosetta server
 * [sgnd start](sgnd_start.md)	 - Run the full node
 * [sgnd status](sgnd_status.md)	 - Query remote node for status
 * [sgnd tendermint](sgnd_tendermint.md)	 - Tendermint subcommands
 * [sgnd tx](sgnd_tx.md)	 - Transactions subcommands
-* [sgnd unsafe-reset-all](sgnd_unsafe-reset-all.md)	 - Resets the blockchain database, removes address book files, and resets data/priv_validator_state.json to the genesis state
 * [sgnd validate-genesis](sgnd_validate-genesis.md)	 - validates the genesis file at the default location or at the location passed as an arg
 * [sgnd version](sgnd_version.md)	 - Print the application binary version information
 

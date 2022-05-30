@@ -18,6 +18,7 @@ sgnd ops sync event [flags]
       --evname string   ev name, the name of the parsed event
   -h, --help            help for event
       --txhash string   tx hash, will parse event with same ID as evname
+      --v2              use v2 contract
 ```
 
 ### SEE ALSO

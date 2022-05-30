@@ -26,6 +26,7 @@ sgnd query cbridge [flags]
 * [sgnd query cbridge chaintokens](sgnd_query_cbridge_chaintokens.md)	 - Query the chain tokens
 * [sgnd query cbridge config](sgnd_query_cbridge_config.md)	 - Query the current cbridge config
 * [sgnd query cbridge fee-share](sgnd_query_cbridge_fee-share.md)	 - Query fee share of a sgn validator or delgator
+* [sgnd query cbridge gas-price](sgnd_query_cbridge_gas-price.md)	 - Query gas price for chainid
 * [sgnd query cbridge getany](sgnd_query_cbridge_getany.md)	 - Query any kv value for given full key
 * [sgnd query cbridge latest-signers](sgnd_query_cbridge_latest-signers.md)	 - Query the latest signers
 * [sgnd query cbridge liqsum](sgnd_query_cbridge_liqsum.md)	 - Query liq sum of chain,token, return both liqsum and itersum over lm- keys

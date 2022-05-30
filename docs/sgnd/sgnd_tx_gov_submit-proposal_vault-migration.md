@@ -1,32 +1,29 @@
-## sgnd tx gov submit-proposal total-supply-update
+## sgnd tx gov submit-proposal vault-migration
 
-Submit a pegged total supply update proposal
+Submit a vault migrations proposal
 
 ### Synopsis
 
 
 proposal file is path to json like below
 {
-	"title": "peg bridge total supply update",
-	"description": "update a pair's total supply",
-	"pair": {
-			"orig": {
-				"address": "3ff73bab93c505809c68b0a8e4321a2713d9255c",
-				"chain_id": 883
-			},
-			"pegged": {
-				"address": "283ab9db53f25d84fa30915816ec53f8affaa86e",
-				"chain_id": 884
-			}
-		}
-    },
-	"total_supply": "100",
+	"title": "vault migration",
+	"description": "migrate vault from v0 to v2",
+	"migration_info": {
+		"chain_id": 883,
+		"token": "f7cf42da4f3b0e374d4b8e59937d4d3fd76354a1",
+		"from_version": 0,
+		"to_version": 2,
+		"to_address": "50d2f000b48576a6d041b8d30e37a8ab1ccb72fd",
+		"executor": "00078b31fa8b29a76bce074b5ea0d515a6aeaee7"
+	},
+	"duration": 600,
 	"deposit": "0"
 }
 
 
 ```
-sgnd tx gov submit-proposal total-supply-update [proposal-file] [flags]
+sgnd tx gov submit-proposal vault-migration [proposal-file] [flags]
 ```
 
 ### Options
@@ -42,7 +39,7 @@ sgnd tx gov submit-proposal total-supply-update [proposal-file] [flags]
       --gas-adjustment float     adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
       --gas-prices string        Gas prices in decimal format to determine the transaction fee (e.g. 0.1uatom)
       --generate-only            Build an unsigned transaction and write it to STDOUT (when enabled, the local Keybase is not accessible)
-  -h, --help                     help for total-supply-update
+  -h, --help                     help for vault-migration
       --keyring-backend string   Select keyring's backend (os|file|kwallet|pass|test|memory) (default "os")
       --keyring-dir string       The client Keyring directory; if omitted, the default 'home' directory will be used
       --ledger                   Use a connected Ledger device
