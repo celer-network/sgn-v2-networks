@@ -1,32 +1,22 @@
-## sgnd tx gov submit-proposal total-supply-update
+## sgnd tx gov submit-proposal orig-token-vault-delete
 
-Submit a pegged total supply update proposal
+Submit a orig token vault delete proposal
 
 ### Synopsis
 
 
 proposal file is path to json like below
 {
-	"title": "peg bridge total supply update",
-	"description": "update a pair's total supply",
-	"pair": {
-			"orig": {
-				"address": "3ff73bab93c505809c68b0a8e4321a2713d9255c",
-				"chain_id": 883
-			},
-			"pegged": {
-				"address": "283ab9db53f25d84fa30915816ec53f8affaa86e",
-				"chain_id": 884
-			}
-		}
-    },
-	"total_supply": "100",
+	"title": "orig token vault delete",
+	"description": "delete a vault",
+	"chain_if": 883,
+	"version": 0,
 	"deposit": "0"
 }
 
 
 ```
-sgnd tx gov submit-proposal total-supply-update [proposal-file] [flags]
+sgnd tx gov submit-proposal orig-token-vault-delete [proposal-file] [flags]
 ```
 
 ### Options
@@ -42,7 +32,7 @@ sgnd tx gov submit-proposal total-supply-update [proposal-file] [flags]
       --gas-adjustment float     adjustment factor to be multiplied against the estimate returned by the tx simulation; if the gas limit is set manually this flag is ignored  (default 1)
       --gas-prices string        Gas prices in decimal format to determine the transaction fee (e.g. 0.1uatom)
       --generate-only            Build an unsigned transaction and write it to STDOUT (when enabled, the local Keybase is not accessible)
-  -h, --help                     help for total-supply-update
+  -h, --help                     help for orig-token-vault-delete
       --keyring-backend string   Select keyring's backend (os|file|kwallet|pass|test|memory) (default "os")
       --keyring-dir string       The client Keyring directory; if omitted, the default 'home' directory will be used
       --ledger                   Use a connected Ledger device

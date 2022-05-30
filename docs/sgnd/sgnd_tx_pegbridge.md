@@ -21,6 +21,7 @@ sgnd tx pegbridge [flags]
 ### SEE ALSO
 
 * [sgnd tx](sgnd_tx.md)	 - Transactions subcommands
+* [sgnd tx pegbridge reset-total-supply](sgnd_tx_pegbridge_reset-total-supply.md)	 - Reset total supply of a pegged token
 * [sgnd tx pegbridge sign-again-mint](sgnd_tx_pegbridge_sign-again-mint.md)	 - Trigger sign again of mint msg
 * [sgnd tx pegbridge sign-again-withdraw](sgnd_tx_pegbridge_sign-again-withdraw.md)	 - Trigger sign again of withdraw msg
 * [sgnd tx pegbridge validator-claim-fee](sgnd_tx_pegbridge_validator-claim-fee.md)	 - Validator claim fee shares

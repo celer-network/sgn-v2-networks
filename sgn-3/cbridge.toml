@@ -1,3 +1,18 @@
+[bridge.default_check_interval]
+# cbridge events
+send = 2
+relay = 2
+liquidity_added = 2
+withdraw_done = 3
+signers_updated = 2
+# pegbridge events
+deposited = 2
+mint = 3
+burn = 2
+withdrawn = 3
+# eth events
+delegation_update = 20
+
 [[multichain]]
 chainID = 1
 name = "Ethereum mainnet"
@@ -114,6 +129,7 @@ blkdelay = 1
 forwardblkdelay = 50
 maxblkdelta = 10000
 cbridge = "0x9D39Fc627A6d9d9F8C831c16995b209548cc3401"
+otvault = "0xbCfeF6Bb4597e724D720735d32A9249E0640aA11"
 ptbridge = "0x61f85fF2a2f4289Be4bb9B72Fc7010B3142B5f41"
 msgbus = "0x0D71D18126E03646eb09FEc929e2ae87b7CAE69d"
 wdinbox = "0x1b6a49B01176020b153d0cD5Bc90Ef2b75676F00"
@@ -278,6 +294,7 @@ cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 otvault = "0xbCfeF6Bb4597e724D720735d32A9249E0640aA11"
 ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
 addgasestimateratio = 0.3
+maxpriorityfeepergasgwei = 3
 proxyport = 10304
 
 [[multichain]]
@@ -305,6 +322,7 @@ forwardblkdelay = 100
 cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 otvault = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
 addgasestimateratio = 0.3
+maxpriorityfeepergasgwei = 3
 proxyport = 10305
 
 [[multichain]]
@@ -429,3 +447,14 @@ cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
 ptbridge2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
 addgasestimateratio = 0.3
 proxyport = 10310
+
+[[multichain]]
+chainID = 16350
+name = "Ape Chain"
+gateway = "https://bas.metaapesgame.com/bas_mainnet_full_rpc"
+blkinterval = 15
+blkdelay = 10
+maxblkdelta = 5000
+cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+otvault2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
+msgbus = "0x5471ea8f739dd37E9B81Be9c5c77754D8AA953E4"

@@ -1,6 +1,6 @@
 ## sgnd ops bridge
 
-Bridge subcommands (submit relay, sync farming, etc.)
+Bridge subcommands (submit relay, sync farming, migrate vault, etc.)
 
 ```
 sgnd ops bridge [flags]
@@ -15,6 +15,7 @@ sgnd ops bridge [flags]
 ### SEE ALSO
 
 * [sgnd ops](sgnd_ops.md)	 - Operation subcommands
+* [sgnd ops bridge migrate-vault](sgnd_ops_bridge_migrate-vault.md)	 - migrate token vault from v0 to v2
 * [sgnd ops bridge query-message](sgnd_ops_bridge_query-message.md)	 - query message by chain id and tx hash
 * [sgnd ops bridge submit-relay](sgnd_ops_bridge_submit-relay.md)	 - Submit cbridge relay using source transferId
 * [sgnd ops bridge sync-farming](sgnd_ops_bridge_sync-farming.md)	 - Syncs all LP liquidity for a token on a chain with their stakes in the farming pool
