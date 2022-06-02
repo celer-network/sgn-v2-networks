@@ -62,8 +62,8 @@ We run on Ubuntu Linux amd64 with Amazon EC2 as an example. Feel free to experim
 1. From the `/home/ubuntu` directory, download and install the `sgnd` binary:
 
     ```sh
-    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.9.0/sgnd-v1.9.0-goleveldb-linux-amd64.tar.gz | tar -xz
-    # To use with cleveldb on Ubuntu, download https://github.com/celer-network/sgn-v2-networks/releases/download/v1.9.0/sgnd-v1.9.0-cleveldb-ubuntu-linux-amd64.tar.gz
+    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.9.1/sgnd-v1.9.1-goleveldb-linux-amd64.tar.gz | tar -xz
+    # To use with cleveldb on Ubuntu, download https://github.com/celer-network/sgn-v2-networks/releases/download/v1.9.1/sgnd-v1.9.1-cleveldb-ubuntu-linux-amd64.tar.gz
     mv sgnd $GOBIN
     ```
 
