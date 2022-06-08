@@ -335,6 +335,7 @@ blkdelay = 15
 maxblkdelta = 10000
 forwardblkdelay = 10
 cbridge = "0x841ce48f9446c8e281d3f1444cb859b4a6d0738c"
+otvault2 = "0xb51541df05DE07be38dcfc4a80c05389A54502BB"
 ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
 addgasestimateratio = 0.3
 
@@ -459,3 +460,13 @@ maxblkdelta = 5000
 cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
 otvault2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
 msgbus = "0x5471ea8f739dd37E9B81Be9c5c77754D8AA953E4"
+
+[[multichain]]
+chainID = 2222
+name = "Kava EVM Co-Chain"
+gateway = "https://evm.kava.io"
+blkinterval = 30
+blkdelay = 15
+maxblkdelta = 10000
+cbridge = "0xb51541df05DE07be38dcfc4a80c05389A54502BB"
+ptbridge2 = "0xF8Bf9988206c4de87F52A3c24486E4367B7088CB"
