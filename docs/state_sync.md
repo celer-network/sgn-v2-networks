@@ -82,7 +82,7 @@ sudo systemctl start sgnd
 
     ```sh
     sudo systemctl stop sgnd # Stop if running
-    sgnd tendermint unsafe-reset-all --home ~/.sgnd
+    sgnd tendermint unsafe-reset-all --home ~/.sgnd # NOTE: The --home flag is mandatory for now
     ```
 
 2. Make sure `$HOME/.sgnd/data/priv_validator_state.json` is reset to the initial state of:
