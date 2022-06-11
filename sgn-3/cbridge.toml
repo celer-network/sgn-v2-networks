@@ -222,8 +222,8 @@ maxpriorityfeepergasgwei = 1
 [[multichain]]
 chainID = 100
 name = "xDai"
-gateway = "https://xdai.poanetwork.dev"
-# gateway = "https://rpc.gnosischain.com"
+gateway = "https://rpc.gnosischain.com"
+# gateway = "https://xdai.poanetwork.dev"
 blkinterval = 15
 blkdelay = 10
 forwardblkdelay = 200
