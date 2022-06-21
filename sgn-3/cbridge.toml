@@ -46,6 +46,7 @@ otvault2 = "0x11a0c9270D88C99e221360BCA50c2f6Fda44A980"
 ptbridge = "0xd443FE6bf23A4C9B78312391A30ff881a097580E"
 ptbridge2 = "0x26c76F7FeF00e02a5DD4B5Cc8a0f717eB61e1E4b"
 msgbus = "0x95714818fdd7a5454f73da9c777b3ee6ebaeea6b"
+wdinbox = "0xf0FF9888A70f44eb12223A6a55C65976BA7bf854"
 addgasgwei = 2
 mingasgwei = 5
 addgasestimateratio = 0.3
