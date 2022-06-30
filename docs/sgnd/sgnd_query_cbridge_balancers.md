@@ -1,16 +1,15 @@
-## sgnd query cbridge liqsum
+## sgnd query cbridge balancers
 
-Query liq sum of chain,token
+Query balancers
 
 ```
-sgnd query cbridge liqsum [chainid] [token] [flags]
+sgnd query cbridge balancers [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help      help for liqsum
-      --itersum   get sum over all lp
+  -h, --help   help for balancers
 ```
 
 ### Options inherited from parent commands

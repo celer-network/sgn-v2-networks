@@ -68,6 +68,7 @@ sgnd tx gov submit-proposal [flags]
 ### SEE ALSO
 
 * [sgnd tx gov](sgnd_tx_gov.md)	 - Governance transactions subcommands
+* [sgnd tx gov submit-proposal balancer-update](sgnd_tx_gov_submit-proposal_balancer-update.md)	 - Submit a balancer update proposal
 * [sgnd tx gov submit-proposal cbridge-change](sgnd_tx_gov_submit-proposal_cbridge-change.md)	 - Submit a cbridge config change proposal
 * [sgnd tx gov submit-proposal farming-add-pool](sgnd_tx_gov_submit-proposal_farming-add-pool.md)	 - Submit an AddPoolProposal
 * [sgnd tx gov submit-proposal farming-add-tokens](sgnd_tx_gov_submit-proposal_farming-add-tokens.md)	 - Submit an AddTokensProposal

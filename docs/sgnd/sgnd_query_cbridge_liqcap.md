@@ -1,16 +1,15 @@
-## sgnd query cbridge liqsum
+## sgnd query cbridge liqcap
 
-Query liq sum of chain,token
+Query liq sum of chain,token, return both liqsum and itersum over lm- keys
 
 ```
-sgnd query cbridge liqsum [chainid] [token] [flags]
+sgnd query cbridge liqcap [chainid] [token] [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help      help for liqsum
-      --itersum   get sum over all lp
+  -h, --help   help for liqcap
 ```
 
 ### Options inherited from parent commands

@@ -1,6 +1,6 @@
 ## sgnd query pegbridge fee
 
-Query fee of a sgn validator or delgator
+Query fee of a sgn validator or delegator
 
 ```
 sgnd query pegbridge fee [validator/delegator-eth-addr] [flags]
@@ -10,7 +10,7 @@ sgnd query pegbridge fee [validator/delegator-eth-addr] [flags]
 
 ```
   -h, --help             help for fee
-      --min-usd uint32   minimal USD value to generate withraw request
+      --min-usd uint32   minimal USD value to generate withdraw request
       --wdlist           generate withdraw file content
 ```
 

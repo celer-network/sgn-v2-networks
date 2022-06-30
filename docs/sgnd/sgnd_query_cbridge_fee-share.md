@@ -1,6 +1,6 @@
 ## sgnd query cbridge fee-share
 
-Query fee share of a sgn validator or delgator
+Query fee share of a sgn validator or delegator
 
 ```
 sgnd query cbridge fee-share [validator/delegator-eth-addr] [flags]
@@ -10,7 +10,7 @@ sgnd query cbridge fee-share [validator/delegator-eth-addr] [flags]
 
 ```
   -h, --help             help for fee-share
-      --min-usd uint32   minimal USD value to generate withraw request
+      --min-usd uint32   minimal USD value to generate withdraw request
       --wdlist           generate withdraw file content
 ```
 

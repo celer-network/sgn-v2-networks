@@ -10,6 +10,7 @@ sgnd query cbridge withdraw [eth-addr] [seq-num] [flags]
 
 ```
   -h, --help   help for withdraw
+      --raw    print raw msg data and sigs
 ```
 
 ### Options inherited from parent commands

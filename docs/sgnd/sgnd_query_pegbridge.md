@@ -24,7 +24,7 @@ sgnd query pegbridge [flags]
 * [sgnd query pegbridge burn](sgnd_query_pegbridge_burn.md)	 - Query pegbridge burn info
 * [sgnd query pegbridge config](sgnd_query_pegbridge_config.md)	 - Query the current pegbridge config
 * [sgnd query pegbridge deposit](sgnd_query_pegbridge_deposit.md)	 - Query pegbridge deposit info
-* [sgnd query pegbridge fee](sgnd_query_pegbridge_fee.md)	 - Query fee of a sgn validator or delgator
+* [sgnd query pegbridge fee](sgnd_query_pegbridge_fee.md)	 - Query fee of a sgn validator or delegator
 * [sgnd query pegbridge mint](sgnd_query_pegbridge_mint.md)	 - Query pegbridge mint info
 * [sgnd query pegbridge pairs](sgnd_query_pegbridge_pairs.md)	 - Query the peg pairs
 * [sgnd query pegbridge params](sgnd_query_pegbridge_params.md)	 - Query the current pegbridge param

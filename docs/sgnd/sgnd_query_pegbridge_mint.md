@@ -10,6 +10,7 @@ sgnd query pegbridge mint [mint-id] [flags]
 
 ```
   -h, --help   help for mint
+      --raw    print raw msg data and sigs
 ```
 
 ### Options inherited from parent commands

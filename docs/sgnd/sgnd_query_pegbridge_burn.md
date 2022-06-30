@@ -10,6 +10,7 @@ sgnd query pegbridge burn [burn-id] [flags]
 
 ```
   -h, --help   help for burn
+      --raw    print raw msg data and sigs
 ```
 
 ### Options inherited from parent commands

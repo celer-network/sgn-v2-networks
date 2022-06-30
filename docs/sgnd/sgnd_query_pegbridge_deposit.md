@@ -10,6 +10,7 @@ sgnd query pegbridge deposit [deposit-id] [flags]
 
 ```
   -h, --help   help for deposit
+      --raw    print raw msg data and sigs
 ```
 
 ### Options inherited from parent commands

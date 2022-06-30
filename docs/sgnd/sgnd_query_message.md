@@ -23,6 +23,7 @@ sgnd query message [flags]
 * [sgnd query](sgnd_query.md)	 - Querying subcommands
 * [sgnd query message ctx-xfer](sgnd_query_message_ctx-xfer.md)	 - Query execution context by bridge type (1:liquidity, 2:pegvault, 3:pegbridge) and src transferId
 * [sgnd query message exec-ctxs](sgnd_query_message_exec-ctxs.md)	 - Query the execution contexts of all messages
+* [sgnd query message fee-split-global](sgnd_query_message_fee-split-global.md)	 - Query fee split global setting
 * [sgnd query message message-bus](sgnd_query_message_message-bus.md)	 - Query message bus contract info
 * [sgnd query message msg](sgnd_query_message_msg.md)	 - Query message details
 * [sgnd query message params](sgnd_query_message_params.md)	 - Query the current message params

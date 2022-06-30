@@ -10,6 +10,7 @@ sgnd query pegbridge withdraw [withdraw-id] [flags]
 
 ```
   -h, --help   help for withdraw
+      --raw    print raw msg data and sigs
 ```
 
 ### Options inherited from parent commands
