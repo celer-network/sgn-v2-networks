@@ -28,6 +28,7 @@ ptbridge = "0x16365b45EB269B5B5dACB34B4a15399Ec79b95eB"
 ptbridge2 = "0x52E4f244f380f8fA51816c8a10A63105dd4De084"
 msgbus = "0x4066d196a423b2b3b8b054f4f40efb47a74e200c"
 wdinbox = "0xD20fc42E293734f58316E2106933B8D9FB14F5b2"
+farmingrewards = "0x61f85fF2a2f4289Be4bb9B72Fc7010B3142B5f41"
 maxfeepergasgwei = 500
 addgasestimateratio = 0.6
 
