@@ -488,3 +488,15 @@ forwardblkdelay = 100
 cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 ptbridge2 = "0xd4c058380D268d85bC7c758072f561e8f2dB5975"
 proxyport = 10311
+
+[[multichain]]
+chainID = 71402
+name = "NERVOS EVM"
+gateway = "https://v1.mainnet.godwoken.io/rpc"
+blkinterval = 30
+blkdelay = 1
+maxblkdelta = 10000
+forwardblkdelay = 200
+cbridge = "0x4C882ec256823eE773B25b414d36F92ef58a7c0C"
+ptbridge2 = "0xb3833Ecd19D4Ff964fA7bc3f8aC070ad5e360E56"
+proxyport = 10312
