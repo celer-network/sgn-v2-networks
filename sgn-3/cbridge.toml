@@ -217,6 +217,7 @@ forwardblkdelay = 200
 maxblkdelta = 10000
 cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 ptbridge = "0x374B8a9f3eC5eB2D97ECA84Ea27aCa45aa1C57EF"
+ptbridge2 = "0x0D71D18126E03646eb09FEc929e2ae87b7CAE69d"
 msgbus = "0x940dAAbA3F713abFabD79CdD991466fe698CBe54"
 addgasestimateratio = 0.3
 maxpriorityfeepergasgwei = 1
@@ -269,6 +270,7 @@ forwardblkdelay = 50
 maxblkdelta = 100
 cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
+ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
 addgasgwei = 10
 addgasestimateratio = 0.3
 
@@ -282,6 +284,7 @@ forwardblkdelay = 200
 maxblkdelta = 10000
 cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
+ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
 addgasestimateratio = 0.3
 maxpriorityfeepergasgwei = 1
 
@@ -296,6 +299,7 @@ maxblkdelta = 10000
 cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 otvault = "0xbCfeF6Bb4597e724D720735d32A9249E0640aA11"
 ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
+ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
 addgasestimateratio = 0.3
 maxpriorityfeepergasgwei = 3
 proxyport = 10304
@@ -339,6 +343,7 @@ forwardblkdelay = 10
 cbridge = "0x841ce48f9446c8e281d3f1444cb859b4a6d0738c"
 otvault2 = "0xb51541df05DE07be38dcfc4a80c05389A54502BB"
 ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
+ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
 addgasestimateratio = 0.3
 
 [[multichain]]
@@ -364,6 +369,7 @@ maxblkdelta = 10000
 forwardblkdelay = 200
 cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
+ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
 addgasestimateratio = 0.3
 maxpriorityfeepergasgwei = 1
 proxyport = 10306
@@ -392,6 +398,7 @@ forwardblkdelay = 50
 maxblkdelta = 100
 cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
+ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
 addgasestimateratio = 0.3
 proxyport = 10307
 
@@ -415,6 +422,7 @@ blkdelay = 8
 maxblkdelta = 5000
 cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
+ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
 proxyport = 10308
 
 [[multichain]]
@@ -427,6 +435,7 @@ forwardblkdelay = 100
 maxblkdelta = 10000
 cbridge = "0xBf2B2757F0B2a2f70136C4A6627e99d8ec5cC7b9"
 ptbridge = "0x31d95c7fc6b5520B4BdCD78Efa689dD1CCa5741E"
+ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
 proxyport = 10309
 
 [[multichain]]
