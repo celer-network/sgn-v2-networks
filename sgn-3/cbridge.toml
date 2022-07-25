@@ -509,3 +509,14 @@ forwardblkdelay = 200
 cbridge = "0x4C882ec256823eE773B25b414d36F92ef58a7c0C"
 ptbridge2 = "0xb3833Ecd19D4Ff964fA7bc3f8aC070ad5e360E56"
 proxyport = 10312
+
+[[multichain]]
+chainID = 8217
+name = "Klaytn"
+gateway = "https://public-node-api.klaytnapi.com/v1/cypress"
+blkinterval = 30
+blkdelay = 30
+maxblkdelta = 10000
+forwardblkdelay = 200
+cbridge = "0x4C882ec256823eE773B25b414d36F92ef58a7c0C"
+ptbridge2 = "0xb3833Ecd19D4Ff964fA7bc3f8aC070ad5e360E56"
