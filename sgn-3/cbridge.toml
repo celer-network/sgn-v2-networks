@@ -435,7 +435,7 @@ forwardblkdelay = 100
 maxblkdelta = 10000
 cbridge = "0xBf2B2757F0B2a2f70136C4A6627e99d8ec5cC7b9"
 ptbridge = "0x31d95c7fc6b5520B4BdCD78Efa689dD1CCa5741E"
-ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
+ptbridge2 = "0xD340BC3Ec35e63BcF929C5A9ad3AE5B1EBDbE678"
 proxyport = 10309
 
 [[multichain]]
