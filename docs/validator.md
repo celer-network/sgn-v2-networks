@@ -31,7 +31,9 @@ We run on Ubuntu Linux amd64 with Amazon EC2 as an example. Feel free to experim
     sudo apt update && sudo apt install gcc make
     ```
 
-    (Optional) If you are on Ubuntu and choose to use cleveldb, which is reported to be more performant, install libleveldb-dev:
+    (Optional) If you are on Ubuntu and choose to use cleveldb, install libleveldb-dev.
+    NOTE: Even though cleveldb has been reported to be more performant, we have
+    observed possible memory leak and DO NOT recommend using it.
 
     ```sh
     sudo apt install libleveldb-dev
