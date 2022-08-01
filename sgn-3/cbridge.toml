@@ -475,7 +475,7 @@ ptbridge2 = "0xF8Bf9988206c4de87F52A3c24486E4367B7088CB"
 [[multichain]]
 chainID = 58
 name = "Ontology EVM"
-gateway = "https://dappnode10.ont.io:10339"
+gateway = "https://dappnode1.ont.io:10339"
 blkinterval = 30
 blkdelay = 2
 maxblkdelta = 10000
