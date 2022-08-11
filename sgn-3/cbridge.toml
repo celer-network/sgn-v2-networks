@@ -507,3 +507,13 @@ maxblkdelta = 10000
 forwardblkdelay = 200
 cbridge = "0x4C882ec256823eE773B25b414d36F92ef58a7c0C"
 ptbridge2 = "0xb3833Ecd19D4Ff964fA7bc3f8aC070ad5e360E56"
+
+[[multichain]]
+chainID = 42170
+name = "Arbitrum Nova"
+gateway = "https://nova.arbitrum.io/rpc"
+blkinterval = 10
+blkdelay = 4
+maxblkdelta = 10000
+forwardblkdelay = 500
+cbridge = "0xb3833Ecd19D4Ff964fA7bc3f8aC070ad5e360E56"
