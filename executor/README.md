@@ -269,6 +269,13 @@ final status. only applicable if you have executor.contracts.allow_sender_groups
 Actions commands are a means of interacting with the executor DB and on-chain data to fix various issues.
 
 ```sh
+executor tx execute --id <message-id> --gas-limit <optional, the gas limit to send the tx with>
+```
+
+This command looks up in the local DB for the message and attempts to execute it on-chain. the `--gas-limit` option is useful for force the execution of the message to debug the execution error.
+
+
+```sh
 executor tx unstuck --id <message-id> --submitter <optional, service-id>
 ```
 
