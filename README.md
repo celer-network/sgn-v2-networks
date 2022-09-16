@@ -6,7 +6,7 @@ Please refer to the [instructions](./docs/) to see how to [run a validator](./do
 
 ## Current networks and configs
 
-- **Partner Testnet**: [sgn-partnernet-1000](./sgn-partnernet-1000/)
+- **Partner Testnet (Paused)**: [sgn-partnernet-1000](./sgn-partnernet-1000/)
 - **Mainnet**: [sgn-3](./sgn-3/)
 
 ## Frontend interfaces
