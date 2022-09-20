@@ -306,6 +306,7 @@ forwardblkdelay = 10
 cbridge = "0x841ce48f9446c8e281d3f1444cb859b4a6d0738c"
 otvault = "0x1E6b1ceAF75936f153ABB7B65FBa57AbaE14e6CE"
 ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
+msgbus = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
 addgasestimateratio = 0.3
 
 [[multichain]]
