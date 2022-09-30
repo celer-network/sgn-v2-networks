@@ -531,7 +531,6 @@ gateway = "https://rpc-mainnet-algorand-rollup.a1.milkomeda.com"
 blkinterval = 30
 blkdelay = 1
 maxblkdelta = 5000
-forwardblkdelay = 500
 cbridge = "0xa7C9FeDe809b6af10dC52590804c69F40f6f8154"
 ptbridge2 = "0x422849B355039bC58F2780cc4854919fC9cfaF94"
 addgasgwei = 20
