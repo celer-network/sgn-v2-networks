@@ -52,6 +52,7 @@ otvault2 = "0xEA4B1b0aa3C110c55f650d28159Ce4AD43a4a58b"
 ptbridge = "0xbdd2739AE69A054895Be33A22b2D2ed71a1DE778"
 ptbridge2 = "0xc72e7fC220e650e93495622422F3c14fb03aAf6B"
 msgbus = "0x3ad9d0648cdaa2426331e894e980d0a5ed16257f"
+wdinbox = "0xfe0401bFFBeECE5d9FaE7f1b9a8f1e03FA1c3184"
 addgasestimateratio = 0.3
 
 [[multichain]]
