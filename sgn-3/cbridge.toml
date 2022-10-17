@@ -536,3 +536,15 @@ maxblkdelta = 5000
 cbridge = "0xa7C9FeDe809b6af10dC52590804c69F40f6f8154"
 ptbridge2 = "0x422849B355039bC58F2780cc4854919fC9cfaF94"
 addgasgwei = 20
+
+[[multichain]]
+chainID = 73
+name = "FNCY Chain"
+gateway = "https://fncy-seed1.fncy.world"
+blkinterval = 15
+blkdelay = 5
+forwardblkdelay = 100
+maxblkdelta = 1000
+cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+otvault2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
+ptbridge2 = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
