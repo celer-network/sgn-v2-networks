@@ -14,6 +14,7 @@ ptbridge2 = "0x52E4f244f380f8fA51816c8a10A63105dd4De084"
 msgbus = "0x4066d196a423b2b3b8b054f4f40efb47a74e200c"
 wdinbox = "0xD20fc42E293734f58316E2106933B8D9FB14F5b2"
 farmingrewards = "0x61f85fF2a2f4289Be4bb9B72Fc7010B3142B5f41"
+xferagt = "0x9b274BC73940d92d0Af292Bde759cbFCCE661a0b"
 maxfeepergasgwei = 500
 addgasestimateratio = 0.6
 
@@ -33,6 +34,7 @@ ptbridge = "0xd443FE6bf23A4C9B78312391A30ff881a097580E"
 ptbridge2 = "0x26c76F7FeF00e02a5DD4B5Cc8a0f717eB61e1E4b"
 msgbus = "0x95714818fdd7a5454f73da9c777b3ee6ebaeea6b"
 wdinbox = "0xf0FF9888A70f44eb12223A6a55C65976BA7bf854"
+xferagt = "0x3d85B598B734a0E7c8c1b62B00E972e9265dA541"
 addgasgwei = 2
 mingasgwei = 5
 addgasestimateratio = 0.3
@@ -548,3 +550,14 @@ maxblkdelta = 1000
 cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
 otvault2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
 ptbridge2 = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
+
+[[multichain]]
+chainID = 12360001
+name = "aptos"
+gateway = "127.0.0.1:7799"
+blkinterval = 15
+blkdelay = 1
+maxblkdelta = 100
+cbridge = "8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d"
+otvault2 = "8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d"
+ptbridge2 = "8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d"
