@@ -275,7 +275,7 @@ receiving the snapshot with `up-to-date-node-ip`s taken from the `seeds` field i
 
     [Service]
     WorkingDirectory=/home/ubuntu
-    ExecStart=/home/ubuntu/bin/sgn-aptos-proxy-server /home/ubuntu/.sgnd/config/sgn_aptos_proxy.toml
+    ExecStart=/home/ubuntu/bin/sgn-aptos-proxy-server /home/ubuntu/.sgnd/config/sgn_proxy_aptos.toml
     StandardOutput=append:/var/log/sgn-proxy/aptos/out.log
     StandardError=append:/var/log/sgn-proxy/aptos/err.log
     Restart=always
