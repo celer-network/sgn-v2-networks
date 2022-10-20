@@ -1,0 +1,17 @@
+[server]
+ip = "127.0.0.1"
+port = 7799
+log_path = "/var/log/sgn-proxy/aptos/"
+enable_panic = true
+rpc_timeout = 20
+
+[aptos]
+url = "https://fullnode.mainnet.aptoslabs.com"
+private_key = ""
+chain_id = 12360001
+owner_account = "8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d"
+
+[contracts]
+bridge = "8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d"
+vault = "8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d"
+peg_bridge = "8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d"

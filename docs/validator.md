@@ -241,10 +241,58 @@ We recommend using systemd to run your validator. Feel free to experiment with o
     ```
 
 4. Currently, we require using Tendermint state sync to sync your node. Follow the instructions in [this doc](state_sync.md) to prepare the node
-receiving the snapshot with `up-to-date-node-ip`s taken from the `seeds` field in `$HOME/.sgnd/config/config.toml`.
-Stop short of starting the node.
+receiving the snapshot with `up-to-date-node-ip`s taken from the `seeds` field in `$HOME/.sgnd/config/config.toml`. Stop short of starting the node.
 
-5. Enable and start the sgnd service:
+5. To support Aptos on `sgn-3`, we require running a sidecar reverse proxy service for `sgnd`.
+
+    Prepare the `sgn-aptos-proxy-server` binary:
+
+    ```sh
+    mkdir -p /home/ubuntu/bin
+    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.11.0/sgn-aptos-proxy-server-linux-amd64.tar.gz | tar -xz
+    mv sgn-aptos-proxy-server /home/ubuntu/bin
+    ```
+
+    Prepare the config TOML file:
+
+    ```sh
+    cp /home/ubuntu/sgn-v2-networks/sgn-3/sgn_proxy_aptos.toml /home/ubuntu/.sgnd/config
+    ```
+
+    Prepare the Aptos proxy service:
+
+    ```sh
+    sudo mkdir -p /var/log/sgn-proxy/aptos
+    sudo touch /etc/systemd/system/sgn-proxy-aptos.service
+    ```
+
+    Add the following to `/etc/systemd/system/sgn-proxy-aptos.service`:
+
+    ```
+    [Unit]
+    Description=SGN Aptos proxy service
+    After=network-online.target
+
+    [Service]
+    WorkingDirectory=/home/ubuntu
+    ExecStart=/home/ubuntu/bin/sgn-aptos-proxy-server /home/ubuntu/.sgnd/config/sgn_aptos_proxy.toml
+    StandardOutput=append:/var/log/sgn-proxy/aptos/out.log
+    StandardError=append:/var/log/sgn-proxy/aptos/err.log
+    Restart=always
+    RestartSec=10
+
+    [Install]
+    WantedBy=multi-user.target
+    ```
+
+    Enable and start the Aptos proxy service:
+
+    ```sh
+    sudo systemctl enable sgn-proxy-aptos.service
+    sudo systemctl start sgn-proxy-aptos.service
+    ```
+
+6. Enable and start the sgnd service:
 
     ```sh
     sudo systemctl enable sgnd.service
@@ -259,7 +307,7 @@ Stop short of starting the node.
 
     You can tell the node is synced when a new block shows up about every 5 seconds.
 
-6. (Currently unsupported) If you choose not to setup state sync, the node will perform a traditional "fast sync" instead.
+7. (Currently unsupported) If you choose not to setup state sync, the node will perform a traditional "fast sync" instead.
 In this mode it replays and verifies all historical transactions starting from genesis.
 
 ## Claim validator status
