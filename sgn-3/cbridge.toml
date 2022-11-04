@@ -346,7 +346,8 @@ addgasestimateratio = 0.3
 [[multichain]]
 chainID = 9001
 name = "Evmos"
-gateway = "https://eth.bd.evmos.org:8545"
+gateway = "https://evmos-json-rpc.stakely.io"
+# gateway = "https://eth.bd.evmos.org:8545"
 blkinterval = 30
 blkdelay = 15
 maxblkdelta = 10000
