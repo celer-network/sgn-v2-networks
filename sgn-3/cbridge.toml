@@ -554,6 +554,17 @@ otvault2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
 ptbridge2 = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
 
 [[multichain]]
+chainID = 248
+name = "Oasys Mainnet"
+gateway = "https://rpc.mainnet.oasys.games/"
+blkinterval = 15
+blkdelay = 4
+forwardblkdelay = 200
+maxblkdelta = 10000
+cbridge = "0x5200000000000000000000000000000000000015"
+ptbridge2 = "0x5200000000000000000000000000000000000017"
+
+[[multichain]]
 chainID = 12360001
 name = "aptos"
 gateway = "127.0.0.1:7799"
