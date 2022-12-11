@@ -585,3 +585,4 @@ forwardblkdelay = 300
 maxblkdelta = 5000
 cbridge = "0x3b53d2c7b44d40be05fa5e2309ffeb6eb2492d88"
 otvault2 = "0x51AF61B7026a0aE369acc8652Ab2fb637F4689F7"
+msgbus = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
