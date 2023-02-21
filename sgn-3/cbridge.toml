@@ -529,6 +529,7 @@ blkdelay = 4
 maxblkdelta = 10000
 forwardblkdelay = 500
 cbridge = "0xb3833Ecd19D4Ff964fA7bc3f8aC070ad5e360E56"
+ptbridge2 = "0xa55C7E1274bE5db2275a0BDd055f81e8263b7954"
 msgbus = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
 
 [[multichain]]
@@ -587,3 +588,15 @@ maxblkdelta = 5000
 cbridge = "0x3b53d2c7b44d40be05fa5e2309ffeb6eb2492d88"
 otvault2 = "0x51AF61B7026a0aE369acc8652Ab2fb637F4689F7"
 msgbus = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
+
+[[multichain]]
+chainID = 324
+name = "zkSync Era Mainnet"
+gateway = "https://zksync2-mainnet.zksync.io"
+blkinterval = 30
+blkdelay = 15
+forwardblkdelay = 300
+maxblkdelta = 5000
+cbridge = "0xd8EB4AF624ff9172992F632d48566faBd7fd71e8"
+ptbridge2 = "0xffB56a0E56afc88295ECc4fCF3D54d844637FcB1"
+msgbus = "0xb3Ec8b87808200E1414010df87f1F8202CdfD084"
