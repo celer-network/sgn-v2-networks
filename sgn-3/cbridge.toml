@@ -63,7 +63,7 @@ name = "Polygon"
 # Private gateway endpoint recommended
 gateway = "https://polygon-rpc.com"
 blkinterval = 15
-blkdelay = 120
+blkdelay = 200
 forwardblkdelay = 50
 maxblkdelta = 5000
 cbridge = "0x88DCDC47D2f83a99CF0000FDF667A468bB958a78"
