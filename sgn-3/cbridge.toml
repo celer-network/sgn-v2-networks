@@ -600,3 +600,15 @@ maxblkdelta = 5000
 cbridge = "0xd8EB4AF624ff9172992F632d48566faBd7fd71e8"
 ptbridge2 = "0xffB56a0E56afc88295ECc4fCF3D54d844637FcB1"
 msgbus = "0xb3Ec8b87808200E1414010df87f1F8202CdfD084"
+
+[[multichain]]
+chainID = 23294
+name = "Oasis Sapphire"
+gateway = "https://sapphire.oasis.io"
+blkinterval = 30
+blkdelay = 15
+forwardblkdelay = 200
+maxblkdelta = 5000
+cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+msgbus = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
+addgasestimateratio = 0.3
