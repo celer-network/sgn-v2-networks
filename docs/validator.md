@@ -64,8 +64,8 @@ We run on Ubuntu Linux amd64 with Amazon EC2 as an example. Feel free to experim
 1. From the `/home/ubuntu` directory, download and install the `sgnd` binary:
 
     ```sh
-    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.12.1/sgnd-v1.12.1-goleveldb-linux-amd64.tar.gz | tar -xz
-    # To use with cleveldb on Ubuntu, download https://github.com/celer-network/sgn-v2-networks/releases/download/v1.12.1/sgnd-v1.12.1-cleveldb-ubuntu-linux-amd64.tar.gz
+    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.13.0/sgnd-v1.13.0-goleveldb-linux-amd64.tar.gz | tar -xz
+    # To use with cleveldb on Ubuntu, download https://github.com/celer-network/sgn-v2-networks/releases/download/v1.13.0/sgnd-v1.13.0-cleveldb-ubuntu-linux-amd64.tar.gz
     mv sgnd $GOBIN
     ```
 
@@ -249,7 +249,7 @@ receiving the snapshot with `up-to-date-node-ip`s taken from the `seeds` field i
 
     ```sh
     mkdir -p /home/ubuntu/bin
-    curl -L https://github.com/celer-network/sgn-v2-networks/releases/download/v1.12.1/sgn-aptos-proxy-server-linux-amd64.tar.gz | tar -xz
+    curl -L https://github.com/celer-network/sgn-v2-networks/blob/main/binaries/sgn-aptos-proxy-server-linux-amd64.tar.gz | tar -xz
     mv sgn-aptos-proxy-server /home/ubuntu/bin
     ```
 
