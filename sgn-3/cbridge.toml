@@ -612,3 +612,15 @@ maxblkdelta = 5000
 cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
 msgbus = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
 addgasestimateratio = 0.3
+
+[[multichain]]
+chainID = 314
+name = "Filecoin"
+gateway = "https://api.node.glif.io/rpc/v1"
+blkinterval = 30
+blkdelay = 1
+forwardblkdelay = 100
+maxblkdelta = 5000
+cbridge = "0xd46f8e428a06789b5884df54e029e738277388d1"
+ptbridge2 = "0xa7c9fede809b6af10dc52590804c69f40f6f8154"
+msgbus = "0x6ff2130fbdd2837b0c92d7f56f6c017642d84f66"
