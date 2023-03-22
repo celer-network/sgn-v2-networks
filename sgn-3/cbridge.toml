@@ -624,3 +624,14 @@ maxblkdelta = 5000
 cbridge = "0xd46f8e428a06789b5884df54e029e738277388d1"
 ptbridge2 = "0xa7c9fede809b6af10dc52590804c69f40f6f8154"
 msgbus = "0x6ff2130fbdd2837b0c92d7f56f6c017642d84f66"
+
+[[multichain]]
+chainID = 7700
+name = "Canto"
+gateway = "https://canto.slingshot.finance/"
+blkinterval = 30
+blkdelay = 8
+forwardblkdelay = 100
+maxblkdelta = 5000
+cbridge = "0xD46F8E428A06789B5884df54E029e738277388D1"
+ptbridge2 = "0xa7C9FeDe809b6af10dC52590804c69F40f6f8154"
