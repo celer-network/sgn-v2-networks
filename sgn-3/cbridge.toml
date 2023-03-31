@@ -646,4 +646,6 @@ blkdelay = 6
 forwardblkdelay = 200
 maxblkdelta = 5000
 cbridge = "0xD46F8E428A06789B5884df54E029e738277388D1"
+msgbus = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
+
 
