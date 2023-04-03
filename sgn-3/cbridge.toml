@@ -598,8 +598,8 @@ blkdelay = 0
 forwardblkdelay = 300
 maxblkdelta = 5000
 cbridge = "0x54069e96C4247b37C2fbd9559CA99f08CD1CD66c"
-ptbridge2 = "0xffB56a0E56afc88295ECc4fCF3D54d844637FcB1"
-msgbus = "0xb3Ec8b87808200E1414010df87f1F8202CdfD084"
+ptbridge2 = "0x0D72Be73619e29A67fbD28348AC952288CC9ee46"
+msgbus = "0xeC778A485247b2E863e0D53660761EA602c8a51D"
 
 [[multichain]]
 chainID = 23294
