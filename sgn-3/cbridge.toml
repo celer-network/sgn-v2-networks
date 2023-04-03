@@ -648,4 +648,18 @@ maxblkdelta = 5000
 cbridge = "0xD46F8E428A06789B5884df54E029e738277388D1"
 msgbus = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
 
+[[multichain]]
+accountprefix = "inj"
+cbridge = "0xe559e36196b88f03423c2ee5708dd83b1d8505e7"
+chainID = 999999997
+gasadjustment = 1.5
+gasprices = "50000000000inj"
+gateway = "https://k8s.global.mainnet.tm.injective.network:443"
+key = "injopr"
+msgpackage = "cosmwasm.wasm.v1"
+name = "Injective"
+otvault = "0xa6214ccc545a3bfb979851b09debed43f124bf61"
+ptbridge = "0x0ec4a924e58b579049c67979bfabb454424e74de"
+rawchainid = "injective-1"
+timeout = "10s"
 
