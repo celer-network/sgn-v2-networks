@@ -440,7 +440,7 @@ proxyport = 10309
 [[multichain]]
 chainID = 73772
 name = "Swimmer Network"
-gateway = "https://avax-cra-rpc.gateway.pokt.network/"
+gateway = "https://subnets.avax.network/swimmer/mainnet/rpc"
 blkinterval = 30
 blkdelay = 4
 forwardblkdelay = 100
