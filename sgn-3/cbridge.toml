@@ -663,3 +663,14 @@ ptbridge = "0x0ec4a924e58b579049c67979bfabb454424e74de"
 rawchainid = "injective-1"
 timeout = "10s"
 
+[[multichain]]
+chainID = 1990
+name = "Antimatter B2"
+gateway = "https://rpc.antimatter.finance"
+blkinterval = 30
+blkdelay = 15
+forwardblkdelay = 200
+maxblkdelta = 5000
+cbridge = "0xD46F8E428A06789B5884df54E029e738277388D1"
+ptbridge2 = "0xa7C9FeDe809b6af10dC52590804c69F40f6f8154"
+
