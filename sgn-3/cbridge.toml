@@ -636,6 +636,7 @@ blkdelay = 8
 forwardblkdelay = 100
 maxblkdelta = 5000
 cbridge = "0xD46F8E428A06789B5884df54E029e738277388D1"
+otvault2 = "0xD33289644740eF5F488b0270f812F7B18B500935"
 ptbridge2 = "0xa7C9FeDe809b6af10dC52590804c69F40f6f8154"
 
 [[multichain]]
