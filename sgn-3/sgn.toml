@@ -40,7 +40,7 @@ passphrase = ""
 transactors = []
 validator_account = ""
 price_update_url = "https://cbridge-stat.s3.us-west-2.amazonaws.com/prod2/cbridge-price.json"
-liveness_report_endpoint = "https://cbridge-prod2.celer.network/v1/reportCurrentBlockNumber"
+liveness_report_endpoint = "https://cbridge-prod2.celer.app/v1/reportCurrentBlockNumber"
 
 [sgnd.check_interval]
 verifier = 10
