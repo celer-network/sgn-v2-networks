@@ -15,3 +15,7 @@ Feel free to try out cBridge and SGN functionalities via the frontend UIs:
 
 - Testnet: [cBridge](https://cbridge-partner-testnet.celer.network/), [SGN staking](https://sgn-partner-testnet.celer.network/)
 - Mainnet: [cBridge](https://cbridge.celer.network/), [SGN staking](https://sgn.celer.network/)
+
+## Contact
+
+If you have identified any security vulnerabilities or have security concerns, please email security@celer.network.
