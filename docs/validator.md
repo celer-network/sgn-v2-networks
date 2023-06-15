@@ -292,7 +292,60 @@ receiving the snapshot with `up-to-date-node-ip`s taken from the `seeds` field i
     sudo systemctl start sgn-proxy-aptos.service
     ```
 
-6. Enable and start the sgnd service:
+    You will likely see `No Aptos account specified, running in watch-only mode.` from the output log, which is normal.
+
+6. To support Sui on `sgn-3`, we require running a sidecar reverse proxy service for `sgnd`.
+
+    Prepare the `sgn-sui-proxy-server` binary:
+
+    ```sh
+    mkdir -p /home/ubuntu/bin
+    curl -L https://github.com/celer-network/sgn-v2-networks/blob/main/binaries/sgn-sui-proxy-server-linux-amd64.tar.gz | tar -xz
+    mv sgn-sui-proxy-server /home/ubuntu/bin
+    ```
+
+    Prepare the config TOML file:
+
+    ```sh
+    cp /home/ubuntu/sgn-v2-networks/sgn-3/sgn_proxy_sui.toml /home/ubuntu/.sgnd/config
+    ```
+
+    Prepare the Sui proxy service:
+
+    ```sh
+    sudo mkdir -p /var/log/sgn-proxy/sui
+    sudo touch /etc/systemd/system/sgn-proxy-sui.service
+    ```
+
+    Add the following to `/etc/systemd/system/sgn-proxy-sui.service`:
+
+    ```
+    [Unit]
+    Description=SGN Sui proxy service
+    After=network-online.target
+
+    [Service]
+    WorkingDirectory=/home/ubuntu
+    ExecStart=/home/ubuntu/bin/sgn-sui-proxy-server /home/ubuntu/.sgnd/config/sgn_proxy_sui.toml
+    StandardOutput=append:/var/log/sgn-proxy/sui/out.log
+    StandardError=append:/var/log/sgn-proxy/sui/err.log
+    Restart=always
+    RestartSec=10
+
+    [Install]
+    WantedBy=multi-user.target
+    ```
+
+    Enable and start the Sui proxy service:
+
+    ```sh
+    sudo systemctl enable sgn-proxy-sui.service
+    sudo systemctl start sgn-proxy-sui.service
+    ```
+
+    You will likely see `No Sui account specified, running in watch-only mode.` from the output log, which is normal.
+
+7. Enable and start the sgnd service:
 
     ```sh
     sudo systemctl enable sgnd.service
@@ -307,7 +360,7 @@ receiving the snapshot with `up-to-date-node-ip`s taken from the `seeds` field i
 
     You can tell the node is synced when a new block shows up about every 5 seconds.
 
-7. (Currently unsupported) If you choose not to setup state sync, the node will perform a traditional "fast sync" instead.
+8. (Currently unsupported) If you choose not to setup state sync, the node will perform a traditional "fast sync" instead.
 In this mode it replays and verifies all historical transactions starting from genesis.
 
 ## Claim validator status

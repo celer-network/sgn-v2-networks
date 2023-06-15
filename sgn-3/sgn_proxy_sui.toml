@@ -1,0 +1,24 @@
+[server]
+ip = "127.0.0.1"
+port = 7798
+log_path = "/var/log/sgn-proxy/sui/"
+enable_panic = true
+rpc_timeout = 15
+
+[sui]
+url = "https://fullnode.mainnet.sui.io:443"
+from_account = ""
+keystore_path = ""
+chain_id = 12370001
+
+[contracts]
+bridge = "0x94e7a8e71830d2b34b3edaa195dc24c45d142584f06fa257b73af753d766e690"
+peg_bridge = "0x94e7a8e71830d2b34b3edaa195dc24c45d142584f06fa257b73af753d766e690"
+vault = "0x94e7a8e71830d2b34b3edaa195dc24c45d142584f06fa257b73af753d766e690"
+
+[objects]
+bridge_state = "0x638553f133a7f8ea32144b7c540bb911ec9d8839977334ad805a3b229fb01e24"
+peg_bridge_state = "0x835006a934bb8ce4b21fb4ce641d5a933677024bc1b88219023dabcbbc8f55b9"
+vault_state = "0x9bb92383797509d1e6d22b9de1437080d38ae5b3b8562bf4234175ae56e30a6a"
+delayed_transfer_state = "0x4ba21830c4f493c73d6560aa17484568e7341dbcd8836ee39822a09894531aa6"
+volume_control_state = "0x668fc25c9e15e3c1d7d40bed2027103f56c62d983ee870469ad9aa8ad83420e2"
