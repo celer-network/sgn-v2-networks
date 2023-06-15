@@ -692,3 +692,14 @@ otvault = "0xc21dcaa1608a7f2559cee58352794db567f5576a7803bb5ae422314766191f14"
 ptbridge = "0xb687d7fb0fcf2a6a9dbe6b9f855d9ed6f028311529b1eec8bb6578a14b90f42c"
 rawchainid = "xstaxy-1"
 timeout = "10s"
+
+[[multichain]]
+chainID = 12370001
+name = "sui mainnet"
+gateway = "127.0.0.1:7798"
+blkinterval = 15
+blkdelay = 1
+maxblkdelta = 20
+cbridge = "94e7a8e71830d2b34b3edaa195dc24c45d142584f06fa257b73af753d766e690"
+otvault2 = "94e7a8e71830d2b34b3edaa195dc24c45d142584f06fa257b73af753d766e690"
+ptbridge2 = "94e7a8e71830d2b34b3edaa195dc24c45d142584f06fa257b73af753d766e690"
