@@ -647,7 +647,8 @@ chainID = 999999997
 gasadjustment = 1.5
 gasprices = "800000000inj"
 gateway = "https://rpc-injective.whispernode.com:443"
-#gateway = "https://k8s.global.mainnet.tm.injective.network:443"key = "injopr"
+#gateway = "https://k8s.global.mainnet.tm.injective.network:443"
+key = "injopr"
 msgpackage = "cosmwasm.wasm.v1"
 name = "Injective"
 otvault = "0xa6214ccc545a3bfb979851b09debed43f124bf61"
