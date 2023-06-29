@@ -474,6 +474,7 @@ blkdelay = 15
 maxblkdelta = 10000
 cbridge = "0xb51541df05DE07be38dcfc4a80c05389A54502BB"
 ptbridge2 = "0xF8Bf9988206c4de87F52A3c24486E4367B7088CB"
+wdinbox = "0x0D90AC8466C3aEF6821f9116B96aa2255Ca2DA20"
 
 [[multichain]]
 chainID = 58
