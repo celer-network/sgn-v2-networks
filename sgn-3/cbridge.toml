@@ -693,3 +693,14 @@ maxblkdelta = 20
 cbridge = "94e7a8e71830d2b34b3edaa195dc24c45d142584f06fa257b73af753d766e690"
 otvault2 = "94e7a8e71830d2b34b3edaa195dc24c45d142584f06fa257b73af753d766e690"
 ptbridge2 = "94e7a8e71830d2b34b3edaa195dc24c45d142584f06fa257b73af753d766e690"
+
+[[multichain]]
+chainID = 59144
+name = "Linea Mainnet"
+gateway = "https://linea-mainnet.infura.io/v3/07f0cfe1681c4237960f665dc668e78c"
+blkinterval = 30
+blkdelay = 5
+forwardblkdelay = 200
+maxblkdelta = 5000
+cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+ptbridge2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
