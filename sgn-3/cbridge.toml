@@ -705,3 +705,14 @@ maxblkdelta = 5000
 cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
 ptbridge2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
 maxpriorityfeepergasgwei = 4.9
+
+[[multichain]]
+chainID = 8453
+name = "Base Mainnet"
+gateway = "https://developer-access-mainnet.base.org"
+blkinterval = 30
+blkdelay = 15
+forwardblkdelay = 200
+maxblkdelta = 5000
+cbridge = "0x7d43AABC515C356145049227CeE54B608342c0ad"
+ptbridge2 = "0x5471ea8f739dd37E9B81Be9c5c77754D8AA953E4"
