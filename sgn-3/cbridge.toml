@@ -698,7 +698,7 @@ ptbridge2 = "94e7a8e71830d2b34b3edaa195dc24c45d142584f06fa257b73af753d766e690"
 [[multichain]]
 chainID = 59144
 name = "Linea Mainnet"
-gateway = "https://linea-mainnet.infura.io/v3/07f0cfe1681c4237960f665dc668e78c"
+gateway = "https://rpc.linea.build"
 blkinterval = 30
 blkdelay = 1
 forwardblkdelay = 200
