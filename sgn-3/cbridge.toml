@@ -159,19 +159,19 @@ maxgasgwei = 30
 addgasestimateratio = 0.3
 proxyport = 10300
 
-[[multichain]]
-chainID = 42220
-name = "Celo"
-gateway = "https://forno.celo.org"
-blkinterval = 10
-blkdelay = 10
-forwardblkdelay = 100
-maxblkdelta = 10000
-cbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
-otvault = "0xD9d1034ef3d21221F008C7e96346CA999966752C"
-ptbridge = "0xDA1DD66924B0470501aC7736372d4171cDd1162E"
-addgasestimateratio = 0.3
-proxyport = 10301
+#[[multichain]]
+#chainID = 42220
+#name = "Celo"
+#gateway = "https://forno.celo.org"
+#blkinterval = 10
+#blkdelay = 10
+#forwardblkdelay = 100
+#maxblkdelta = 10000
+#cbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
+#otvault = "0xD9d1034ef3d21221F008C7e96346CA999966752C"
+#ptbridge = "0xDA1DD66924B0470501aC7736372d4171cDd1162E"
+#addgasestimateratio = 0.3
+#proxyport = 10301
 
 [[multichain]]
 chainID = 1088
@@ -229,18 +229,18 @@ cbridge = "0x3795C36e7D12A8c252A20C5a7B455f7c57b60283"
 ptbridge = "0xd4c058380D268d85bC7c758072f561e8f2dB5975"
 addgasestimateratio = 0.3
 
-[[multichain]]
-chainID = 66
-name = "OEC"
-gateway = "https://exchainrpc.okex.org"
-blkinterval = 15
-blkdelay = 10
-forwardblkdelay = 200
-maxblkdelta = 2000
-cbridge = "0x6a2d262D56735DbA19Dd70682B39F6bE9a931D98"
-ptbridge = "0x48284Eb583a1F3058F4BCe0a685D44FE29d4539e"
-ptbridge2 = "0x8bCcdD21B97733D78a4168be1D6049A45652C4B8"
-addgasestimateratio = 0.3
+#[[multichain]]
+#chainID = 66
+#name = "OEC"
+#gateway = "https://exchainrpc.okex.org"
+#blkinterval = 15
+#blkdelay = 10
+#forwardblkdelay = 200
+#maxblkdelta = 2000
+#cbridge = "0x6a2d262D56735DbA19Dd70682B39F6bE9a931D98"
+#ptbridge = "0x48284Eb583a1F3058F4BCe0a685D44FE29d4539e"
+#ptbridge2 = "0x8bCcdD21B97733D78a4168be1D6049A45652C4B8"
+#addgasestimateratio = 0.3
 
 [[multichain]]
 chainID = 128
@@ -359,21 +359,21 @@ ptbridge = "0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820"
 ptbridge2 = "0xC1d6E421a062Fdbb26C31Db4a2113dF0F678CD04"
 addgasestimateratio = 0.3
 
-[[multichain]]
-chainID = 1024
-name = "Clover"
-gateway = "https://api-para.clover.finance"
-blkinterval = 30
-blkdelay = 15
-maxblkdelta = 10000
-forwardblkdelay = 200
-cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
-ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
-ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
-addgasestimateratio = 0.3
-maxpriorityfeepergasgwei = 1
-proxyport = 10306
-gaslimit = 500000
+#[[multichain]]
+#chainID = 1024
+#name = "Clover"
+#gateway = "https://api-para.clover.finance"
+#blkinterval = 30
+#blkdelay = 15
+#maxblkdelta = 10000
+#forwardblkdelay = 200
+#cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
+#ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
+#ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
+#addgasestimateratio = 0.3
+#maxpriorityfeepergasgwei = 1
+#proxyport = 10306
+#gaslimit = 500000
 
 [[multichain]]
 chainID = 47805
@@ -414,17 +414,17 @@ cbridge = "08dd120226ec2213"
 otvault = "08dd120226ec2213"
 ptbridge = "08dd120226ec2213"
 
-[[multichain]]
-chainID = 44
-name = "Crab Mainnet"
-gateway = "https://crab-rpc.darwinia.network"
-blkinterval = 30
-blkdelay = 8
-maxblkdelta = 5000
-cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
-ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
-ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
-proxyport = 10308
+#[[multichain]]
+#chainID = 44
+#name = "Crab Mainnet"
+#gateway = "https://crab-rpc.darwinia.network"
+#blkinterval = 30
+#blkdelay = 8
+#maxblkdelta = 5000
+#cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
+#ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
+#ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
+#proxyport = 10308
 
 [[multichain]]
 chainID = 210425
@@ -476,17 +476,17 @@ cbridge = "0xb51541df05DE07be38dcfc4a80c05389A54502BB"
 ptbridge2 = "0xF8Bf9988206c4de87F52A3c24486E4367B7088CB"
 wdinbox = "0x0D90AC8466C3aEF6821f9116B96aa2255Ca2DA20"
 
-[[multichain]]
-chainID = 58
-name = "Ontology EVM"
-gateway = "https://dappnode10.ont.io:10339"
-blkinterval = 30
-blkdelay = 2
-maxblkdelta = 10000
-forwardblkdelay = 100
-cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
-ptbridge2 = "0xd4c058380D268d85bC7c758072f561e8f2dB5975"
-proxyport = 10311
+#[[multichain]]
+#chainID = 58
+#name = "Ontology EVM"
+#gateway = "https://dappnode10.ont.io:10339"
+#blkinterval = 30
+#blkdelay = 2
+#maxblkdelta = 10000
+#forwardblkdelay = 100
+#cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
+#ptbridge2 = "0xd4c058380D268d85bC7c758072f561e8f2dB5975"
+#proxyport = 10311
 
 [[multichain]]
 chainID = 71402
