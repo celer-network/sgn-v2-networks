@@ -9,7 +9,8 @@ sgnd query cbridge chain-signers [chain-id] [flags]
 ### Options
 
 ```
-  -h, --help   help for chain-signers
+      --file string   file that contains a list of <val, signer> addrs to check powers
+  -h, --help          help for chain-signers
 ```
 
 ### Options inherited from parent commands

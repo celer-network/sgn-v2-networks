@@ -23,9 +23,11 @@ sgnd query cbridge [flags]
 * [sgnd query](sgnd_query.md)	 - Querying subcommands
 * [sgnd query cbridge asset-price](sgnd_query_cbridge_asset-price.md)	 - Query asset price
 * [sgnd query cbridge balancers](sgnd_query_cbridge_balancers.md)	 - Query balancers
+* [sgnd query cbridge blacklist](sgnd_query_cbridge_blacklist.md)	 - Query blacklist
 * [sgnd query cbridge chain-signers](sgnd_query_cbridge_chain-signers.md)	 - Query signers for chainid
 * [sgnd query cbridge chaintokens](sgnd_query_cbridge_chaintokens.md)	 - Query the chain tokens
 * [sgnd query cbridge config](sgnd_query_cbridge_config.md)	 - Query the current cbridge config
+* [sgnd query cbridge confiscation](sgnd_query_cbridge_confiscation.md)	 - Query confiscation
 * [sgnd query cbridge fee-share](sgnd_query_cbridge_fee-share.md)	 - Query fee share of a sgn validator or delegator
 * [sgnd query cbridge gas-price](sgnd_query_cbridge_gas-price.md)	 - Query gas price for chainid
 * [sgnd query cbridge getany](sgnd_query_cbridge_getany.md)	 - Query any kv value for given full key

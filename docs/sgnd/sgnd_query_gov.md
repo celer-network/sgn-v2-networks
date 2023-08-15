@@ -23,11 +23,11 @@ sgnd query gov [flags]
 * [sgnd query](sgnd_query.md)	 - Querying subcommands
 * [sgnd query gov deposit](sgnd_query_gov_deposit.md)	 - Query details of a deposit
 * [sgnd query gov deposits](sgnd_query_gov_deposits.md)	 - Query deposits on a proposal
+* [sgnd query gov expedited](sgnd_query_gov_expedited.md)	 - Query expedited proposal
 * [sgnd query gov param](sgnd_query_gov_param.md)	 - Query the parameters (voting|tallying|deposit) of the governance process
 * [sgnd query gov params](sgnd_query_gov_params.md)	 - Query the parameters of the governance process
 * [sgnd query gov proposal](sgnd_query_gov_proposal.md)	 - Query details of a single proposal
 * [sgnd query gov proposals](sgnd_query_gov_proposals.md)	 - Query proposals with optional filters
-* [sgnd query gov proposer](sgnd_query_gov_proposer.md)	 - Query the proposer of a governance proposal
 * [sgnd query gov tally](sgnd_query_gov_tally.md)	 - Get the tally of a proposal vote
 * [sgnd query gov vote](sgnd_query_gov_vote.md)	 - Query details of a single vote
 * [sgnd query gov votes](sgnd_query_gov_votes.md)	 - Query votes on a proposal

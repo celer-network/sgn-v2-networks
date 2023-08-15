@@ -1,25 +1,16 @@
-## sgnd query gov tally
+## sgnd query gov expedited
 
-Get the tally of a proposal vote
-
-### Synopsis
-
-Query tally of votes on a proposal. You can find
-the proposal-id by running "<appd> query gov proposals".
-
-Example:
-$ <appd> query gov tally 1
+Query expedited proposal
 
 ```
-sgnd query gov tally [proposal-id] [flags]
+sgnd query gov expedited [proposal-id] [flags]
 ```
 
 ### Options
 
 ```
-      --detail       Print detailed voters info
       --height int   Use a specific height to query state at (this can error if the node is pruning state)
-  -h, --help         help for tally
+  -h, --help         help for expedited
 ```
 
 ### Options inherited from parent commands

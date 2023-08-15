@@ -1,16 +1,15 @@
-## sgnd query cbridge latest-signers
+## sgnd query cbridge confiscation
 
-Query the latest signers
+Query confiscation
 
 ```
-sgnd query cbridge latest-signers [flags]
+sgnd query cbridge confiscation [chainId] [tokenAddr] [flags]
 ```
 
 ### Options
 
 ```
-      --file string   file that contains a list of <val, signer> addrs to check powers
-  -h, --help          help for latest-signers
+  -h, --help   help for confiscation
 ```
 
 ### Options inherited from parent commands

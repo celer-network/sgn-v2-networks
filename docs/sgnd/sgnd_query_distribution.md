@@ -25,6 +25,7 @@ sgnd query distribution [flags]
 * [sgnd query distribution commission](sgnd_query_distribution_commission.md)	 - Query distribution validator commission
 * [sgnd query distribution community-pool](sgnd_query_distribution_community-pool.md)	 - Query the amount of coins in the community pool
 * [sgnd query distribution params](sgnd_query_distribution_params.md)	 - Query distribution params
+* [sgnd query distribution pegbridge-fee-info](sgnd_query_distribution_pegbridge-fee-info.md)	 - query the pegBridge fee info of an account
 * [sgnd query distribution rewards](sgnd_query_distribution_rewards.md)	 - Query all distribution delegator rewards or rewards from a particular validator
 * [sgnd query distribution staking-reward-claim-info](sgnd_query_distribution_staking-reward-claim-info.md)	 - query the staking reward claim info of an account
 * [sgnd query distribution staking-reward-info](sgnd_query_distribution_staking-reward-info.md)	 - query the staking reward info of an account

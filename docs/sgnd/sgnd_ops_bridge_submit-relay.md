@@ -5,7 +5,7 @@ Submit cbridge relay using source transferId
 ### Synopsis
 
 Example:
-$ <appd> ops submit-relay --xferid=xxxxx"
+$ <appd> ops bridge submit-relay --xferid=xxxxx"
 
 ```
 sgnd ops bridge submit-relay [flags]
@@ -14,9 +14,9 @@ sgnd ops bridge submit-relay [flags]
 ### Options
 
 ```
-      --gasprice uint   force gas price in gwei
-  -h, --help            help for submit-relay
-      --xferid string   transferId, used to retry submit relay
+      --gasprice string   force gas price in gwei
+  -h, --help              help for submit-relay
+      --xferid string     transferId, used to retry submit relay
 ```
 
 ### SEE ALSO

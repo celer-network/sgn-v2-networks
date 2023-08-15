@@ -1,16 +1,15 @@
-## sgnd query cbridge latest-signers
+## sgnd query cbridge blacklist
 
-Query the latest signers
+Query blacklist
 
 ```
-sgnd query cbridge latest-signers [flags]
+sgnd query cbridge blacklist [flags]
 ```
 
 ### Options
 
 ```
-      --file string   file that contains a list of <val, signer> addrs to check powers
-  -h, --help          help for latest-signers
+  -h, --help   help for blacklist
 ```
 
 ### Options inherited from parent commands

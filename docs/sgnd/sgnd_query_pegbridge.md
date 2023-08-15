@@ -23,6 +23,7 @@ sgnd query pegbridge [flags]
 * [sgnd query](sgnd_query.md)	 - Querying subcommands
 * [sgnd query pegbridge burn](sgnd_query_pegbridge_burn.md)	 - Query pegbridge burn info
 * [sgnd query pegbridge config](sgnd_query_pegbridge_config.md)	 - Query the current pegbridge config
+* [sgnd query pegbridge confiscation](sgnd_query_pegbridge_confiscation.md)	 - Query confiscation
 * [sgnd query pegbridge deposit](sgnd_query_pegbridge_deposit.md)	 - Query pegbridge deposit info
 * [sgnd query pegbridge fee](sgnd_query_pegbridge_fee.md)	 - Query fee of a sgn validator or delegator
 * [sgnd query pegbridge mint](sgnd_query_pegbridge_mint.md)	 - Query pegbridge mint info

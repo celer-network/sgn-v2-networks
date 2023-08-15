@@ -9,8 +9,9 @@ sgnd ops view validators [flags]
 ### Options
 
 ```
-      --bonded   Only bonded validators
-  -h, --help     help for validators
+      --bonded        Only bonded validators
+      --file string   file that contains a list of <val, signer> addrs to check powers
+  -h, --help          help for validators
 ```
 
 ### SEE ALSO

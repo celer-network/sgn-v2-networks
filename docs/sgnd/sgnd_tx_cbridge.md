@@ -24,6 +24,8 @@ sgnd tx cbridge [flags]
 * [sgnd tx cbridge batch-set-liq-caps](sgnd_tx_cbridge_batch-set-liq-caps.md)	 - Set a list of liquidity caps through a config file
 * [sgnd tx cbridge set-liq-cap](sgnd_tx_cbridge_set-liq-cap.md)	 - Set the liquidity cap of a token on a chain
 * [sgnd tx cbridge sign-again-relay](sgnd_tx_cbridge_sign-again-relay.md)	 - Trigger sign again of relay msg
+* [sgnd tx cbridge sign-again-withdraw](sgnd_tx_cbridge_sign-again-withdraw.md)	 - Trigger sign again of withdraw msg
+* [sgnd tx cbridge syncer-claim-fee-of](sgnd_tx_cbridge_syncer-claim-fee-of.md)	 - Syncer claim fee on behalf of the client
 * [sgnd tx cbridge update-latest-signers](sgnd_tx_cbridge_update-latest-signers.md)	 - Trigger update of latest signers
 * [sgnd tx cbridge validator-claim-fee](sgnd_tx_cbridge_validator-claim-fee.md)	 - Validator claim fee shares
 

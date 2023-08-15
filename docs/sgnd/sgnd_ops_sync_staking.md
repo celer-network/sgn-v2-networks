@@ -14,7 +14,7 @@ sgnd ops sync staking [flags]
 ### Options
 
 ```
-      --deladdr string   delagator address, optional. must be presented when sync delegation info
+      --deladdr string   delegator address, optional. must be presented when sync delegation info
   -h, --help             help for staking
       --valaddr string   validator address, required
 ```
