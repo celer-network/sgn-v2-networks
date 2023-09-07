@@ -568,18 +568,18 @@ cbridge = "8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d"
 otvault2 = "8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d"
 ptbridge2 = "8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d"
 
-[[multichain]]
-chainID = 13000
-name = "SPS Mainnet"
-gateway = "https://rpc.ssquad.games"
-blkinterval = 30
-blkdelay = 15
-forwardblkdelay = 300
-maxblkdelta = 5000
-cbridge = "0x3b53d2c7b44d40be05fa5e2309ffeb6eb2492d88"
-otvault2 = "0x51AF61B7026a0aE369acc8652Ab2fb637F4689F7"
-ptbridge2 = "0xa349005a68FA33e8DACAAa850c45175bbcD49B19"
-msgbus = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
+#[[multichain]]
+#chainID = 13000
+#name = "SPS Mainnet"
+#gateway = "https://rpc.ssquad.games"
+#blkinterval = 30
+#blkdelay = 15
+#forwardblkdelay = 300
+#maxblkdelta = 5000
+#cbridge = "0x3b53d2c7b44d40be05fa5e2309ffeb6eb2492d88"
+#otvault2 = "0x51AF61B7026a0aE369acc8652Ab2fb637F4689F7"
+#ptbridge2 = "0xa349005a68FA33e8DACAAa850c45175bbcD49B19"
+#msgbus = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
 
 [[multichain]]
 chainID = 324
