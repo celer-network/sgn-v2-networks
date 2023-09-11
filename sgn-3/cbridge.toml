@@ -720,12 +720,12 @@ cbridge = "0x7d43AABC515C356145049227CeE54B608342c0ad"
 ptbridge2 = "0x5471ea8f739dd37E9B81Be9c5c77754D8AA953E4"
 
 [[multichain]]
-chainID = 40
-name = "Telos Mainnet"
-gateway = "https://mainnet.telos.net/evm"
-blkinterval = 10 
-blkdelay = 1
+chainID = 169
+name = "Manta Pacific Mainnet"
+gateway = "https://manta-pacific.calderachain.xyz/http"
+blkinterval = 30
+blkdelay = 5
 forwardblkdelay = 200
 maxblkdelta = 5000
-cbridge = "0xf39e2D6f40EEeFbec021BaDC6ef5a4F201F5dC4a"
-ptbridge2 = "0xbe68c0a781F618ceCc61C98fdbd46E9aBCB13aEb"
+cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+ptbridge2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
