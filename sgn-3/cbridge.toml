@@ -731,3 +731,15 @@ forwardblkdelay = 200
 maxblkdelta = 5000
 cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
 ptbridge2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
+
+[[multichain]]
+chainID = "534352"
+name = "Scroll Mainnet"
+gateway = "https://rpc.scroll.io"
+blkinterval = 4
+blkdelay = 1
+maxblkdelta = 1000
+forwardblkdelay = 100
+cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+msgbus = "0x7d43AABC515C356145049227CeE54B608342c0ad"
+addgasestimateratio = 0.3
