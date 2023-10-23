@@ -242,18 +242,18 @@ addgasestimateratio = 0.3
 #ptbridge2 = "0x8bCcdD21B97733D78a4168be1D6049A45652C4B8"
 #addgasestimateratio = 0.3
 
-[[multichain]]
-chainID = 128
-name = "Heco"
-gateway = "https://http-mainnet.hecochain.com"
-blkinterval = 15
-blkdelay = 12
-forwardblkdelay = 200
-maxblkdelta = 5000
-cbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
-otvault = "0x5d96d4287D1ff115eE50faC0526cf43eCf79bFc6"
-ptbridge = "0x81ECac0D6Be0550A00FF064a4f9dd2400585FE9c"
-addgasestimateratio = 0.3
+#[[multichain]]
+#chainID = 128
+#name = "Heco"
+#gateway = "https://http-mainnet.hecochain.com"
+#blkinterval = 15
+#blkdelay = 12
+#forwardblkdelay = 200
+#maxblkdelta = 5000
+#cbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
+#otvault = "0x5d96d4287D1ff115eE50faC0526cf43eCf79bFc6"
+#ptbridge = "0x81ECac0D6Be0550A00FF064a4f9dd2400585FE9c"
+#addgasestimateratio = 0.3
 
 [[multichain]]
 chainID = 42262
