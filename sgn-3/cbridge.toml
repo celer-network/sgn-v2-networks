@@ -586,7 +586,7 @@ ptbridge2 = "8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d"
 [[multichain]]
 chainID = 324
 name = "zkSync Era Mainnet"
-gateway = "https://zksync2-mainnet.zksync.io"
+gateway = "https://mainnet.era.zksync.io"
 blkinterval = 30
 blkdelay = 0
 forwardblkdelay = 300
