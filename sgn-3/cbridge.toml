@@ -476,17 +476,17 @@ cbridge = "0xb51541df05DE07be38dcfc4a80c05389A54502BB"
 ptbridge2 = "0xF8Bf9988206c4de87F52A3c24486E4367B7088CB"
 wdinbox = "0x0D90AC8466C3aEF6821f9116B96aa2255Ca2DA20"
 
-#[[multichain]]
-#chainID = 58
-#name = "Ontology EVM"
-#gateway = "https://dappnode10.ont.io:10339"
-#blkinterval = 30
-#blkdelay = 2
-#maxblkdelta = 10000
-#forwardblkdelay = 100
-#cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
-#ptbridge2 = "0xd4c058380D268d85bC7c758072f561e8f2dB5975"
-#proxyport = 10311
+[[multichain]]
+chainID = 58
+name = "Ontology EVM"
+gateway = "https://dappnode10.ont.io:10339"
+blkinterval = 30
+blkdelay = 2
+maxblkdelta = 10000
+forwardblkdelay = 100
+cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
+ptbridge2 = "0xd4c058380D268d85bC7c758072f561e8f2dB5975"
+proxyport = 10311
 
 [[multichain]]
 chainID = 71402
