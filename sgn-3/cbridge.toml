@@ -599,7 +599,7 @@ wdinbox = "0x80Bd61013F1ca7908b75d88AD08f8dBdEab4e779"
 [[multichain]]
 chainID = 23294
 name = "Oasis Sapphire"
-gateway = "https://sapphire.oasis.io"
+gateway = "https://1rpc.io/oasis/sapphire"
 blkinterval = 30
 blkdelay = 15
 forwardblkdelay = 200
