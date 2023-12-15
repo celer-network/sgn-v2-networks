@@ -249,7 +249,7 @@ receiving the snapshot with `up-to-date-node-ip`s taken from the `seeds` field i
 
     ```sh
     mkdir -p /home/ubuntu/bin
-    curl -L https://github.com/celer-network/sgn-v2-networks/blob/main/binaries/sgn-aptos-proxy-server-linux-amd64.tar.gz | tar -xz
+    curl -L https://github.com/celer-network/sgn-v2-networks/raw/main/binaries/sgn-aptos-proxy-server-linux-amd64.tar.gz | tar -xz
     mv sgn-aptos-proxy-server /home/ubuntu/bin
     ```
 
@@ -300,7 +300,7 @@ receiving the snapshot with `up-to-date-node-ip`s taken from the `seeds` field i
 
     ```sh
     mkdir -p /home/ubuntu/bin
-    curl -L https://github.com/celer-network/sgn-v2-networks/blob/main/binaries/sgn-sui-proxy-server-linux-amd64.tar.gz | tar -xz
+    curl -L https://github.com/celer-network/sgn-v2-networks/raw/main/binaries/sgn-sui-proxy-server-linux-amd64.tar.gz | tar -xz
     mv sgn-sui-proxy-server /home/ubuntu/bin
     ```
 
