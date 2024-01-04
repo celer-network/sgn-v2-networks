@@ -204,7 +204,7 @@ addgasestimateratio = 0.3
 [[multichain]]
 chainID = 1285
 name = "Moonriver"
-gateway = "https://moonriver.public.blastapi.io"
+gateway = "https://moonriver.unitedbloc.com"
 blkinterval = 20
 blkdelay = 6
 forwardblkdelay = 200
