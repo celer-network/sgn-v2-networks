@@ -280,6 +280,7 @@ maxblkdelta = 10000
 cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
 ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
+wdinbox = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
 addgasestimateratio = 0.3
 maxpriorityfeepergasgwei = 1
 
@@ -732,6 +733,7 @@ forwardblkdelay = 200
 maxblkdelta = 5000
 cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
 ptbridge2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
+wdinbox = "0xF9eBA2FE3F8d03d098a439fab2038c737D3DBB94"
 
 [[multichain]]
 chainID = "534352"
