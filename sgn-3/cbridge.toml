@@ -746,3 +746,14 @@ forwardblkdelay = 100
 cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
 msgbus = "0x7d43AABC515C356145049227CeE54B608342c0ad"
 addgasestimateratio = 0.3
+
+[[multichain]]
+chainID = "204"
+name = "opBNB"
+gateway = "https://opbnb-mainnet-rpc.bnbchain.org"
+blkinterval = 3
+blkdelay = 150
+forwardblkdelay = 200
+maxblkdelta = 10000
+cbridge = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
+addgasestimateratio = 0.3
