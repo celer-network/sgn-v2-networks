@@ -522,6 +522,7 @@ blkdelay = 4
 maxblkdelta = 10000
 forwardblkdelay = 500
 cbridge = "0xb3833Ecd19D4Ff964fA7bc3f8aC070ad5e360E56"
+otvault2 = "0x4b8904945967fa7148B6F9677c2855081e2e8166"
 ptbridge2 = "0xa55C7E1274bE5db2275a0BDd055f81e8263b7954"
 msgbus = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
 
