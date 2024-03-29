@@ -305,7 +305,7 @@ proxyport = 10304
 [[multichain]]
 chainID = 57
 name = "Syscoin"
-gateway = "https://rpc.syscoin.org"
+gateway = "https://syscoin-evm.publicnode.com"
 blkinterval = 60
 blkdelay = 1
 maxblkdelta = 10000
