@@ -704,7 +704,7 @@ ptbridge2 = "94e7a8e71830d2b34b3edaa195dc24c45d142584f06fa257b73af753d766e690"
 [[multichain]]
 chainID = 59144
 name = "Linea Mainnet"
-gateway = "https://linea.drpc.org"
+gateway = "https://linea.decubate.com"
 blkinterval = 30
 blkdelay = 1
 forwardblkdelay = 200
