@@ -711,6 +711,7 @@ forwardblkdelay = 200
 maxblkdelta = 5000
 cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
 ptbridge2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
+msgbus = "0x6F2bD3Dec1A8c4459c2acC318881F63A048c7c28"
 maxpriorityfeepergasgwei = 4.9
 
 [[multichain]]
