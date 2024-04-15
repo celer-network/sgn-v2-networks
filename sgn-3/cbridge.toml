@@ -748,6 +748,7 @@ blkdelay = 1
 maxblkdelta = 1000
 forwardblkdelay = 100
 cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+ptbridge2 = "0x2e8dd00e5793a316144cc77b59f80accf7cc41ce"
 msgbus = "0x7d43AABC515C356145049227CeE54B608342c0ad"
 addgasestimateratio = 0.3
 
