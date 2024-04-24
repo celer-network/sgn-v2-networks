@@ -317,6 +317,30 @@ msgbus = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
 addgasestimateratio = 0.3
 
 [[multichain]]
+chainID = 196
+name = "X Layer"
+gateway = "https://xlayerrpc.okx.com"
+blkinterval = 4
+blkdelay = 1
+maxblkdelta = 1000
+forwardblkdelay = 100
+cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+msgbus = "0x265B25e22bcd7f10a5bD6E6410F10537Cc7567e8"
+ptbridge2 = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
+addgasestimateratio = 0.3
+
+[[multichain]]
+chainID = 112358
+name = "Xterio"
+gateway = "https://xterio.alt.technology"
+blkinterval = 2
+blkdelay = 100
+maxblkdelta = 1000
+forwardblkdelay = 100
+cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+addgasestimateratio = 0.3
+
+[[multichain]]
 chainID = 336
 name = "ShidenNetworkMainnet"
 # gateway = "https://shiden.api.onfinality.io/public"
