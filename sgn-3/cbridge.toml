@@ -550,16 +550,16 @@ otvault2 = "0x4b8904945967fa7148B6F9677c2855081e2e8166"
 ptbridge2 = "0xa55C7E1274bE5db2275a0BDd055f81e8263b7954"
 msgbus = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
 
-[[multichain]]
-chainID = 2002
-name = "Milkomeda A1 Mainnet"
-gateway = "https://rpc-mainnet-algorand-rollup.a1.milkomeda.com"
-blkinterval = 30
-blkdelay = 1
-maxblkdelta = 5000
-cbridge = "0xa7C9FeDe809b6af10dC52590804c69F40f6f8154"
-ptbridge2 = "0x422849B355039bC58F2780cc4854919fC9cfaF94"
-addgasgwei = 20
+#[[multichain]]
+#chainID = 2002
+#name = "Milkomeda A1 Mainnet"
+#gateway = "https://rpc-mainnet-algorand-rollup.a1.milkomeda.com"
+#blkinterval = 30
+#blkdelay = 1
+#maxblkdelta = 5000
+#cbridge = "0xa7C9FeDe809b6af10dC52590804c69F40f6f8154"
+#ptbridge2 = "0x422849B355039bC58F2780cc4854919fC9cfaF94"
+#addgasgwei = 20
 
 [[multichain]]
 chainID = 73
