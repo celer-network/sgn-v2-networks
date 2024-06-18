@@ -98,7 +98,8 @@ addgasestimateratio = 0.3
 chainID = 250
 name = "Fantom"
 # Private gateway endpoint recommended
-gateway = "https://rpc.ftm.tools"
+# gateway = "https://rpc.ftm.tools"
+gateway = "https://fantom-pokt.nodies.app"
 blkinterval = 10
 blkdelay = 30
 maxblkdelta = 10000
