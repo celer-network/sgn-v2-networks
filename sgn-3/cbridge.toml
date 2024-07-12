@@ -2,7 +2,8 @@
 chainID = 1
 name = "Ethereum mainnet"
 # Private gateway endpoint recommended
-gateway = "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+#gateway = "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+gateway = "https://eth-pokt.nodies.app"
 blkinterval = 15
 blkdelay = 8
 forwardblkdelay = 5
