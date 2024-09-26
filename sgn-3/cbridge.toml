@@ -372,6 +372,7 @@ ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
 ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
 msgbus = "0x81c548584189ba1d54510313d3b5e601f6679818"
 addgasestimateratio = 0.3
+proxyport = 10316
 
 [[multichain]]
 chainID = 9001
@@ -415,6 +416,7 @@ cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
 ptbridge2 = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
 addgasestimateratio = 0.3
+proxyport = 10315
 
 [[multichain]]
 chainID = 1030
@@ -491,6 +493,7 @@ maxblkdelta = 5000
 cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
 otvault2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
 msgbus = "0x5471ea8f739dd37E9B81Be9c5c77754D8AA953E4"
+proxyport = 10313
 
 [[multichain]]
 chainID = 2222
@@ -575,6 +578,7 @@ maxblkdelta = 1000
 cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
 otvault2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
 ptbridge2 = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
+proxyport = 10314
 
 [[multichain]]
 chainID = 248
