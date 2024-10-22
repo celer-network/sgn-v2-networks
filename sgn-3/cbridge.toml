@@ -546,7 +546,7 @@ msgbus = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
 [[multichain]]
 chainID = 42170
 name = "Arbitrum Nova"
-gateway = "https://nova.arbitrum.io/rpc"
+gateway = "https://arbitrum-nova-rpc.publicnode.com"
 blkinterval = 10
 blkdelay = 4
 maxblkdelta = 10000
