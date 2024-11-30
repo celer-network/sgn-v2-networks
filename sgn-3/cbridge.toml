@@ -534,7 +534,7 @@ proxyport = 10312
 [[multichain]]
 chainID = 8217
 name = "Klaytn"
-gateway = "https://klaytn.blockpi.network/v1/rpc/public"
+gateway = "https://klaytn.api.onfinality.io/public"
 blkinterval = 30
 blkdelay = 30
 maxblkdelta = 1000
