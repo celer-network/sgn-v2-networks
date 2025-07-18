@@ -830,3 +830,16 @@ forwardblkdelay = 100
 cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 ptbridge2 = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
 addgasestimateratio = 0.3
+
+[[multichain]]
+chainID = 151
+name = "Redbelly Network"
+gateway = "https://governors.mainnet.redbelly.network"
+blkinterval = 60
+blkdelay = 2
+maxblkdelta = 1000
+forwardblkdelay = 100
+cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+otvault2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
+ptbridge2 = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
+addgasestimateratio = 0.3
