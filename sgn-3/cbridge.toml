@@ -843,3 +843,16 @@ cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
 otvault2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
 ptbridge2 = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
 addgasestimateratio = 0.3
+
+[[multichain]]
+chainID = 999
+name = "Hype EVM chain"
+gateway = "https://rpc.hyperliquid.xyz/evm"
+blkinterval = 60
+blkdelay = 10
+maxblkdelta = 1000
+forwardblkdelay = 500
+cbridge = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
+otvault2 = "0x7d43AABC515C356145049227CeE54B608342c0ad"
+ptbridge2 = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
+addgasestimateratio = 0.6
