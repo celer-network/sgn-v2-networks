@@ -498,7 +498,7 @@ proxyport = 10310
 [[multichain]]
 chainID = 2222
 name = "Kava EVM Co-Chain"
-gateway = "https://evm.kava.io"
+gateway = "https://evm.kava-rpc.com"
 blkinterval = 30
 forwardblkdelay = 100
 blkdelay = 15
@@ -660,7 +660,7 @@ msgbus = "0x317ed2054CCD6DC47d49550B4dE41589E7064154"
 [[multichain]]
 chainID = 7700
 name = "Canto"
-gateway = "https://canto.slingshot.finance/"
+gateway = "https://canto-rpc.ansybl.io"
 blkinterval = 30
 blkdelay = 8
 forwardblkdelay = 100
