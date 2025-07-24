@@ -856,3 +856,14 @@ cbridge = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
 otvault2 = "0x7d43AABC515C356145049227CeE54B608342c0ad"
 ptbridge2 = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
 addgasestimateratio = 0.6
+
+[[multichain]]
+chainID = 130
+name = "Unichain Mainnet"
+gateway = "https://mainnet.unichain.org"
+blkinterval = 30
+blkdelay = 10
+maxblkdelta = 1000
+forwardblkdelay = 50
+cbridge = "0xf39e2D6f40EEeFbec021BaDC6ef5a4F201F5dC4a"
+addgasestimateratio = 0.6
