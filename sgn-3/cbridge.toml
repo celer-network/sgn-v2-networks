@@ -874,6 +874,17 @@ name = "Plasma Mainnet"
 gateway = "https://plasma.drpc.org"
 blkinterval = 1
 blkdelay = 10
+
+[[multichain]]
+chainID = 239
+name = "TAC Mainnet"
+gateway = "https://rpc.tac.build"
+blkinterval = 1
+blkdelay = 10
+maxblkdelta = 5000
+forwardblkdelay = 5
+cbridge = "0xf39e2D6f40EEeFbec021BaDC6ef5a4F201F5dC4a"
+otvault2 = "0xb49c498B7d68cA37c65A399307AB0DECC8951e9d"
 maxblkdelta = 5000
 forwardblkdelay = 5
 cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
