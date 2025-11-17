@@ -869,6 +869,17 @@ cbridge = "0xf39e2D6f40EEeFbec021BaDC6ef5a4F201F5dC4a"
 addgasestimateratio = 0.6
 
 [[multichain]]
+chainID = 9745
+name = "Plasma Mainnet"
+gateway = "https://plasma.drpc.org"
+blkinterval = 1
+blkdelay = 10
+maxblkdelta = 5000
+forwardblkdelay = 5
+cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+ptbridge2 = "0x7d43AABC515C356145049227CeE54B608342c0ad"
+
+[[multichain]]
 chainID = 239
 name = "TAC Mainnet"
 gateway = "https://rpc.tac.build"
