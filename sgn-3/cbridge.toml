@@ -361,7 +361,7 @@ proxyport = 10305
 [[multichain]]
 chainID = 9001
 name = "Evmos"
-gateway = "https://evmos-json-rpc.stakely.io"
+gateway = "https://evmos-evm-rpc.publicnode.com"
 # gateway = "https://eth.bd.evmos.org:8545"
 blkinterval = 30
 blkdelay = 15
