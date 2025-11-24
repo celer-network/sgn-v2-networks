@@ -847,7 +847,8 @@ addgasestimateratio = 0.3
 [[multichain]]
 chainID = 999
 name = "Hype EVM chain"
-gateway = "https://rpc.hyperliquid.xyz/evm"
+#gateway = "https://rpc.hyperliquid.xyz/evm"
+gateway = "https://rpc.hyperlend.finance"
 blkinterval = 60
 blkdelay = 10
 maxblkdelta = 1000
