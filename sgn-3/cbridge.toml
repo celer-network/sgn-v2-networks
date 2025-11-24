@@ -359,22 +359,6 @@ maxpriorityfeepergasgwei = 3
 proxyport = 10305
 
 [[multichain]]
-chainID = 2001
-name = "Milkomeda Cardano"
-gateway = "https://rpc-mainnet-cardano-evm.c1.milkomeda.com"
-blkinterval = 20
-blkdelay = 15
-maxblkdelta = 10000
-forwardblkdelay = 10
-cbridge = "0x841ce48f9446c8e281d3f1444cb859b4a6d0738c"
-otvault2 = "0xb51541df05DE07be38dcfc4a80c05389A54502BB"
-ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
-ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
-msgbus = "0x81c548584189ba1d54510313d3b5e601f6679818"
-addgasestimateratio = 0.3
-proxyport = 10316
-
-[[multichain]]
 chainID = 9001
 name = "Evmos"
 gateway = "https://evmos-json-rpc.stakely.io"
