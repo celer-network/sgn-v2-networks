@@ -63,7 +63,7 @@ addgasestimateratio = 0.3
 chainID = 137
 name = "Polygon"
 # Private gateway endpoint recommended
-gateway = "https://polygon-rpc.com"
+gateway = "https://polygon.drpc.org"
 blkinterval = 15
 blkdelay = 200
 forwardblkdelay = 50
@@ -332,16 +332,16 @@ msgbus = "0x265B25e22bcd7f10a5bD6E6410F10537Cc7567e8"
 ptbridge2 = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
 addgasestimateratio = 0.3
 
-[[multichain]]
-chainID = 112358
-name = "Xterio"
-gateway = "https://xterio.alt.technology"
-blkinterval = 2
-blkdelay = 100
-maxblkdelta = 1000
-forwardblkdelay = 100
-cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
-addgasestimateratio = 0.3
+#[[multichain]]
+#chainID = 112358
+#name = "Xterio"
+#gateway = "https://xterio.alt.technology"
+#blkinterval = 2
+#blkdelay = 100
+#maxblkdelta = 1000
+#forwardblkdelay = 100
+#cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+#addgasestimateratio = 0.3
 
 [[multichain]]
 chainID = 336
@@ -358,19 +358,19 @@ addgasestimateratio = 0.3
 maxpriorityfeepergasgwei = 3
 #proxyport = 10305
 
-[[multichain]]
-chainID = 9001
-name = "Evmos"
-gateway = "https://evmos-evm-rpc.publicnode.com"
-# gateway = "https://eth.bd.evmos.org:8545"
-blkinterval = 30
-blkdelay = 15
-maxblkdelta = 10000
-forwardblkdelay = 200
-cbridge = "0x5F52B9d1C0853da636e178169e6B426E4cCfA813"
-ptbridge = "0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820"
-ptbridge2 = "0xC1d6E421a062Fdbb26C31Db4a2113dF0F678CD04"
-addgasestimateratio = 0.3
+#[[multichain]]
+#chainID = 9001
+#name = "Evmos"
+#gateway = "https://evmos-evm-rpc.publicnode.com"
+## gateway = "https://eth.bd.evmos.org:8545"
+#blkinterval = 30
+#blkdelay = 15
+#maxblkdelta = 10000
+#forwardblkdelay = 200
+#cbridge = "0x5F52B9d1C0853da636e178169e6B426E4cCfA813"
+#ptbridge = "0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820"
+#ptbridge2 = "0xC1d6E421a062Fdbb26C31Db4a2113dF0F678CD04"
+#addgasestimateratio = 0.3
 
 #[[multichain]]
 #chainID = 1024
@@ -453,18 +453,18 @@ ptbridge = "0x31d95c7fc6b5520B4BdCD78Efa689dD1CCa5741E"
 ptbridge2 = "0xD340BC3Ec35e63BcF929C5A9ad3AE5B1EBDbE678"
 proxyport = 10309
 
-[[multichain]]
-chainID = 416
-name = "SX Network"
-gateway = "https://rpc.sx.technology"
-blkinterval = 30
-blkdelay = 20
-forwardblkdelay = 100
-maxblkdelta = 10000
-cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
-ptbridge2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
-addgasestimateratio = 0.3
-proxyport = 10310
+#[[multichain]]
+#chainID = 416
+#name = "SX Network"
+#gateway = "https://rpc.sx.technology"
+#blkinterval = 30
+#blkdelay = 20
+#forwardblkdelay = 100
+#maxblkdelta = 10000
+#cbridge = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+#ptbridge2 = "0x9Bb46D5100d2Db4608112026951c9C965b233f4D"
+#addgasestimateratio = 0.3
+#proxyport = 10310
 
 #[[multichain]]
 #chainID = 16350
@@ -503,17 +503,17 @@ cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
 ptbridge2 = "0xd4c058380D268d85bC7c758072f561e8f2dB5975"
 proxyport = 10311
 
-[[multichain]]
-chainID = 8217
-name = "Klaytn"
-gateway = "https://klaytn.api.onfinality.io/public"
-blkinterval = 30
-blkdelay = 30
-maxblkdelta = 1000
-forwardblkdelay = 200
-cbridge = "0x4C882ec256823eE773B25b414d36F92ef58a7c0C"
-ptbridge2 = "0xb3833Ecd19D4Ff964fA7bc3f8aC070ad5e360E56"
-msgbus = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
+#[[multichain]]
+#chainID = 8217
+#name = "Klaytn"
+#gateway = "https://klaytn.api.onfinality.io/public"
+#blkinterval = 30
+#blkdelay = 30
+#maxblkdelta = 1000
+#forwardblkdelay = 200
+#cbridge = "0x4C882ec256823eE773B25b414d36F92ef58a7c0C"
+#ptbridge2 = "0xb3833Ecd19D4Ff964fA7bc3f8aC070ad5e360E56"
+#msgbus = "0xf5C6825015280CdfD0b56903F9F8B5A2233476F5"
 
 [[multichain]]
 chainID = 42170
@@ -820,7 +820,7 @@ addgasestimateratio = 0.3
 chainID = 999
 name = "Hype EVM chain"
 #gateway = "https://rpc.hyperliquid.xyz/evm"
-gateway = "https://rpc.hyperlend.finance"
+gateway = "https://hyperliquid.drpc.org"
 blkinterval = 60
 blkdelay = 10
 maxblkdelta = 1000
