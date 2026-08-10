@@ -272,20 +272,20 @@ ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
 addgasgwei = 10
 addgasestimateratio = 0.3
 
-[[multichain]]
-chainID = 1284
-name = "Moonbeam"
-gateway = "https://rpc.api.moonbeam.network"
-blkinterval = 20
-blkdelay = 6
-forwardblkdelay = 200
-maxblkdelta = 10000
-cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
-ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
-ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
-wdinbox = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
-addgasestimateratio = 0.3
-maxpriorityfeepergasgwei = 1
+#[[multichain]]
+#chainID = 1284
+#name = "Moonbeam"
+#gateway = "https://rpc.api.moonbeam.network"
+#blkinterval = 20
+#blkdelay = 6
+#forwardblkdelay = 200
+#maxblkdelta = 10000
+#cbridge = "0x841ce48F9446C8E281D3F1444cB859b4A6D0738C"
+#ptbridge = "0xBB7684Cc5408F4DD0921E5c2Cadd547b8f1AD573"
+#ptbridge2 = "0x3b53D2C7B44d40BE05Fa5E2309FFeB6eB2492d88"
+#wdinbox = "0x9B36f165baB9ebe611d491180418d8De4b8f3a1f"
+#addgasestimateratio = 0.3
+#maxpriorityfeepergasgwei = 1
 
 [[multichain]]
 chainID = 592
@@ -684,7 +684,7 @@ cbridge = "0xd7b9bfd73a44ef9b002b6d071a2805c2b78aac97d9a3cf09d8235cc9f7f2e0d7"
 chainID = 999999996
 gasadjustment = 1.3
 gasprices = "0.01uaura"
-gateway = "https://rpc.aura.network:443"
+gateway = "https://snapshot-1.aura.network:443"
 key = "auraoprc"
 msgpackage = "cosmwasm.wasm.v1"
 name = "Aura Mainnet"

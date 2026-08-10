@@ -6,7 +6,7 @@ enable_panic = true
 rpc_timeout = 15
 
 [sui]
-url = "https://fullnode.mainnet.sui.io:443"
+url = "https://archive.mainnet.sui.io:443"
 from_account = ""
 keystore_path = ""
 chain_id = 12370001
