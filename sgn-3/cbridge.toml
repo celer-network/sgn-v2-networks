@@ -720,7 +720,7 @@ maxpriorityfeepergasgwei = 4.9
 [[multichain]]
 chainID = 8453
 name = "Base Mainnet"
-gateway = "https://base.meowrpc.com"
+gateway = "https://base-mainnet.public.blastapi.io"
 blkinterval = 30
 blkdelay = 15
 forwardblkdelay = 200
