@@ -290,7 +290,8 @@ addgasestimateratio = 0.3
 [[multichain]]
 chainID = 592
 name = "Astar"
-gateway = "https://astar.api.onfinality.io/public"
+#gateway = "https://astar.api.onfinality.io/public"
+gateway = "https://evm.astar.network"
 blkinterval = 30
 blkdelay = 6
 forwardblkdelay = 200
